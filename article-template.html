@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ======= SEO META (à personnaliser pour chaque article) ======= -->
+  <title>TITRE SEO DE L'ARTICLE — MLM Décrypté</title>
+  <meta name="description" content="META DESCRIPTION DE L'ARTICLE (155 caractères max)" />
+  <meta name="keywords" content="mot-clé principal, mot-clé secondaire 1, mot-clé secondaire 2" />
+  <link rel="canonical" href="https://mlm-decrypte.fr/articles/URL-DE-L-ARTICLE" />
+
+  <!-- Open Graph (réseaux sociaux) -->
+  <meta property="og:title" content="TITRE SEO DE L'ARTICLE" />
+  <meta property="og:description" content="META DESCRIPTION DE L'ARTICLE" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://mlm-decrypte.fr/articles/URL-DE-L-ARTICLE" />
+  <meta property="og:image" content="https://mlm-decrypte.fr/images/articles/IMAGE-ARTICLE.jpg" />
+  <meta property="article:published_time" content="2026-03-25" />
+  <meta property="article:author" content="Laurent Constantin" />
+
+  <!-- Schema.org (données structurées pour Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "TITRE SEO DE L'ARTICLE",
+    "description": "META DESCRIPTION DE L'ARTICLE",
+    "author": {
+      "@type": "Person",
+      "name": "Laurent Constantin",
+      "url": "https://mlm-decrypte.fr/a-propos"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MLM Décrypté",
+      "url": "https://mlm-decrypte.fr"
+    },
+    "datePublished": "2026-03-25",
+    "dateModified": "2026-03-25",
+    "mainEntityOfPage": "https://mlm-decrypte.fr/articles/URL-DE-L-ARTICLE"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a2e; background: #fff; line-height: 1.7; font-size: 16px; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    :root {
+      --green-dark:  #0d3b2e;
+      --green-mid:   #1a5c44;
+      --green-light: #2d8a64;
+      --amber:       #e8a020;
+      --amber-light: #f5c052;
+      --cream:       #faf8f3;
+      --grey-light:  #f4f4f6;
+      --grey-mid:    #9a9aaa;
+      --text-dark:   #1a1a2e;
+      --text-mid:    #4a4a6a;
+      --radius-sm:   8px;
+      --radius-md:   14px;
+      --shadow-sm:   0 2px 8px rgba(0,0,0,0.07);
+      --shadow-md:   0 4px 20px rgba(0,0,0,0.10);
+    }
+
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .container--narrow { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+
+    .tag {
+      display: inline-block; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 20px;
+    }
+    .tag--green  { background: #d4f0e4; color: var(--green-mid); }
+    .tag--amber  { background: #fdefd0; color: #b07010; }
+    .tag--blue   { background: #dbeafe; color: #1e40af; }
+    .tag--red    { background: #fee2e2; color: #991b1b; }
+    .tag--purple { background: #ede9fe; color: #5b21b6; }
+
+    /* ===== HEADER ===== */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav__logo { display: flex; align-items: center; gap: 10px; }
+    .nav__logo-icon {
+      width: 38px; height: 38px; background: var(--green-mid);
+      border-radius: 10px; display: flex; align-items: center;
+      justify-content: center; font-size: 1.1rem; font-weight: 800; color: white;
+    }
+    .nav__logo-text { font-weight: 800; font-size: 1.15rem; color: var(--text-dark); }
+    .nav__logo-text span { color: var(--green-mid); }
+    .nav__links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav__links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color 0.2s; }
+    .nav__links a:hover { color: var(--green-mid); }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 22px; border-radius: var(--radius-sm);
+      font-weight: 600; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; border: none;
+    }
+    .btn--primary { background: var(--green-mid); color: white; }
+    .btn--primary:hover { background: var(--green-dark); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--text-dark); border-radius: 2px; }
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      background: var(--grey-light);
+      padding: 12px 0;
+      font-size: 0.8rem;
+      color: var(--grey-mid);
+    }
+    .breadcrumb a { color: var(--green-mid); }
+    .breadcrumb span { margin: 0 8px; }
+
+    /* ===== ARTICLE HERO ===== */
+    .article-hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+      color: white;
+      padding: 60px 0 70px;
+    }
+    .article-hero__inner { max-width: 800px; }
+    .article-hero__tags { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+    .article-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.5rem);
+      line-height: 1.25;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+    .article-hero__intro {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 28px;
+      max-width: 680px;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .article-meta__author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .article-meta__avatar {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, var(--amber), #f5c052);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 0.8rem; color: white;
+    }
+    .article-meta__name { font-weight: 600; font-size: 0.88rem; }
+    .article-meta__date { font-size: 0.8rem; color: rgba(255,255,255,0.6); }
+    .article-meta__info {
+      display: flex; gap: 16px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .article-meta__info span { display: flex; align-items: center; gap: 5px; }
+
+    /* ===== ARTICLE LAYOUT ===== */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 48px;
+      padding: 60px 0 80px;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE CONTENT ===== */
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 40px 0 16px;
+      line-height: 1.35;
+    }
+    .article-content h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 28px 0 12px;
+    }
+    .article-content p {
+      font-size: 1rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px;
+      color: var(--text-mid);
+    }
+    .article-content li {
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 8px;
+    }
+    .article-content strong { color: var(--text-dark); font-weight: 700; }
+    .article-content em { font-style: italic; }
+    .article-content a { color: var(--green-mid); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+    .article-content a:hover { color: var(--green-dark); }
+
+    /* Bloc mise en avant */
+    .article-content .highlight-box {
+      background: var(--cream);
+      border-left: 4px solid var(--green-mid);
+      padding: 20px 24px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0;
+    }
+    .article-content .highlight-box p { margin: 0; color: var(--text-dark); }
+
+    /* Bloc attention / alerte */
+    .article-content .alert-box {
+      background: #fff8ec;
+      border-left: 4px solid var(--amber);
+      padding: 20px 24px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0;
+    }
+    .article-content .alert-box p { margin: 0; color: var(--text-dark); }
+
+    /* Séparateur */
+    .article-content hr {
+      border: none;
+      border-top: 1px solid #e8e8f0;
+      margin: 40px 0;
+    }
+
+    /* ===== TABLE DES MATIÈRES ===== */
+    .toc {
+      background: var(--grey-light);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .toc__title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--grey-mid);
+      margin-bottom: 12px;
+    }
+    .toc__list { list-style: none; }
+    .toc__list li { margin-bottom: 8px; counter-increment: toc-counter; }
+    .toc__list a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--green-mid);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toc__list a:hover { color: var(--green-dark); }
+    .toc__list a::before {
+      content: counter(toc-counter) ".";
+      font-weight: 700;
+      font-size: 0.78rem;
+      color: var(--grey-mid);
+      min-width: 18px;
+    }
+    .toc__list { counter-reset: toc-counter; }
+
+    /* ===== FAQ ===== */
+    .faq { margin-top: 48px; }
+    .faq__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+    .faq__item {
+      border: 1.5px solid #e8e8f0;
+      border-radius: var(--radius-sm);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq__question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      background: white;
+      gap: 12px;
+    }
+    .faq__question:hover { background: var(--grey-light); }
+    .faq__icon { font-size: 1.1rem; flex-shrink: 0; transition: transform 0.2s; }
+    .faq__answer {
+      display: none;
+      padding: 0 20px 16px;
+      font-size: 0.92rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+    }
+    .faq__item.open .faq__answer { display: block; }
+    .faq__item.open .faq__icon { transform: rotate(45deg); }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar { position: sticky; top: 88px; }
+
+    .sidebar-card {
+      background: white;
+      border: 1.5px solid #e8e8f0;
+      border-radius: var(--radius-md);
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+    .sidebar-card__title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--grey-mid);
+      margin-bottom: 14px;
+    }
+
+    /* Newsletter sidebar */
+    .sidebar-newsletter {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+      color: white;
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .sidebar-newsletter__icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .sidebar-newsletter h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .sidebar-newsletter p { font-size: 0.82rem; color: rgba(255,255,255,0.75); margin-bottom: 16px; line-height: 1.6; }
+    .sidebar-newsletter input {
+      width: 100%; padding: 10px 14px;
+      border: none; border-radius: var(--radius-sm);
+      font-size: 0.85rem; font-family: 'Inter', sans-serif;
+      margin-bottom: 8px; outline: none;
+    }
+    .sidebar-newsletter button {
+      width: 100%; padding: 10px;
+      background: var(--amber); color: white;
+      border: none; border-radius: var(--radius-sm);
+      font-weight: 700; font-size: 0.85rem;
+      cursor: pointer; transition: background 0.2s;
+    }
+    .sidebar-newsletter button:hover { background: #c88010; }
+    .sidebar-newsletter__note { font-size: 0.72rem; color: rgba(255,255,255,0.5); text-align: center; margin-top: 8px; }
+
+    /* Articles liés sidebar */
+    .related-mini {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .related-mini__item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .related-mini__icon {
+      width: 40px; height: 40px;
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .related-mini__title {
+      font-size: 0.83rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--text-dark);
+      transition: color 0.2s;
+    }
+    .related-mini__item:hover .related-mini__title { color: var(--green-mid); }
+    .related-mini__cat { font-size: 0.72rem; color: var(--grey-mid); margin-bottom: 3px; }
+
+    /* Partage social */
+    .share-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .share-btn {
+      flex: 1;
+      padding: 9px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      border: none;
+    }
+    .share-btn:hover { opacity: 0.85; }
+    .share-btn--fb   { background: #1877f2; color: white; }
+    .share-btn--tw   { background: #1da1f2; color: white; }
+    .share-btn--li   { background: #0a66c2; color: white; }
+    .share-btn--copy { background: var(--grey-light); color: var(--text-mid); border: 1.5px solid #e0e0ec; }
+
+    /* ===== MAILLAGE INTERNE — Articles liés ===== */
+    .internal-links {
+      padding: 60px 0;
+      background: var(--grey-light);
+    }
+    .internal-links__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 28px;
+    }
+    .internal-links__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .link-card {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 20px;
+      border: 1.5px solid #e8e8f0;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .link-card:hover {
+      border-color: var(--green-mid);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .link-card__icon { font-size: 1.4rem; }
+    .link-card__cat { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--grey-mid); }
+    .link-card__title { font-weight: 700; font-size: 0.9rem; line-height: 1.4; color: var(--text-dark); }
+    .link-card:hover .link-card__title { color: var(--green-mid); }
+    .link-card__arrow { font-size: 0.85rem; color: var(--green-mid); font-weight: 700; margin-top: auto; }
+
+    /* ===== AUTEUR ===== */
+    .author-box {
+      padding: 60px 0;
+      background: var(--cream);
+    }
+    .author-box__inner {
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+    .author-box__avatar {
+      width: 72px; height: 72px;
+      background: linear-gradient(135deg, var(--green-mid), var(--amber));
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; font-weight: 800; color: white;
+      flex-shrink: 0;
+    }
+    .author-box__label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--grey-mid); margin-bottom: 4px; }
+    .author-box__name { font-weight: 800; font-size: 1.15rem; margin-bottom: 8px; }
+    .author-box__bio { font-size: 0.88rem; color: var(--text-mid); line-height: 1.7; }
+
+    /* ===== NEWSLETTER BAS DE PAGE ===== */
+    .newsletter-bottom {
+      padding: 70px 0;
+      background: linear-gradient(135deg, #fff8ec, #fdf4e3);
+    }
+    .newsletter-bottom__inner { max-width: 540px; margin: 0 auto; text-align: center; }
+    .newsletter-bottom h2 { font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-bottom: 10px; }
+    .newsletter-bottom p { color: var(--text-mid); font-size: 0.9rem; margin-bottom: 24px; }
+    .newsletter-form { display: flex; gap: 10px; }
+    .newsletter-form input {
+      flex: 1; padding: 12px 18px;
+      border: 1.5px solid #e0d8c8; border-radius: var(--radius-sm);
+      font-size: 0.9rem; font-family: 'Inter', sans-serif;
+      outline: none; transition: border-color 0.2s;
+    }
+    .newsletter-form input:focus { border-color: var(--amber); }
+    .newsletter-form button {
+      padding: 12px 24px; background: var(--amber); color: white;
+      border: none; border-radius: var(--radius-sm);
+      font-weight: 700; font-size: 0.9rem; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .newsletter-form button:hover { background: #c88010; }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--green-dark); color: rgba(255,255,255,0.7); padding: 48px 0 24px; }
+    .footer__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; margin-bottom: 36px; }
+    .footer__logo { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .footer__logo-icon {
+      width: 32px; height: 32px; background: var(--green-mid);
+      border-radius: 8px; display: flex; align-items: center;
+      justify-content: center; font-weight: 800; color: white; font-size: 0.9rem;
+    }
+    .footer__logo-text { font-weight: 800; color: white; }
+    .footer__logo-text span { color: var(--amber-light); }
+    .footer__desc { font-size: 0.83rem; line-height: 1.7; margin-bottom: 16px; }
+    .footer__col-title { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: white; margin-bottom: 14px; }
+    .footer__links { list-style: none; }
+    .footer__links li { margin-bottom: 8px; }
+    .footer__links a { font-size: 0.83rem; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+    .footer__links a:hover { color: var(--amber-light); }
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.78rem;
+    }
+    .footer__bottom-links { display: flex; gap: 20px; }
+    .footer__bottom-links a { color: rgba(255,255,255,0.5); }
+    .footer__bottom-links a:hover { color: white; }
+
+    /* ═══ HAMBURGER ═══ */
+    .hamburger {
+      display: none; flex-direction: column; justify-content: center;
+      gap: 5px; cursor: pointer; padding: 10px; margin-right: -10px;
+      background: none; border: none; z-index: 201;
+      min-width: 44px; min-height: 44px;
+    }
+    .hamburger__line {
+      display: block; width: 24px; height: 2px;
+      background: var(--text-dark); border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform-origin: center;
+    }
+    .hamburger.is-active .hamburger__line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.is-active .hamburger__line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.is-active .hamburger__line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ═══ MOBILE NAV ═══ */
+    .nav-overlay {
+      display: none; position: fixed; inset: 0; top: var(--nav-h);
+      background: rgba(0,0,0,0.4); z-index: 189;
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .nav-overlay.is-open { opacity: 1; }
+    .mobile-nav {
+      display: none; position: fixed; inset: 0; top: var(--nav-h); z-index: 190;
+      background: white; padding: 28px 24px 40px;
+      flex-direction: column; overflow-y: auto;
+      transform: translateX(100%); transition: transform 0.3s ease;
+    }
+    .mobile-nav.is-open { transform: translateX(0); }
+    .mobile-nav__links { list-style: none; margin-bottom: 24px; }
+    .mobile-nav__links li { border-bottom: 1px solid var(--grey-light); }
+    .mobile-nav__links a {
+      display: block; padding: 15px 4px;
+      font-size: 1.05rem; font-weight: 600; color: var(--text-dark);
+    }
+    .mobile-nav__links a:hover { color: var(--green-mid); }
+    .mobile-nav__cta { display: flex; flex-direction: column; gap: 10px; }
+    .mobile-nav__cta .btn { width: 100%; font-size: 0.95rem; }
+
+    /* ═══ RESPONSIVE — TABLETTE (max 1024px) ═══ */
+    @media (max-width: 1024px) {
+      .article-layout { grid-template-columns: 1fr 260px; gap: 32px; }
+    }
+
+    /* ═══ RESPONSIVE — MOBILE (max 768px) ═══ */
+    @media (max-width: 768px) {
+      :root { --nav-h: 60px; }
+      body.nav-open { overflow: hidden; }
+
+      /* Nav */
+      .nav__links, .nav__cta { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav { display: flex; }
+
+      /* Article layout : sidebar passe sous le contenu */
+      .article-layout {
+        grid-template-columns: 1fr;
+        padding: 36px 0 52px;
+        gap: 32px;
+      }
+      .sidebar { position: static; }
+
+      /* Hero article */
+      .article-hero { padding: 40px 0 48px; }
+      .article-hero h1 { font-size: clamp(1.5rem, 6vw, 2rem); }
+      .article-hero__intro { font-size: 0.95rem; }
+      .article-hero__tags { flex-wrap: wrap; }
+      .article-meta { flex-direction: column; align-items: flex-start; gap: 12px; }
+
+      /* Sidebar : newsletter en premier sur mobile */
+      .sidebar { display: flex; flex-direction: column; }
+      .sidebar-newsletter { order: -1; }
+
+      /* Share buttons */
+      .share-buttons { flex-wrap: wrap; }
+      .share-btn { flex: 1 1 calc(50% - 4px); min-width: 0; }
+
+      /* Internal links */
+      .internal-links { padding: 44px 0; }
+      .internal-links__grid { grid-template-columns: 1fr; gap: 12px; }
+
+      /* Author */
+      .author-box { padding: 44px 0; }
+      .author-box__inner { flex-direction: column; gap: 16px; padding: 24px; }
+
+      /* Newsletter */
+      .newsletter-bottom { padding: 52px 0; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-form button { width: 100%; }
+
+      /* Footer */
+      .footer__grid { grid-template-columns: 1fr; gap: 24px; margin-bottom: 28px; }
+      .footer__bottom { flex-direction: column; gap: 10px; text-align: center; }
+      .footer__bottom-links { flex-wrap: wrap; justify-content: center; }
+
+      /* Breadcrumb */
+      .breadcrumb { font-size: 0.76rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+      /* TOC */
+      .toc { padding: 16px 18px; }
+    }
+
+    /* ═══ RESPONSIVE — PETIT MOBILE (max 400px) ═══ */
+    @media (max-width: 400px) {
+      .container, .container--narrow { padding: 0 16px; }
+      .article-hero h1 { font-size: 1.4rem; }
+      .share-btn { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ OVERLAY ═══ -->
+  <div class="nav-overlay" id="navOverlay" onclick="closeNav()" aria-hidden="true"></div>
+
+  <!-- ═══ HEADER ═══ -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="nav__logo" aria-label="MLM Décrypté — Accueil">
+        <div class="nav__logo-icon">M</div>
+        <span class="nav__logo-text">MLM <span>Décrypté</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="categories/demystifier.html">Démystifier</a></li>
+        <li><a href="categories/le-modele.html">Le modèle</a></li>
+        <li><a href="categories/la-realite.html">La réalité</a></li>
+        <li><a href="categories/temoignages.html">Témoignages</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="#newsletter" class="btn btn--primary">📩 Newsletter</a>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile nav -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+      <ul class="mobile-nav__links">
+        <li><a href="categories/demystifier.html" onclick="closeNav()">🔍 Démystifier</a></li>
+        <li><a href="categories/le-modele.html"   onclick="closeNav()">📊 Le modèle</a></li>
+        <li><a href="categories/la-realite.html"  onclick="closeNav()">🌱 La réalité</a></li>
+        <li><a href="categories/temoignages.html" onclick="closeNav()">🗣️ Témoignages</a></li>
+        <li><a href="a-propos.html"               onclick="closeNav()">✍️ À propos</a></li>
+      </ul>
+      <div class="mobile-nav__cta">
+        <a href="#newsletter" class="btn btn--amber"   onclick="closeNav()">📩 S'abonner à la newsletter</a>
+        <a href="index.html" class="btn btn--outline" onclick="closeNav()">← Retour à l'accueil</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Accueil</a>
+      <span>›</span>
+      <!-- Modifier la catégorie selon l'article -->
+      <a href="categories/demystifier.html">Démystifier</a>
+      <span>›</span>
+      <span>Titre court de l'article</span>
+    </div>
+  </div>
+
+  <!-- ===== HERO DE L'ARTICLE ===== -->
+  <section class="article-hero" aria-label="En-tête de l'article">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__tags">
+          <!-- Choisir le bon tag selon la catégorie -->
+          <span class="tag tag--red">Démystifier</span>
+          <!-- Optionnel : ajouter un 2e tag thématique -->
+          <span class="tag tag--amber">Populaire</span>
+        </div>
+        <h1>Titre principal de l'article (H1 — contient le mot-clé principal)</h1>
+        <p class="article-hero__intro">
+          Introduction percutante de 2-3 phrases. Doit reprendre le mot-clé principal
+          et donner envie de lire la suite. C'est la seule partie visible sans scroller.
+        </p>
+        <div class="article-meta">
+          <div class="article-meta__author">
+            <div class="article-meta__avatar">CL</div>
+            <div>
+              <div class="article-meta__name">Laurent Constantin</div>
+              <div class="article-meta__date">25 mars 2026</div>
+            </div>
+          </div>
+          <div class="article-meta__info">
+            <span>⏱ 8 min de lecture</span>
+            <span>👁 XXX vues</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CORPS DE L'ARTICLE ===== -->
+  <main class="container">
+    <div class="article-layout">
+
+      <!-- ===== CONTENU PRINCIPAL ===== -->
+      <article class="article-content" aria-label="Contenu de l'article">
+
+        <!-- TABLE DES MATIÈRES -->
+        <nav class="toc" aria-label="Table des matières">
+          <button class="toc__toggle" onclick="toggleToc(this)" aria-expanded="false">
+            <span class="toc__toggle-label">📋 Sur cette page <span class="toc__count">(5 sections)</span></span>
+            <span class="toc__toggle-icon">▼</span>
+          </button>
+          <div class="toc__body">
+            <ul class="toc__list">
+
+            <li><a href="#section-1">Titre de la section 1</a></li>
+            <li><a href="#section-2">Titre de la section 2</a></li>
+            <li><a href="#section-3">Titre de la section 3</a></li>
+            <li><a href="#section-4">Titre de la section 4</a></li>
+            <li><a href="#faq">Questions fréquentes</a></li>
+                      </ul>
+          </div>
+        </nav>
+
+        <!-- INTRODUCTION -->
+        <p>
+          Paragraphe d'introduction plus développé. Présenter le problème que l'article va résoudre,
+          valider les doutes du lecteur avant d'apporter de la nuance.
+          <strong>Répéter le mot-clé principal ici naturellement.</strong>
+        </p>
+
+        <!-- SECTION 1 -->
+        <h2 id="section-1">Titre de la section 1 (H2 contient mot-clé secondaire)</h2>
+        <p>Contenu de la section 1. Viser 200-300 mots par section. Relier les idées entre elles naturellement.</p>
+        <p>Deuxième paragraphe de la section. Utiliser des exemples concrets, des chiffres sourcés, des anecdotes personnelles.</p>
+
+        <!-- Bloc mise en avant (optionnel) -->
+        <div class="highlight-box">
+          <p>💡 <strong>À retenir :</strong> une idée clé à mettre en évidence, courte et mémorable.</p>
+        </div>
+
+        <!-- SECTION 2 -->
+        <h2 id="section-2">Titre de la section 2</h2>
+        <p>Contenu de la section 2.</p>
+
+        <!-- Exemple de liste -->
+        <ul>
+          <li><strong>Premier point :</strong> explication concise.</li>
+          <li><strong>Deuxième point :</strong> explication concise.</li>
+          <li><strong>Troisième point :</strong> explication concise.</li>
+        </ul>
+
+        <!-- SECTION 3 -->
+        <h2 id="section-3">Titre de la section 3</h2>
+        <p>Contenu de la section 3.</p>
+
+        <!-- Maillage interne dans le texte — CRUCIAL pour le SEO -->
+        <p>
+          Pour aller plus loin sur ce sujet, consultez notre article sur
+          <a href="/articles/ARTICLE-LIE-1.html">la différence entre MLM et pyramide de Ponzi</a>.
+          Vous pouvez également lire
+          <a href="/articles/ARTICLE-LIE-2.html">notre guide sur les signaux d'alarme d'un MLM douteux</a>.
+        </p>
+
+        <!-- Bloc alerte (optionnel) -->
+        <div class="alert-box">
+          <p>⚠️ <strong>Attention :</strong> un point important à signaler, une mise en garde honnête.</p>
+        </div>
+
+        <!-- SECTION 4 -->
+        <h2 id="section-4">Conclusion — Ce qu'il faut retenir</h2>
+        <p>
+          Synthèse des points clés. Reformuler le mot-clé principal une dernière fois.
+          Inviter le lecteur à lire un autre article ou à s'abonner à la newsletter.
+        </p>
+
+        <hr />
+
+        <!-- ===== FAQ — CRUCIAL pour le référencement (featured snippets Google) ===== -->
+        <section class="faq" id="faq" aria-label="Questions fréquentes">
+          <h2 class="faq__title">Questions fréquentes</h2>
+
+          <div class="faq__item">
+            <div class="faq__question" onclick="toggleFaq(this)">
+              Question fréquente n°1 sur le sujet de l'article ?
+              <span class="faq__icon">+</span>
+            </div>
+            <div class="faq__answer">
+              Réponse concise et complète (2-4 phrases). Google adore ces blocs pour les
+              "position zéro" dans les résultats de recherche. Utiliser le mot-clé dans la réponse.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <div class="faq__question" onclick="toggleFaq(this)">
+              Question fréquente n°2 sur le sujet de l'article ?
+              <span class="faq__icon">+</span>
+            </div>
+            <div class="faq__answer">
+              Réponse concise et complète. Ces FAQ augmentent significativement les chances
+              d'apparaître dans les extraits mis en avant de Google.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <div class="faq__question" onclick="toggleFaq(this)">
+              Question fréquente n°3 sur le sujet de l'article ?
+              <span class="faq__icon">+</span>
+            </div>
+            <div class="faq__answer">
+              Réponse concise et complète. Terminer par un lien interne vers un article connexe
+              si pertinent.
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <!-- ===== SIDEBAR ===== -->
+      <aside class="sidebar" aria-label="Barre latérale">
+
+        <!-- Newsletter -->
+        <div class="sidebar-newsletter">
+          <div class="sidebar-newsletter__icon">📩</div>
+          <h3>Un article par semaine</h3>
+          <p>Rejoignez les lecteurs qui veulent comprendre le MLM sans préjugés.</p>
+          <form onsubmit="return handleNewsletterSubmit(event, 'sidebar')">
+            <input type="email" placeholder="votre@email.com" required aria-label="Email newsletter" />
+            <button type="submit">S'abonner gratuitement</button>
+          </form>
+          <p class="sidebar-newsletter__note">🔒 Sans spam · Désinscription en 1 clic</p>
+        </div>
+
+        <!-- Partage social -->
+        <div class="sidebar-card">
+          <div class="sidebar-card__title">📤 Partager cet article</div>
+          <div class="share-buttons">
+            <button class="share-btn share-btn--fb" onclick="shareArticle('facebook')">Facebook</button>
+            <button class="share-btn share-btn--tw" onclick="shareArticle('twitter')">Twitter</button>
+            <button class="share-btn share-btn--li" onclick="shareArticle('linkedin')">LinkedIn</button>
+            <button class="share-btn share-btn--copy" onclick="copyLink()">🔗 Copier</button>
+          </div>
+        </div>
+
+        <!-- Articles liés -->
+        <div class="sidebar-card">
+          <div class="sidebar-card__title">📖 À lire aussi</div>
+          <div class="related-mini">
+
+            <a href="/articles/ARTICLE-LIE-1.html" class="related-mini__item">
+              <div class="related-mini__icon img-green" style="background:linear-gradient(135deg,#0d3b2e,#2d8a64)">🔎</div>
+              <div>
+                <div class="related-mini__cat">Démystifier</div>
+                <div class="related-mini__title">Titre de l'article lié n°1</div>
+              </div>
+            </a>
+
+            <a href="/articles/ARTICLE-LIE-2.html" class="related-mini__item">
+              <div class="related-mini__icon" style="background:linear-gradient(135deg,#1e3a8a,#2563eb);border-radius:8px;width:40px;height:40px;display:flex;align-items:center;justify-content:center">📊</div>
+              <div>
+                <div class="related-mini__cat">Le modèle</div>
+                <div class="related-mini__title">Titre de l'article lié n°2</div>
+              </div>
+            </a>
+
+            <a href="/articles/ARTICLE-LIE-3.html" class="related-mini__item">
+              <div class="related-mini__icon" style="background:linear-gradient(135deg,#92400e,#d97706);border-radius:8px;width:40px;height:40px;display:flex;align-items:center;justify-content:center">🌱</div>
+              <div>
+                <div class="related-mini__cat">La réalité</div>
+                <div class="related-mini__title">Titre de l'article lié n°3</div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Catégories -->
+        <div class="sidebar-card">
+          <div class="sidebar-card__title">🗂 Catégories</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <a href="categories/demystifier.html" style="font-size:0.85rem;font-weight:600;color:var(--green-mid);display:flex;justify-content:space-between;">🔍 Démystifier <span style="color:var(--grey-mid)">8 articles</span></a>
+            <a href="categories/le-modele.html" style="font-size:0.85rem;font-weight:600;color:var(--green-mid);display:flex;justify-content:space-between;">📊 Le modèle <span style="color:var(--grey-mid)">7 articles</span></a>
+            <a href="categories/la-realite.html" style="font-size:0.85rem;font-weight:600;color:var(--green-mid);display:flex;justify-content:space-between;">🌱 La réalité <span style="color:var(--grey-mid)">6 articles</span></a>
+            <a href="categories/temoignages.html" style="font-size:0.85rem;font-weight:600;color:var(--green-mid);display:flex;justify-content:space-between;">🗣️ Témoignages <span style="color:var(--grey-mid)">4 articles</span></a>
+            <a href="categories/mon-regard.html" style="font-size:0.85rem;font-weight:600;color:var(--green-mid);display:flex;justify-content:space-between;">✍️ Mon regard <span style="color:var(--grey-mid)">3 articles</span></a>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <!-- ===== MAILLAGE INTERNE — 3 articles conseillés ===== -->
+  <section class="internal-links" aria-label="Articles recommandés">
+    <div class="container">
+      <h2 class="internal-links__title">Continuer la lecture</h2>
+      <div class="internal-links__grid">
+
+        <a href="/articles/ARTICLE-LIE-1.html" class="link-card">
+          <div class="link-card__icon">🔎</div>
+          <div class="link-card__cat">Démystifier</div>
+          <div class="link-card__title">Titre de l'article recommandé n°1</div>
+          <div class="link-card__arrow">Lire l'article →</div>
+        </a>
+
+        <a href="/articles/ARTICLE-LIE-2.html" class="link-card">
+          <div class="link-card__icon">📊</div>
+          <div class="link-card__cat">Le modèle</div>
+          <div class="link-card__title">Titre de l'article recommandé n°2</div>
+          <div class="link-card__arrow">Lire l'article →</div>
+        </a>
+
+        <a href="/articles/ARTICLE-LIE-3.html" class="link-card">
+          <div class="link-card__icon">🌱</div>
+          <div class="link-card__cat">La réalité</div>
+          <div class="link-card__title">Titre de l'article recommandé n°3</div>
+          <div class="link-card__arrow">Lire l'article →</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AUTEUR ===== -->
+  <section class="author-box" aria-label="À propos de l'auteur">
+    <div class="container--narrow">
+      <div class="author-box__inner">
+        <div class="author-box__avatar">CL</div>
+        <div>
+          <div class="author-box__label">Auteur de l'article</div>
+          <div class="author-box__name">Laurent Constantin</div>
+          <p class="author-box__bio">
+            Praticien du MLM depuis plusieurs années, j'écris sur ce sujet pour apporter
+            une vision nuancée et honnête — ni militantisme pro-MLM, ni condamnation facile.
+            Mon objectif : vous donner les clés pour réfléchir par vous-même.
+            <a href="a-propos.html" style="color:var(--green-mid);font-weight:600;">En savoir plus →</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER BAS DE PAGE ===== -->
+  <section class="newsletter-bottom" id="newsletter" aria-label="S'abonner à la newsletter">
+    <div class="container">
+      <div class="newsletter-bottom__inner">
+        <div style="font-size:2rem;margin-bottom:12px">📩</div>
+        <h2>Un article par semaine dans votre boîte</h2>
+        <p>Rejoignez les lecteurs qui veulent comprendre le MLM sans préjugés. Pas de spam, pas de recrutement.</p>
+        <form class="newsletter-form" onsubmit="return handleNewsletterSubmit(event, 'bottom')">
+          <input type="email" placeholder="votre@email.com" required aria-label="Adresse email" />
+          <button type="submit">S'abonner</button>
+        </form>
+        <p style="font-size:0.75rem;color:var(--grey-mid);margin-top:10px">🔒 Vos données restent privées. Désinscription en un clic.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer aria-label="Pied de page">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <div class="footer__logo-icon">M</div>
+            <span class="footer__logo-text">MLM <span>Décrypté</span></span>
+          </div>
+          <p class="footer__desc">Un blog indépendant pour comprendre le marketing de réseau sans a priori. Ni pro-MLM forcené, ni procès permanent.</p>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Thématiques</h3>
+          <ul class="footer__links">
+            <li><a href="categories/demystifier.html">Démystifier</a></li>
+            <li><a href="categories/le-modele.html">Le modèle économique</a></li>
+            <li><a href="categories/la-realite.html">La réalité du terrain</a></li>
+            <li><a href="categories/temoignages.html">Témoignages</a></li>
+            <li><a href="categories/mon-regard.html">Mon regard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Le blog</h3>
+          <ul class="footer__links">
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 MLM Décrypté · Tous droits réservés</p>
+        <div class="footer__bottom-links">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // --- Menu mobile ---
+    const hamburger  = document.getElementById('hamburger');
+    const mobileNav  = document.getElementById('mobileNav');
+    const navOverlay = document.getElementById('navOverlay');
+    function toggleNav() {
+      mobileNav.classList.contains('is-open') ? closeNav() : openNav();
+    }
+    function openNav() {
+      hamburger.classList.add('is-active');
+      hamburger.setAttribute('aria-expanded', 'true');
+      mobileNav.classList.add('is-open');
+      navOverlay.classList.add('is-open');
+      navOverlay.style.display = 'block';
+      document.body.classList.add('nav-open');
+    }
+    function closeNav() {
+      hamburger.classList.remove('is-active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileNav.classList.remove('is-open');
+      navOverlay.classList.remove('is-open');
+      setTimeout(() => { navOverlay.style.display = 'none'; }, 300);
+      document.body.classList.remove('nav-open');
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+
+    // --- FAQ Accordion ---
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq__item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // --- Newsletter (Brevo / Sendinblue) ---
+    // Remplacez VOTRE_CLE_API_BREVO et VOTRE_ID_LISTE par vos vraies valeurs Brevo
+    async function handleNewsletterSubmit(e, source) {
+      e.preventDefault();
+      const form = e.target;
+      const email = form.querySelector('input[type="email"]').value;
+      const btn = form.querySelector('button');
+
+      btn.textContent = 'Inscription en cours...';
+      btn.disabled = true;
+
+      try {
+        const response = await fetch('https://api.brevo.com/v3/contacts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'api-key': 'VOTRE_CLE_API_BREVO'
+          },
+          body: JSON.stringify({
+            email: email,
+            listIds: [VOTRE_ID_LISTE],
+            attributes: {
+              SOURCE: source,
+              DATE_INSCRIPTION: new Date().toISOString().split('T')[0]
+            },
+            updateEnabled: false
+          })
+        });
+
+        if (response.ok || response.status === 204) {
+          btn.textContent = '✓ Abonné(e) !';
+          btn.style.background = '#16a34a';
+          form.querySelector('input').value = '';
+          setTimeout(() => {
+            btn.textContent = 'S\'abonner';
+            btn.style.background = '';
+            btn.disabled = false;
+          }, 3000);
+        } else {
+          throw new Error('Erreur API');
+        }
+      } catch (err) {
+        btn.textContent = 'Une erreur s\'est produite';
+        btn.style.background = '#dc2626';
+        setTimeout(() => {
+          btn.textContent = 'S\'abonner';
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      }
+    }
+
+    // --- Partage social ---
+    function shareArticle(platform) {
+      const url = encodeURIComponent(window.location.href);
+      const title = encodeURIComponent(document.title);
+      const urls = {
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+        twitter:  `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
+        linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`
+      };
+      window.open(urls[platform], '_blank', 'width=600,height=400');
+    }
+
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const btn = document.querySelector('.share-btn--copy');
+        btn.textContent = '✓ Copié !';
+        setTimeout(() => btn.textContent = '🔗 Copier', 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>

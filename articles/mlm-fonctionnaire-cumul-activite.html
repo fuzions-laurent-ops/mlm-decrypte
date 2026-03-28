@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- publication-pending -->
+  <meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fonctionnaire et MLM : ce que dit la loi sur le cumul d'activité — MLM Décrypté</title>
+  <meta name="description" content="Fonctionnaire et distributeur MLM : est-ce compatible ? Ce que dit la loi, les différences entre les 3 versants de la fonction publique, les plafonds et les démarches.">
+  <link rel="canonical" href="https://mlm-decrypte.fr/articles/mlm-fonctionnaire-cumul-activite.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --green-dark:#1a3a2a;--green-mid:#2d6a4f;--green-light:#52b788;
+      --amber:#f5a623;--amber-light:#fdf3e3;
+      --cream:#fafaf7;--white:#ffffff;
+      --text-dark:#1a1a1a;--text-mid:#4a4a4a;--text-light:#888;
+      --nav-h:64px;
+    }
+    body{font-family:'Inter',sans-serif;color:var(--text-dark);background:var(--cream);line-height:1.7}
+    .container{max-width:1140px;margin:0 auto;padding:0 24px}
+    .container--narrow{max-width:740px;margin:0 auto;padding:0 24px}
+    a{color:var(--green-mid);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,0.08)}
+    nav.container{display:flex;align-items:center;height:var(--nav-h);gap:32px}
+    .nav__logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:var(--green-dark);text-decoration:none;flex-shrink:0}
+    .nav__logo-icon{width:32px;height:32px;background:var(--amber);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-weight:900;font-size:1rem}
+    .nav__logo-text span{color:var(--amber)}
+    .nav__links{display:flex;gap:20px;list-style:none;margin-left:auto}
+    .nav__links a{font-size:0.88rem;font-weight:500;color:var(--text-mid);transition:color 0.2s}
+    .nav__links a:hover{color:var(--green-mid);text-decoration:none}
+    .nav__cta .btn{display:inline-flex;align-items:center;padding:10px 22px;border-radius:8px;font-weight:600;font-size:0.88rem;border:none;cursor:pointer;background:var(--green-mid);color:white;transition:background 0.2s;min-height:44px}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+    .hamburger__line{display:block;width:24px;height:2px;background:var(--text-dark);border-radius:2px;transition:transform 0.3s ease,opacity 0.3s ease;transform-origin:center}
+    .hamburger.open .hamburger__line:nth-child(1){transform:rotate(45deg) translate(10px,10px)}
+    .hamburger.open .hamburger__line:nth-child(2){opacity:0}
+    .hamburger.open .hamburger__line:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}
+    .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:189}
+    .nav-overlay.open{display:block}
+    .mobile-nav{display:none;position:fixed;inset:0;top:var(--nav-h);z-index:190;background:white;padding:28px 24px 40px;flex-direction:column;overflow-y:auto;transform:translateX(100%);transition:transform 0.3s ease}
+    .mobile-nav.open{transform:translateX(0)}
+    .mobile-nav__links{list-style:none;margin-bottom:24px}
+    .mobile-nav__links li{border-bottom:1px solid #f0f0f0}
+    .mobile-nav__links a{display:block;padding:14px 0;font-weight:600;font-size:1rem;color:var(--text-dark)}
+    .btn-mobile{display:block;text-align:center;padding:14px;border-radius:10px;font-weight:700;font-size:0.95rem;margin-bottom:10px}
+    .btn-amber{background:var(--amber);color:white}
+    .btn-outline-green{border:2px solid var(--green-mid);color:var(--green-mid)}
+    .breadcrumb{background:white;border-bottom:1px solid #eee;padding:10px 0;font-size:0.82rem;color:var(--text-light)}
+    .breadcrumb a{color:var(--text-mid)}
+    .breadcrumb span{margin:0 6px;color:#ccc}
+    .article-hero{background:linear-gradient(135deg,var(--green-dark) 0%,var(--green-mid) 100%);color:white;padding:56px 0 64px}
+    .article-hero__tags{margin-bottom:14px}
+    .tag{display:inline-block;padding:4px 12px;border-radius:20px;font-size:0.76rem;font-weight:600;letter-spacing:0.03em}
+    .tag--blue{background:rgba(255,255,255,0.18);color:white}
+    .tag--green{background:rgba(82,183,136,0.25);color:#a8e6c5}
+    .article-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.22;margin-bottom:16px;font-weight:800}
+    .article-hero__intro{font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.83);margin-bottom:26px;max-width:680px}
+    .article-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+    .article-meta__author{display:flex;align-items:center;gap:10px}
+    .article-meta__avatar{width:36px;height:36px;background:linear-gradient(135deg,var(--amber),#f5c052);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.78rem;color:white}
+    .article-meta__name{font-weight:700;font-size:0.88rem;color:white}
+    .article-meta__date{font-size:0.78rem;color:rgba(255,255,255,0.6)}
+    .article-meta__info{display:flex;gap:16px;font-size:0.78rem;color:rgba(255,255,255,0.6)}
+    main.container{padding-top:40px;padding-bottom:60px}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start}
+    .article-content h2{font-family:'Playfair Display',serif;font-size:1.55rem;margin:40px 0 16px;color:var(--green-dark)}
+    .article-content h3{font-size:1.1rem;font-weight:700;margin:28px 0 12px;color:var(--text-dark)}
+    .article-content p{margin-bottom:18px;color:var(--text-mid);line-height:1.8}
+    .article-content strong{color:var(--text-dark)}
+    .highlight-box{background:var(--amber-light);border-left:4px solid var(--amber);border-radius:0 10px 10px 0;padding:18px 20px;margin:24px 0}
+    .highlight-box p{margin-bottom:8px;color:var(--text-dark);font-size:0.93rem}
+    .highlight-box p:last-child{margin-bottom:0}
+    .warning-box{background:#fff5f5;border-left:4px solid #e74c3c;border-radius:0 10px 10px 0;padding:18px 20px;margin:24px 0}
+    .warning-box p{margin-bottom:8px;color:var(--text-dark);font-size:0.93rem}
+    .warning-box p:last-child{margin-bottom:0}
+    .info-box{background:#f0f8ff;border-left:4px solid #3498db;border-radius:0 10px 10px 0;padding:18px 20px;margin:24px 0}
+    .info-box p{margin-bottom:8px;color:var(--text-dark);font-size:0.93rem}
+    .info-box p:last-child{margin-bottom:0}
+    .versant-card{background:white;border-radius:14px;padding:22px;margin:16px 0;box-shadow:0 2px 12px rgba(0,0,0,0.07);border-top:4px solid var(--green-mid)}
+    .versant-card.orange{border-top-color:#e67e22}
+    .versant-card.blue{border-top-color:#2980b9}
+    .versant-card h3{margin-top:0;margin-bottom:10px;font-size:1rem;color:var(--text-dark)}
+    .versant-card p{font-size:0.88rem;color:var(--text-mid);margin-bottom:8px}
+    .versant-card p:last-child{margin-bottom:0}
+    .toc{background:white;border-radius:12px;padding:20px;margin-bottom:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);border:1px solid #eee}
+    .toc__toggle{display:flex;align-items:center;justify-content:space-between;width:100%;padding:14px 20px;background:transparent;border:none;cursor:pointer;font-family:'Inter',sans-serif;text-align:left;gap:8px}
+    .toc__toggle-label{font-weight:700;font-size:0.9rem;color:var(--text-dark)}
+    .toc__count{font-weight:400;color:var(--text-light)}
+    .toc__toggle-icon{color:var(--text-light);font-size:0.75rem;transition:transform 0.2s;flex-shrink:0}
+    .toc__body{display:none;padding:0 20px 16px}
+    .toc__body.open{display:block}
+    .toc__list{list-style:none;counter-reset:toc}
+    .toc__list li{counter-increment:toc;padding:6px 0;border-bottom:1px solid #f5f5f5;font-size:0.86rem}
+    .toc__list li:last-child{border-bottom:none}
+    .toc__list a{color:var(--text-mid);display:flex;gap:8px;align-items:baseline}
+    .toc__list a::before{content:counter(toc);background:var(--green-mid);color:white;width:18px;height:18px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.68rem;font-weight:700;flex-shrink:0}
+    .toc__list a:hover{color:var(--green-mid);text-decoration:none}
+    .faq{margin:40px 0}
+    .faq__item{border:1px solid #e8e8e8;border-radius:10px;overflow:hidden;margin-bottom:10px}
+    .faq__question{width:100%;text-align:left;padding:16px 20px;background:white;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-weight:600;font-size:0.9rem;color:var(--text-dark);display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq__icon{font-size:0.75rem;color:var(--text-light);transition:transform 0.2s;flex-shrink:0}
+    .faq__answer{display:none;padding:0 20px 16px;background:white}
+    .faq__answer p{font-size:0.88rem;color:var(--text-mid);line-height:1.75;margin:0}
+    .author-box{background:var(--cream);border-radius:14px;padding:24px;margin-top:48px;display:flex;gap:18px;align-items:flex-start}
+    .author-box__avatar{width:52px;height:52px;background:linear-gradient(135deg,var(--amber),#f5c052);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:white;flex-shrink:0}
+    .author-box__name{font-weight:700;font-size:0.92rem;margin-bottom:4px}
+    .author-box__bio{font-size:0.83rem;color:var(--text-mid);line-height:1.65}
+    .sidebar{position:sticky;top:calc(var(--nav-h) + 20px)}
+    .sidebar-newsletter{background:linear-gradient(135deg,var(--green-dark),var(--green-mid));color:white;border-radius:14px;padding:22px;margin-bottom:18px}
+    .sidebar-newsletter h3{font-size:1rem;margin-bottom:8px}
+    .sidebar-newsletter p{font-size:0.81rem;color:rgba(255,255,255,0.74);margin-bottom:14px;line-height:1.6}
+    .sidebar-newsletter input{width:100%;padding:10px 14px;border:none;border-radius:8px;font-size:0.84rem;font-family:'Inter',sans-serif;margin-bottom:8px;outline:none}
+    .sidebar-newsletter button{width:100%;padding:10px;background:var(--amber);color:white;border:none;border-radius:8px;font-weight:700;font-size:0.84rem;cursor:pointer;transition:background 0.2s}
+    .sidebar-newsletter button:hover{background:#c88010}
+    .sidebar-links{background:white;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+    .sidebar-links h3{font-size:0.92rem;font-weight:700;margin-bottom:14px;color:var(--text-dark)}
+    .sidebar-links ul{list-style:none}
+    .sidebar-links li{padding:6px 0;border-bottom:1px solid #f5f5f5;font-size:0.84rem}
+    .sidebar-links li:last-child{border-bottom:none}
+    .sidebar-links a{color:var(--text-mid)}
+    .sidebar-links a:hover{color:var(--green-mid)}
+    .internal-links{margin:40px 0;padding:28px;background:white;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+    .internal-links__title{font-family:'Playfair Display',serif;font-size:1.45rem;margin-bottom:26px}
+    .internal-links__grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .internal-link-card{display:block;padding:16px;background:var(--cream);border-radius:10px;border:1px solid #e8e8e8;transition:border-color 0.2s,box-shadow 0.2s;text-decoration:none}
+    .internal-link-card:hover{border-color:var(--green-mid);box-shadow:0 4px 14px rgba(0,0,0,0.1);text-decoration:none}
+    .internal-link-card__tag{font-size:0.72rem;font-weight:600;color:var(--green-mid);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:6px}
+    .internal-link-card__title{font-size:0.88rem;font-weight:600;color:var(--text-dark);line-height:1.4}
+    .newsletter-bottom{background:linear-gradient(135deg,var(--green-dark),var(--green-mid));color:white;border-radius:16px;padding:32px;margin:40px 0;text-align:center}
+    .newsletter-bottom h2{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:10px}
+    .newsletter-bottom p{color:rgba(255,255,255,0.74);font-size:0.9rem;margin-bottom:22px}
+    .newsletter-form{display:flex;gap:10px;max-width:460px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+    .newsletter-form input{flex:1;min-width:200px;padding:12px 16px;border:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:0.9rem;outline:none;min-height:48px}
+    .newsletter-form button{padding:12px 22px;background:var(--amber);color:white;border:none;border-radius:8px;font-weight:700;font-size:0.9rem;cursor:pointer;transition:background 0.2s;min-height:48px}
+    .newsletter-form button:hover{background:#c88010}
+    footer{background:var(--green-dark);color:rgba(255,255,255,0.7);padding:52px 0 24px}
+    .footer__grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:40px}
+    .footer__logo{font-weight:800;font-size:1.1rem;color:white;margin-bottom:10px}
+    .footer__logo span{color:var(--amber)}
+    .footer__desc{font-size:0.82rem;line-height:1.7;color:rgba(255,255,255,0.5)}
+    .footer__col h3{font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.45);margin-bottom:14px}
+    .footer__links{display:flex;flex-direction:column;gap:8px}
+    .footer__links a{font-size:0.82rem;color:rgba(255,255,255,0.6);transition:color 0.2s}
+    .footer__links a:hover{color:white;text-decoration:none}
+    .footer__bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:0.77rem;flex-wrap:wrap;gap:10px}
+    .footer__bottom-links{display:flex;gap:20px}
+    .footer__bottom-links a{color:rgba(255,255,255,0.45)}
+    .footer__bottom-links a:hover{color:white;text-decoration:none}
+    .footer__social{display:flex;gap:10px;margin-top:16px}
+    .footer__social-btn{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:1rem;transition:background 0.2s}
+    .footer__social-btn:hover{background:rgba(255,255,255,0.2);text-decoration:none}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr 260px;gap:30px}}
+    @media(max-width:768px){
+      .nav__links,.nav__cta{display:none}
+      .hamburger{display:flex}
+      .mobile-nav{display:flex}
+      .article-layout{grid-template-columns:1fr}
+      .sidebar{display:none}
+      .internal-links__grid{grid-template-columns:1fr}
+      .footer__grid{grid-template-columns:1fr;gap:24px;margin-bottom:28px}
+      .newsletter-form button{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-overlay" id="navOverlay" onclick="closeNav()"></div>
+  <header>
+    <nav class="container">
+      <a href="../index.html" class="nav__logo"><div class="nav__logo-icon">M</div><span class="nav__logo-text">MLM <span>Décrypté</span></span></a>
+      <ul class="nav__links">
+        <li><a href="../categories/demystifier.html">Démystifier</a></li>
+        <li><a href="../categories/le-modele.html">Le modèle</a></li>
+        <li><a href="../categories/la-realite.html">La réalité</a></li>
+        <li><a href="../categories/temoignages.html">Témoignages</a></li>
+        <li><a href="../a-propos.html">À propos</a></li>
+      </ul>
+      <div class="nav__cta"><a href="#newsletter" class="btn">📩 Newsletter</a></div>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu" aria-expanded="false">
+        <span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span>
+      </button>
+    </nav>
+    <nav class="mobile-nav" id="mobileNav">
+      <ul class="mobile-nav__links">
+        <li><a href="../categories/demystifier.html" onclick="closeNav()">🔍 Démystifier</a></li>
+        <li><a href="../categories/le-modele.html" onclick="closeNav()">📊 Le modèle</a></li>
+        <li><a href="../categories/la-realite.html" onclick="closeNav()">🌱 La réalité</a></li>
+        <li><a href="../categories/temoignages.html" onclick="closeNav()">🗣️ Témoignages</a></li>
+        <li><a href="../a-propos.html" onclick="closeNav()">✍️ À propos</a></li>
+      </ul>
+      <div class="mobile-nav__cta">
+        <a href="#newsletter" class="btn-mobile btn-amber" onclick="closeNav()">📩 Newsletter</a>
+        <a href="../index.html" class="btn-mobile btn-outline-green" onclick="closeNav()">← Accueil</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="breadcrumb"><div class="container"><a href="../index.html">Accueil</a><span>›</span><a href="../categories/la-realite.html">La réalité</a><span>›</span><span>Fonctionnaire et MLM</span></div></div>
+
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__tags"><span class="tag tag--blue">La réalité</span></div>
+      <h1>Fonctionnaire et MLM : ce que dit vraiment la loi sur le cumul d'activité</h1>
+      <p class="article-hero__intro">Tu es agent public et tu envisages de développer une activité MLM ? Ce n'est pas interdit — mais ce n'est pas libre non plus. Ce que tu dois savoir avant de t'engager.</p>
+      <div class="article-meta">
+        <div class="article-meta__author">
+          <div class="article-meta__avatar" style="background:none;padding:0;overflow:hidden"><img src="../assets/images/laurent-avatar.jpg" alt="Laurent Constantin" style="width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:center top"></div>
+          <div><div class="article-meta__name">Laurent Constantin</div><div class="article-meta__date">27 mars 2026</div></div>
+        </div>
+        <div class="article-meta__info"><span>⏱ 8 min de lecture</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="article-layout">
+      <article class="article-content">
+
+        <nav class="toc" aria-label="Table des matières">
+          <button class="toc__toggle" onclick="toggleToc(this)" aria-expanded="false">
+            <span class="toc__toggle-label">📋 Sur cette page <span class="toc__count">(7 sections)</span></span>
+            <span class="toc__toggle-icon">▼</span>
+          </button>
+          <div class="toc__body">
+            <ul class="toc__list">
+              <li><a href="#principe-general">Le principe : l'exclusivité du service public</a></li>
+              <li><a href="#trois-versants">Les 3 versants : des règles différentes</a></li>
+              <li><a href="#autorisation">L'autorisation hiérarchique : obligatoire</a></li>
+              <li><a href="#plafonds">Les plafonds de revenus</a></li>
+              <li><a href="#cas-particuliers">Cas particuliers à surveiller</a></li>
+              <li><a href="#demarches">Les démarches concrètes</a></li>
+              <li><a href="#conseil-final">Mon conseil avant de te lancer</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <h2>Introduction</h2>
+        <p>J'ai rencontré plusieurs personnes dans mon réseau qui sont fonctionnaires — enseignants, infirmiers, agents territoriaux — et qui souhaitent développer une activité MLM en parallèle. La question revient toujours : <em>"C'est légal ? Je risque quelque chose ?"</em></p>
+        <p>La réponse courte : c'est possible, mais soumis à des conditions strictes qui varient selon ton statut précis. Et la grosse erreur, c'est de ne pas se renseigner avant de commencer. Un collègue m'a dit un jour "j'avais juste un arrondi de fin de mois" — sans savoir qu'il était techniquement en infraction. Ce n'était pas de la mauvaise volonté, juste de l'ignorance de la règle.</p>
+        <p>Cet article ne remplace pas un conseil juridique personnalisé. Il te donne les bases pour poser les bonnes questions à ton service RH ou à un avocat spécialisé en droit public.</p>
+
+        <h2 id="principe-general">Le principe de base : l'exclusivité du service public</h2>
+        <p>Le point de départ est simple et souvent méconnu : un fonctionnaire est en principe soumis à un <strong>principe d'exclusivité</strong>. Il doit consacrer l'intégralité de son activité professionnelle à ses missions de service public. C'est inscrit dans le Code général de la fonction publique (articles L.123-2 à L.123-8).</p>
+        <p>Cela ne veut pas dire qu'aucune activité annexe n'est possible. La loi prévoit des exceptions. Mais le MLM — en tant qu'activité commerciale lucrative — entre dans la catégorie des activités qui nécessitent une autorisation préalable. Tu ne peux pas juste "commencer" sans en parler à personne.</p>
+
+        <div class="warning-box">
+          <p><strong>⚠️ Ce qui est interdit sans condition</strong></p>
+          <p>Exercer une activité commerciale en tant que fonctionnaire à temps complet sans autorisation est une faute disciplinaire. Les sanctions peuvent aller du blâme au licenciement selon la gravité et la récidive. Ce n'est pas un risque à prendre à la légère.</p>
+        </div>
+
+        <h2 id="trois-versants">Les 3 versants de la fonction publique : des situations différentes</h2>
+        <p>La fonction publique française est divisée en trois versants, et si les règles générales sont les mêmes, la culture de chaque administration et les pratiques des employeurs varient énormément.</p>
+
+        <div class="versant-card">
+          <h3>🏛️ Fonction publique d'État (FPE)</h3>
+          <p><strong>Qui :</strong> Enseignants, magistrats, militaires, agents des ministères, douaniers, agents des impôts, etc.</p>
+          <p><strong>Spécificités MLM :</strong> L'autorisation de cumul relève du ministre ou du chef de service. Certains corps ont des restrictions renforcées — notamment les militaires (soumis au statut général des militaires, plus restrictif) et les magistrats (interdiction de certaines activités commerciales).</p>
+          <p><strong>Point clé :</strong> Les enseignants à temps partiel (mi-temps thérapeutique ou partiel choisi à 50%) sont en principe mieux placés pour obtenir une autorisation.</p>
+        </div>
+
+        <div class="versant-card orange">
+          <h3>🏢 Fonction publique territoriale (FPT)</h3>
+          <p><strong>Qui :</strong> Agents des mairies, des conseils départementaux, des régions, des intercommunalités, etc.</p>
+          <p><strong>Spécificités MLM :</strong> L'autorisation relève du maire ou du président de l'assemblée délibérante. Les pratiques varient beaucoup selon les collectivités — une petite mairie sera moins formelle qu'une grande métropole, mais le risque juridique est identique.</p>
+          <p><strong>Point clé :</strong> Les agents à temps non complet (moins de 70% du temps légal) peuvent exercer une activité lucrative sur simple déclaration — sans autorisation formelle. C'est fréquent dans les petites communes.</p>
+        </div>
+
+        <div class="versant-card blue">
+          <h3>🏥 Fonction publique hospitalière (FPH)</h3>
+          <p><strong>Qui :</strong> Infirmiers, aides-soignants, médecins hospitaliers, administratifs des hôpitaux, EHPAD, etc.</p>
+          <p><strong>Spécificités MLM :</strong> Le cumul est autorisé sous réserve d'accord du directeur d'établissement. Attention aux règles de déontologie médicale pour les médecins et infirmiers — toute activité commerciale pouvant créer un conflit d'intérêts avec les patients est examinée de près.</p>
+          <p><strong>Point clé :</strong> Le secteur hospitalier est souvent considéré comme le plus vigilant sur ce sujet. Le cumul est techniquement possible mais les refus sont plus fréquents qu'ailleurs.</p>
+        </div>
+
+        <h2 id="autorisation">L'autorisation hiérarchique : une étape obligatoire</h2>
+        <p>Quelle que soit ta situation, si tu es fonctionnaire à temps complet et que tu veux développer une activité MLM, tu dois demander une <strong>autorisation à ton supérieur hiérarchique</strong> avant de commencer. Pas après. Avant.</p>
+
+        <p><strong>Comment fonctionne la procédure :</strong></p>
+        <ul style="margin:16px 0 18px 24px;color:var(--text-mid);line-height:1.8">
+          <li>Tu envoies une demande écrite à ton N+1 ou directement au service RH selon les procédures internes</li>
+          <li>Tu décris l'activité envisagée (nature, fréquence, revenus estimés)</li>
+          <li>L'administration a <strong>1 mois maximum</strong> pour te répondre</li>
+          <li>Sans réponse dans ce délai, c'est considéré comme un refus implicite dans certains versants — renseigne-toi sur les règles spécifiques à ton employeur</li>
+          <li>L'autorisation est accordée pour <strong>3 ans renouvelables 1 an</strong> (4 ans maximum)</li>
+        </ul>
+
+        <p><strong>Critères d'évaluation par l'administration :</strong></p>
+        <ul style="margin:16px 0 18px 24px;color:var(--text-mid);line-height:1.8">
+          <li>L'activité ne doit pas perturber l'exercice de tes fonctions</li>
+          <li>Elle doit être exercée en dehors de tes heures de service</li>
+          <li>Elle ne doit pas créer de conflit d'intérêts avec ta mission publique</li>
+          <li>Elle doit être compatible avec la dignité des fonctions exercées</li>
+        </ul>
+
+        <div class="info-box">
+          <p><strong>💡 Le MLM passe-t-il ces critères ?</strong></p>
+          <p>En théorie, oui — à condition que tu l'exerces en dehors de tes heures de travail et qu'il n'y a pas de lien entre ton activité MLM et tes missions publiques (par exemple, vendre des compléments alimentaires si tu travailles dans un service de santé publique peut poser question). En pratique, beaucoup dépend de la sensibilité de ta hiérarchie et du MLM concerné.</p>
+        </div>
+
+        <h2 id="plafonds">Les plafonds de revenus : ce qu'on oublie souvent de vérifier</h2>
+        <p>C'est souvent la partie la moins bien connue. L'autorisation n'est pas seulement accordée ou refusée — elle peut être assortie de conditions sur les revenus générés par l'activité complémentaire.</p>
+
+        <p>La réglementation prévoit que les revenus de l'activité accessoire ne doivent pas dépasser certains seuils, qui varient selon les corps et les dispositions spécifiques à chaque administration. Il n'existe pas de plafond unique national — c'est là que la personnalisation devient essentielle.</p>
+
+        <p><strong>Ce que tu dois vérifier auprès de ton service RH :</strong></p>
+        <ul style="margin:16px 0 18px 24px;color:var(--text-mid);line-height:1.8">
+          <li>Existe-t-il un plafond de revenus annuels pour les activités accessoires dans ton corps ?</li>
+          <li>Comment ces revenus sont-ils calculés (chiffre d'affaires ou bénéfice net) ?</li>
+          <li>Dois-tu déclarer annuellement tes revenus MLM à ton employeur public ?</li>
+          <li>Quel régime fiscal est applicable (micro-entrepreneur BNC à 25,6% du CA) ?</li>
+        </ul>
+
+        <div class="highlight-box">
+          <p><strong>Le bon réflexe :</strong> Demande à ton service RH un document écrit précisant les conditions de ton autorisation — notamment s'il y a un plafond de revenus. Garde ce document précieusement. En cas de contrôle, c'est ta protection.</p>
+        </div>
+
+        <h2 id="cas-particuliers">Les cas particuliers à surveiller</h2>
+
+        <h3>Les militaires</h3>
+        <p>Le statut général des militaires (loi du 13 juillet 1972) est plus restrictif que le droit commun de la fonction publique. Les militaires en activité ont des obligations de disponibilité permanente qui rendent le cumul d'activité commerciale particulièrement encadré. Se renseigner auprès du service juridique de son armée ou corps est indispensable.</p>
+
+        <h3>Les enseignants</h3>
+        <p>C'est l'un des cas les plus favorables. Les enseignants à temps partiel ou à mi-temps sont nombreux à avoir obtenu des autorisations pour des activités complémentaires. La nature "pédagogique" ou "formative" de certaines activités MLM (formation d'équipe, coaching) est parfois bien perçue. Mais l'autorisation reste obligatoire.</p>
+
+        <h3>Les agents à temps non complet (≤ 70%)</h3>
+        <p>C'est l'exception la plus utile à connaître. Si tu travailles à moins de 70% de la durée légale du travail, tu peux exercer une activité privée lucrative sur simple <strong>déclaration</strong> — sans avoir à attendre une autorisation formelle. Le MLM entre dans ce cadre. Vérifie bien ton contrat : c'est le temps contractuel qui compte, pas le temps effectivement travaillé.</p>
+
+        <h3>Les agents contractuels</h3>
+        <p>Les contractuels de droit public sont soumis aux mêmes règles que les fonctionnaires titulaires pour le cumul d'activités. L'erreur fréquente est de penser que le statut de contractuel donne plus de liberté — ce n'est pas le cas.</p>
+
+        <h2 id="demarches">Les démarches concrètes pas à pas</h2>
+
+        <p><strong>Étape 1 : Avant de rejoindre le MLM</strong></p>
+        <ul style="margin:16px 0 18px 24px;color:var(--text-mid);line-height:1.8">
+          <li>Consulte ton contrat ou statut pour identifier ton temps de travail exact</li>
+          <li>Lis le règlement intérieur de ton administration sur le cumul d'activités</li>
+          <li>Renseigne-toi sur le MLM : son activité principale, son image, les éventuels conflits avec tes missions</li>
+        </ul>
+
+        <p><strong>Étape 2 : La demande d'autorisation</strong></p>
+        <ul style="margin:16px 0 18px 24px;color:var(--text-mid);line-height:1.8">
+          <li>Rédige une demande formelle (par écrit, avec accusé de réception)</li>
+          <li>Précise : la nature de l'activité, l'entreprise MLM concernée, les horaires envisagés, les revenus estimés</li>
+          <li>Adresse-la à ton supérieur hiérarchique direct ou au DRH selon ta structure</li>
+          <li>Note la date d'envoi — le délai de 1 mois court à partir de la réception</li>
+        </ul>
+
+        <p><strong>Étape 3 : Une fois autorisé</strong></p>
+        <ul style="margin:16px 0 18px 24px;color:var(--text-mid);line-height:1.8">
+          <li>Crée ta micro-entreprise sur autoentrepreneur.urssaf.fr (activité BNC)</li>
+          <li>Déclare tes revenus MLM chaque mois à l'URSSAF</li>
+          <li>Conserve l'autorisation et renouvelle-la avant son expiration (avant 3 ans)</li>
+          <li>Si tes revenus évoluent fortement, informe ton administration — une révision de l'autorisation peut être nécessaire</li>
+        </ul>
+
+        <h2 id="conseil-final">Mon conseil avant de te lancer</h2>
+
+        <div class="highlight-box" style="border-left:4px solid var(--amber);background:#fffbf0">
+          <p><strong>🔍 Ne pas poser la question, c'est déjà prendre un risque</strong></p>
+          <p>J'entends souvent "je vais commencer doucement, et si ça prend je régulariserai". C'est une erreur. L'administration publique est beaucoup plus traçable que le privé — les revenus déclarés à l'URSSAF peuvent remonter, des collègues peuvent parler, un contrôle peut survenir. Le coût d'une régularisation tardive (faute disciplinaire au dossier) dépasse largement le bénéfice d'un démarrage rapide.</p>
+          <p>La bonne démarche : prends rendez-vous avec ton service RH, explique ton projet, et obtiens une réponse écrite. Ça prend deux semaines. Et ça peut te protéger pour des années.</p>
+        </div>
+
+        <p>Chaque situation est différente. Un enseignant à mi-temps n'a pas les mêmes contraintes qu'un médecin hospitalier à temps plein, qui n'a pas les mêmes contraintes qu'un militaire en activité. Ce qui est vrai pour l'un ne l'est pas forcément pour l'autre.</p>
+        <p>Si tu as le moindre doute, une consultation avec un avocat spécialisé en droit de la fonction publique (comptez 100 à 200€ la consultation) est infiniment moins coûteuse qu'une procédure disciplinaire.</p>
+
+        <div class="faq">
+          <h2>Questions fréquentes</h2>
+
+          <div class="faq__item">
+            <button class="faq__question" onclick="toggleFaq(this)">
+              <span>Mon administration peut-elle m'interdire le MLM même si je demande l'autorisation ?</span>
+              <span class="faq__icon">▼</span>
+            </button>
+            <div class="faq__answer">
+              <p>Oui. L'administration a le droit de refuser si elle estime que l'activité crée un conflit d'intérêts, affecte tes fonctions, ou nuit à l'image du service. Le refus doit être motivé par écrit. Tu peux le contester devant le tribunal administratif, mais c'est rare que ça aille jusque-là.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" onclick="toggleFaq(this)">
+              <span>Est-ce que les revenus MLM entrent dans le calcul de mes impôts comme les autres revenus ?</span>
+              <span class="faq__icon">▼</span>
+            </button>
+            <div class="faq__answer">
+              <p>Oui, absolument. Tu déclares tes revenus MLM séparément (case BNC ou micro-BNC selon ton régime) lors de ta déclaration annuelle d'impôts. Ils s'ajoutent à ton salaire de fonctionnaire pour le calcul de ta tranche marginale d'imposition. Si tu es déjà dans une tranche élevée, l'impact fiscal peut être significatif — tiens-en compte dans tes projections.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" onclick="toggleFaq(this)">
+              <span>Les revenus MLM affectent-ils ma retraite de fonctionnaire ?</span>
+              <span class="faq__icon">▼</span>
+            </button>
+            <div class="faq__answer">
+              <p>Tes cotisations MLM (micro-entrepreneur) cotisent au régime de retraite des indépendants (SSI), pas au régime de retraite des fonctionnaires. À terme, tu auras deux pensions distinctes : ta pension de fonctionnaire (calculée sur ta rémunération publique) et une mini-pension du SSI (liée à tes années de cotisations MLM). Ce n'est ni un avantage ni un inconvénient majeur — c'est juste une réalité à anticiper.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" onclick="toggleFaq(this)">
+              <span>Puis-je utiliser mon matériel ou mes locaux professionnels pour le MLM ?</span>
+              <span class="faq__icon">▼</span>
+            </button>
+            <div class="faq__answer">
+              <p>Non. C'est formellement interdit. Tu ne peux pas utiliser le matériel de l'administration (ordinateur, téléphone, imprimante, locaux) pour ton activité MLM, même partiellement. C'est une faute disciplinaire distincte du cumul non autorisé, et elle peut s'y ajouter.</p>
+            </div>
+          </div>
+
+        </div>
+
+        
+        <div class="sources-block" style="background:#f8f9fa;border-radius:12px;padding:24px;margin:32px 0;border:1px solid #e2e8f0">
+          <h3 style="font-size:0.92rem;font-weight:700;color:#1a3a2a;margin-bottom:14px;display:flex;align-items:center;gap:8px">📚 Sources officielles</h3>
+          <ul style="list-style:none;margin:0;padding:0">
+            <li><a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000044416551/LEGISCTA000044420763/2022-03-01" target="_blank" rel="noopener noreferrer">Légifrance — Code général de la fonction publique, Art. L123-2 à L123-8</a></li>
+            <li><a href="https://www.fonction-publique.gouv.fr/etre-agent-public/mes-droits-et-obligations/le-cumul-dactivites-et-les-passages-entre-les-secteurs-public-et-prive" target="_blank" rel="noopener noreferrer">Portail de la Fonction Publique — Cumul d'activités</a></li>
+            <li><a href="https://entreprendre.service-public.gouv.fr/vosdroits/F36610" target="_blank" rel="noopener noreferrer">Service-public.fr — Fonctionnaire et micro-entrepreneur</a></li>
+            <li><a href="https://www.urssaf.fr/accueil/outils-documentation/taux-baremes/taux-cotisations-ac-plnr.html" target="_blank" rel="noopener noreferrer">URSSAF — Taux de cotisations auto-entrepreneur 2026</a></li>
+          </ul>
+        </div>
+        
+        <!-- Share bar -->
+        <div style="margin:32px 0;padding:22px 24px;background:#f0f7f4;border-radius:12px;border:1px solid #d4e8df">
+          <p style="font-size:0.82rem;font-weight:700;color:#1a3a2a;margin:0 0 12px 0;text-transform:uppercase;letter-spacing:0.06em">📤 Partager cet article</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <a id="sh-wa" href="#" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;padding:9px 16px;background:#25D366;color:white;border-radius:8px;font-size:0.82rem;font-weight:600;text-decoration:none">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+            <a id="sh-fb" href="#" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;padding:9px 16px;background:#1877F2;color:white;border-radius:8px;font-size:0.82rem;font-weight:600;text-decoration:none">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+            <a id="sh-li" href="#" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;padding:9px 16px;background:#0A66C2;color:white;border-radius:8px;font-size:0.82rem;font-weight:600;text-decoration:none">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a id="sh-x" href="#" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;padding:9px 16px;background:#000;color:white;border-radius:8px;font-size:0.82rem;font-weight:600;text-decoration:none">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              X / Twitter
+            </a>
+          </div>
+        </div>
+        <script>
+        (function(){
+          var u=encodeURIComponent(window.location.href);
+          var t=encodeURIComponent(document.title);
+          var wa=document.getElementById('sh-wa');
+          var fb=document.getElementById('sh-fb');
+          var li=document.getElementById('sh-li');
+          var x=document.getElementById('sh-x');
+          if(wa)wa.href='https://wa.me/?text='+t+'%20'+u;
+          if(fb)fb.href='https://www.facebook.com/sharer/sharer.php?u='+u;
+          if(li)li.href='https://www.linkedin.com/shareArticle?mini=true&url='+u+'&title='+t;
+          if(x)x.href='https://twitter.com/intent/tweet?url='+u+'&text='+t;
+        })();
+        </script>
+        <div class="author-box">
+          <div class="author-box__avatar" style="background:none;padding:0;overflow:hidden"><img src="../assets/images/laurent-avatar.jpg" alt="Laurent Constantin" style="width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center top"></div>
+          <div>
+            <div class="author-box__name">Laurent Constantin</div>
+            <div class="author-box__bio">Ancien joueur de badminton professionnel, coach, entrepreneur et distributeur MWR Life. Je partage sur ce blog ce que j'aurais aimé savoir avant de me lancer dans le MLM — sans filtre et sans promesse de richesse facile.</div>
+          </div>
+        </div>
+
+        <div class="internal-links">
+          <h2 class="internal-links__title">Pour aller plus loin</h2>
+          <div class="internal-links__grid">
+            <a href="mlm-impots-france.html" class="internal-link-card">
+              <div class="internal-link-card__tag">Fiscalité</div>
+              <div class="internal-link-card__title">MLM et fiscalité : comment déclarer ses revenus en France ?</div>
+            </a>
+            <a href="mlm-france-legal.html" class="internal-link-card">
+              <div class="internal-link-card__tag">Légal</div>
+              <div class="internal-link-card__title">Le MLM en France : chiffres, législation et état des lieux en 2026</div>
+            </a>
+            <a href="pourquoi-echouer-mlm.html" class="internal-link-card">
+              <div class="internal-link-card__tag">La réalité</div>
+              <div class="internal-link-card__title">Pourquoi la majorité des gens échouent en MLM</div>
+            </a>
+            <a href="terrain-manifeste.html" class="internal-link-card">
+              <div class="internal-link-card__tag">Sur le terrain</div>
+              <div class="internal-link-card__title">Je ne suis pas une success story. Voici pourquoi je t'écris quand même.</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="newsletter-bottom" id="newsletter">
+          <h2>Tu veux aller plus loin ?</h2>
+          <p>Rejoins les lecteurs de MLM Décrypté et reçois les nouveaux articles directement dans ta boîte mail.</p>
+          <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+            <input type="email" placeholder="Votre email" required>
+            <button type="submit">S'abonner</button>
+            <label style="display:flex;align-items:flex-start;gap:8px;font-size:0.8rem;color:rgba(255,255,255,0.65);margin-top:10px;cursor:pointer;width:100%">
+              <input type="checkbox" required style="margin-top:2px;flex-shrink:0">
+              <span>J'accepte de recevoir la newsletter. <a href="../confidentialite.html" style="color:var(--amber)">Désabonnement à tout moment.</a></span>
+            </label>
+          </form>
+        </div>
+
+      </article>
+
+      <aside class="sidebar">
+        <div class="sidebar-newsletter">
+          <h3>📩 La newsletter</h3>
+          <p>Articles, analyses et retours terrain — une fois par semaine.</p>
+          <input type="email" placeholder="ton@email.com">
+          <button>S'abonner</button>
+        </div>
+        <div class="sidebar-links">
+          <h3>Articles liés</h3>
+          <ul>
+            <li><a href="mlm-impots-france.html">MLM et fiscalité en France</a></li>
+            <li><a href="mlm-france-legal.html">MLM et législation française</a></li>
+            <li><a href="pourquoi-echouer-mlm.html">Pourquoi on échoue en MLM</a></li>
+            <li><a href="terrain-manifeste.html">Mon manifeste</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">MLM <span>Décrypté</span></div>
+          <p class="footer__desc">Un blog sur le marketing de réseau. Honnête, basé sur les faits, respectueux de votre intelligence.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-btn" aria-label="Instagram">📷</a>
+            <a href="#" class="footer__social-btn" aria-label="Facebook">📘</a>
+            <a href="#" class="footer__social-btn" aria-label="LinkedIn">💼</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h3>Thématiques</h3>
+          <div class="footer__links">
+            <a href="../categories/demystifier.html">Démystifier</a>
+            <a href="../categories/le-modele.html">Le modèle</a>
+            <a href="../categories/la-realite.html">La réalité</a>
+            <a href="../categories/temoignages.html">Témoignages</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h3>Articles populaires</h3>
+          <div class="footer__links">
+            <a href="mlm-impots-france.html">MLM et fiscalité</a>
+            <a href="mlm-fonctionnaire-cumul-activite.html">Fonctionnaire et MLM</a>
+            <a href="pourquoi-echouer-mlm.html">Pourquoi on échoue</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h3>Le blog</h3>
+          <div class="footer__links">
+            <a href="../index.html">Accueil</a>
+            <a href="../a-propos.html">Qui suis-je</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 MLM Décrypté. Tous droits réservés.</span>
+        <div class="footer__bottom-links">
+          <a href="../mentions-legales.html">Mentions légales</a>
+          <a href="../confidentialite.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav(){
+      const h=document.getElementById('hamburger');
+      const n=document.getElementById('mobileNav');
+      const o=document.getElementById('navOverlay');
+      h.classList.toggle('open');
+      n.classList.toggle('open');
+      o.classList.toggle('open');
+      h.setAttribute('aria-expanded', h.classList.contains('open'));
+    }
+    function closeNav(){
+      document.getElementById('hamburger').classList.remove('open');
+      document.getElementById('mobileNav').classList.remove('open');
+      document.getElementById('navOverlay').classList.remove('open');
+    }
+    document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeNav()});
+    function toggleToc(btn){
+      const body=btn.nextElementSibling;
+      const isOpen=body.classList.toggle('open');
+      btn.setAttribute('aria-expanded',isOpen);
+      btn.querySelector('.toc__toggle-icon').style.transform=isOpen?'rotate(180deg)':'';
+    }
+    function toggleFaq(btn){
+      const answer=btn.nextElementSibling;
+      const icon=btn.querySelector('.faq__icon');
+      const isOpen=answer.style.display==='block';
+      answer.style.display=isOpen?'none':'block';
+      icon.style.transform=isOpen?'':'rotate(180deg)';
+    }
+    function handleNewsletterSubmit(e){
+      e.preventDefault();
+      const btn=e.target.querySelector('button');
+      btn.textContent='✓ Inscrit !';
+      btn.disabled=true;
+      setTimeout(()=>{btn.textContent="S'abonner";btn.disabled=false;e.target.reset();},3000);
+    }
+  </script>
+
+  <script>
+(function(){
+  var GA_ID = 'GA_MEASUREMENT_ID';   // ← Remplacer par ex: G-ABC123XYZ
+  var META_ID = 'META_PIXEL_ID';     // ← Remplacer par ex: 123456789012345
+  var STORAGE_KEY = 'mlmd_cookie_consent';
+
+  function getConsent(){ try{ return JSON.parse(localStorage.getItem(STORAGE_KEY)); }catch(e){ return null; } }
+  function setConsent(obj){ localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); }
+
+  function loadGA(){
+    if(GA_ID === 'GA_MEASUREMENT_ID') return;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID, {anonymize_ip: true});
+  }
+
+  function loadMeta(){
+    if(META_ID === 'META_PIXEL_ID') return;
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+      t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', META_ID);
+    fbq('track', 'PageView');
+  }
+
+  function applyConsent(consent){
+    if(consent.analytics) loadGA();
+    if(consent.advertising) loadMeta();
+  }
+
+  function hideBanner(){ document.getElementById('cookie-banner').style.display='none'; }
+  function hideModal(){ document.getElementById('cookie-modal').classList.remove('is-open'); }
+
+  window.cbAcceptAll = function(){
+    setConsent({analytics:true, advertising:true});
+    loadGA(); loadMeta(); hideBanner();
+  };
+  window.cbRefuseAll = function(){
+    setConsent({analytics:false, advertising:false});
+    hideBanner(); hideModal();
+  };
+  window.cbOpenModal = function(){
+    document.getElementById('cookie-modal').classList.add('is-open');
+  };
+  window.cbSaveCustom = function(){
+    var ga = document.getElementById('toggle-ga').checked;
+    var meta = document.getElementById('toggle-meta').checked;
+    setConsent({analytics:ga, advertising:meta});
+    if(ga) loadGA();
+    if(meta) loadMeta();
+    hideBanner(); hideModal();
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var consent = getConsent();
+    if(!consent){
+      document.getElementById('cookie-banner').style.display='block';
+    } else {
+      applyConsent(consent);
+    }
+    // Close modal on overlay click
+    document.getElementById('cookie-modal').addEventListener('click', function(e){
+      if(e.target === this) cbRefuseAll();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

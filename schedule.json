@@ -1,0 +1,248 @@
+{
+  "comment-fonctionne-mlm.html": {
+    "title": "Comment fonctionne vraiment le MLM ?",
+    "category": "le-modele",
+    "publish_date": "2026-04-01",
+    "status": "launch"
+  },
+  "mlm-arnaque-ou-opportunite.html": {
+    "title": "MLM : arnaque ou vraie opportunité ?",
+    "category": "demystifier",
+    "publish_date": "2026-04-01",
+    "status": "launch"
+  },
+  "mlm-vs-pyramide-de-ponzi.html": {
+    "title": "MLM vs Pyramide de Ponzi",
+    "category": "demystifier",
+    "publish_date": "2026-04-01",
+    "status": "launch"
+  },
+  "mlm-france-legal.html": {
+    "title": "Le MLM est-il légal en France ?",
+    "category": "demystifier",
+    "publish_date": "2026-04-01",
+    "status": "launch"
+  },
+  "vivre-du-mlm-statistiques.html": {
+    "title": "Peut-on vraiment vivre du MLM ?",
+    "category": "la-realite",
+    "publish_date": "2026-04-01",
+    "status": "launch"
+  },
+  "pourquoi-echouer-mlm.html": {
+    "title": "Pourquoi la plupart échouent en MLM",
+    "category": "la-realite",
+    "publish_date": "2026-04-01",
+    "status": "launch"
+  },
+  "signaux-alarme-mlm-douteux.html": {
+    "title": "Les signaux d'alarme d'un MLM douteux",
+    "category": "demystifier",
+    "publish_date": "2026-04-01",
+    "status": "launch"
+  },
+  "mlm-impots-france.html": {
+    "title": "MLM et fiscalité en France",
+    "category": "le-modele",
+    "publish_date": "2026-04-01",
+    "status": "launch"
+  },
+  "pourquoi-blog-mlm-decrypte.html": {
+    "title": "Pourquoi ce blog MLM Décrypté",
+    "category": "mon-regard",
+    "publish_date": "2026-04-07",
+    "status": "scheduled"
+  },
+  "mlm-mauvaise-reputation.html": {
+    "title": "Pourquoi le MLM a mauvaise réputation",
+    "category": "demystifier",
+    "publish_date": "2026-04-10",
+    "status": "scheduled"
+  },
+  "plus-grandes-entreprises-mlm.html": {
+    "title": "Les plus grandes entreprises MLM",
+    "category": "le-modele",
+    "publish_date": "2026-04-14",
+    "status": "scheduled"
+  },
+  "plan-de-compensation-mlm.html": {
+    "title": "Comprendre les plans de compensation",
+    "category": "le-modele",
+    "publish_date": "2026-04-17",
+    "status": "scheduled"
+  },
+  "difference-vente-directe-mlm.html": {
+    "title": "Vente directe vs MLM",
+    "category": "le-modele",
+    "publish_date": "2026-04-21",
+    "status": "scheduled"
+  },
+  "mlm-recrutement-ou-vente.html": {
+    "title": "Recrutement ou vente : le vrai débat",
+    "category": "le-modele",
+    "publish_date": "2026-04-24",
+    "status": "scheduled"
+  },
+  "mlm-manipulation.html": {
+    "title": "MLM et manipulation : les techniques",
+    "category": "la-realite",
+    "publish_date": "2026-04-28",
+    "status": "scheduled"
+  },
+  "mlm-et-secte.html": {
+    "title": "MLM et comportements sectaires",
+    "category": "la-realite",
+    "publish_date": "2026-05-01",
+    "status": "scheduled"
+  },
+  "produits-mlm-trop-chers.html": {
+    "title": "Pourquoi les produits MLM sont chers",
+    "category": "le-modele",
+    "publish_date": "2026-05-05",
+    "status": "scheduled"
+  },
+  "comprendre-distributeur-mlm.html": {
+    "title": "Comprendre le statut de distributeur",
+    "category": "le-modele",
+    "publish_date": "2026-05-08",
+    "status": "scheduled"
+  },
+  "mlm-developpement-personnel.html": {
+    "title": "MLM et développement personnel",
+    "category": "mon-regard",
+    "publish_date": "2026-05-12",
+    "status": "scheduled"
+  },
+  "competences-developpees-mlm.html": {
+    "title": "Les compétences développées en MLM",
+    "category": "la-realite",
+    "publish_date": "2026-05-15",
+    "status": "scheduled"
+  },
+  "erreurs-debutant-mlm.html": {
+    "title": "Les erreurs classiques du débutant",
+    "category": "la-realite",
+    "publish_date": "2026-05-19",
+    "status": "scheduled"
+  },
+  "avenir-mlm.html": {
+    "title": "Quel avenir pour le MLM ?",
+    "category": "mon-regard",
+    "publish_date": "2026-05-22",
+    "status": "scheduled"
+  },
+  "regard-famille-amis-mlm.html": {
+    "title": "La famille et les amis face au MLM",
+    "category": "temoignages",
+    "publish_date": "2026-05-26",
+    "status": "scheduled"
+  },
+  "mlm-fonctionnaire-cumul-activite.html": {
+    "title": "Fonctionnaire et MLM : la loi",
+    "category": "le-modele",
+    "publish_date": "2026-05-29",
+    "status": "scheduled"
+  },
+  "terrain-manifeste.html": {
+    "title": "Mon manifeste MLM",
+    "category": "sur-le-terrain",
+    "publish_date": "2026-06-02",
+    "status": "scheduled"
+  },
+  "terrain-philosophie-mlm-france.html": {
+    "title": "Ma philosophie du MLM en France",
+    "category": "sur-le-terrain",
+    "publish_date": "2026-06-05",
+    "status": "scheduled"
+  },
+  "terrain-pourquoi-mwr-life.html": {
+    "title": "Pourquoi j'ai choisi MWR Life",
+    "category": "sur-le-terrain",
+    "publish_date": "2026-06-09",
+    "status": "scheduled"
+  },
+  "terrain-premiers-jours-mwr.html": {
+    "title": "Mes premiers jours chez MWR Life",
+    "category": "sur-le-terrain",
+    "publish_date": "2026-06-12",
+    "status": "scheduled"
+  },
+  "terrain-premier-echec.html": {
+    "title": "Mon premier échec en MLM",
+    "category": "sur-le-terrain",
+    "publish_date": "2026-06-16",
+    "status": "scheduled"
+  },
+  "terrain-deux-mlm.html": {
+    "title": "Deux MLM, deux expériences très différentes",
+    "category": "sur-le-terrain",
+    "publish_date": "2026-06-19",
+    "status": "scheduled"
+  },
+  "terrain-entourage.html": {
+    "title": "Comment mon entourage a réagi",
+    "category": "sur-le-terrain",
+    "publish_date": "2026-06-23",
+    "status": "scheduled"
+  },
+  "terrain-methode-invitation.html": {
+    "title": "Ma méthode d'invitation",
+    "category": "sur-le-terrain",
+    "publish_date": "2026-06-26",
+    "status": "scheduled"
+  },
+  "terrain-erreurs.html": {
+    "title": "Mes erreurs sur le terrain",
+    "category": "sur-le-terrain",
+    "publish_date": "2026-06-30",
+    "status": "scheduled"
+  },
+  "terrain-lecons-echec.html": {
+    "title": "Les leçons de mes échecs",
+    "category": "sur-le-terrain",
+    "publish_date": "2026-07-03",
+    "status": "scheduled"
+  },
+  "terrain-bilan-4-mois.html": {
+    "title": "Bilan après 4 mois de MLM",
+    "category": "sur-le-terrain",
+    "publish_date": "2026-07-07",
+    "status": "scheduled"
+  },
+  "terrain-70-collaborateurs.html": {
+    "title": "70 collaborateurs : ce que ça m'a appris",
+    "category": "sur-le-terrain",
+    "publish_date": "2026-07-10",
+    "status": "scheduled"
+  },
+  "temoignage-mlm-argent.html": {
+    "title": "Témoignage : l'argent en MLM",
+    "category": "temoignages",
+    "publish_date": "2026-07-14",
+    "status": "scheduled"
+  },
+  "perdre-argent-mlm-temoignage.html": {
+    "title": "Témoignage : j'ai perdu de l'argent en MLM",
+    "category": "temoignages",
+    "publish_date": "2026-07-17",
+    "status": "scheduled"
+  },
+  "portrait-mere-famille-mlm.html": {
+    "title": "Portrait : mère de famille en MLM",
+    "category": "temoignages",
+    "publish_date": "2026-07-21",
+    "status": "scheduled"
+  },
+  "quitter-emploi-pour-mlm.html": {
+    "title": "Quitter son emploi pour le MLM",
+    "category": "temoignages",
+    "publish_date": "2026-07-24",
+    "status": "scheduled"
+  },
+  "quitter-le-mlm.html": {
+    "title": "Quitter le MLM : témoignage",
+    "category": "temoignages",
+    "publish_date": "2026-07-28",
+    "status": "scheduled"
+  }
+}

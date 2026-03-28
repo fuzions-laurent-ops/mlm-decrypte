@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La vérité sur le terrain du MLM : difficultés, compétences, regard des autres. Des articles honnêtes sur ce que le MLM demande vraiment.">
+    <title>La réalité du MLM — Ni tout rose ni tout noir | MLM Décrypté</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-dark: #0d3b2e;
+            --green-mid: #1a5c44;
+            --amber: #e8a020;
+            --amber-light: #f5c052;
+            --cream: #faf8f3;
+            --grey-light: #f4f4f6;
+            --grey-mid: #9a9aaa;
+            --text-dark: #1a1a2e;
+            --text-mid: #4a4a6a;
+            --nav-h: 68px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background: white;
+            height: var(--nav-h);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .logo-m {
+            color: var(--green-mid);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-mid);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--green-mid);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            transition: all 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Mobile Menu */
+        .nav-drawer {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100vh;
+            background: white;
+            transition: right 0.3s ease;
+            z-index: 99;
+            padding: 100px 2rem 2rem;
+            overflow-y: auto;
+        }
+
+        .nav-drawer.open {
+            right: 0;
+        }
+
+        .nav-drawer a {
+            display: block;
+            padding: 1rem 0;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            border-bottom: 1px solid var(--grey-light);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 98;
+        }
+
+        .overlay.open {
+            display: block;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #064e3b 0%, #059669 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: var(--nav-h);
+        }
+
+        .hero-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background: white;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 0.9rem;
+            color: var(--text-mid);
+        }
+
+        .breadcrumb a {
+            color: var(--green-mid);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .article-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--grey-light);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .tag--red {
+            background: rgba(185, 28, 28, 0.15);
+            color: #7f1d1d;
+        }
+
+        .tag--blue {
+            background: rgba(37, 99, 235, 0.15);
+            color: #1e3a8a;
+        }
+
+        .tag--green {
+            background: rgba(5, 150, 105, 0.15);
+            color: #064e3b;
+        }
+
+        .tag--amber {
+            background: rgba(217, 119, 6, 0.15);
+            color: #78350f;
+        }
+
+        .tag--purple {
+            background: rgba(124, 58, 237, 0.15);
+            color: #4c1d95;
+        }
+
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-mid);
+            margin-bottom: 1rem;
+        }
+
+        .article-body {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .article-excerpt {
+            color: var(--text-mid);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .article-link {
+            color: var(--green-mid);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .article-link:hover {
+            color: var(--amber);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: var(--amber-light);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 4rem 2rem;
+            border-radius: 8px;
+        }
+
+        .newsletter h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .newsletter p {
+            margin-bottom: 2rem;
+            color: var(--text-mid);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.5rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .newsletter-form button {
+            padding: 0.8rem 1.5rem;
+            background: var(--green-mid);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--green-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--green-dark);
+            color: white;
+            padding: 3rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--amber);
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header {
+                padding: 0 1rem;
+            }
+
+            nav {
+                gap: 1.5rem;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0 1rem;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .nav-drawer {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .article-title {
+                font-size: 1.1rem;
+            }
+
+            .newsletter h2 {
+                font-size: 1.5rem;
+            }
+
+            .breadcrumb {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo"><span class="logo-m">M</span>LM Décrypté</div>
+        <nav id="nav">
+            <a href="../index.html">Accueil</a>
+            <a href="./demystifier.html">Démystifier</a>
+            <a href="./le-modele.html">Le modèle</a>
+            <a href="./la-realite.html">La réalité</a>
+            <a href="./temoignages.html">Témoignages</a>
+            <a href="./mon-regard.html">Mon regard</a>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="overlay" id="overlay"></div>
+    <div class="nav-drawer" id="navDrawer">
+        <a href="../index.html">Accueil</a>
+        <a href="./demystifier.html">Démystifier</a>
+        <a href="./le-modele.html">Le modèle</a>
+        <a href="./la-realite.html">La réalité</a>
+        <a href="./temoignages.html">Témoignages</a>
+        <a href="./mon-regard.html">Mon regard</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-icon">🌱</div>
+        <h1>La réalité du MLM</h1>
+        <p>Ni tout rose ni tout noir. Ce que le MLM demande vraiment.</p>
+        <div class="article-count">6 articles</div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="../index.html">Accueil</a> › <strong>La réalité du MLM</strong>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="articles-grid">
+            <!-- Article 1 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <span class="tag tag--green">Statistiques</span>
+                    <h2 class="article-title"><a href="../articles/pourquoi-echouer-mlm.html" style="color:inherit;text-decoration:none">Pourquoi la majorité des gens échouent en MLM</a></h2>
+                    <div class="article-meta">
+                        <span>18 mars 2026</span>
+                        <span>8 min</span>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <p class="article-excerpt">Les taux de réussite en MLM sont faibles. Comprendre pourquoi la plupart des participants abandonnent...</p>
+                    <a href="../articles/pourquoi-echouer-mlm.html" class="article-link">Lire l'article →</a>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <span class="tag tag--green">Développement</span>
+                    <h2 class="article-title"><a href="../articles/competences-developpees-mlm.html" style="color:inherit;text-decoration:none">Les compétences que le MLM m'a forcé à développer</a></h2>
+                    <div class="article-meta">
+                        <span>11 mars 2026</span>
+                        <span>7 min</span>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <p class="article-excerpt">Malgré les défis, le MLM enseigne des compétences précieuses. Découvrez lesquelles et comment les valoriser...</p>
+                    <a href="../articles/competences-developpees-mlm.html" class="article-link">Lire l'article →</a>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <span class="tag tag--green">Social</span>
+                    <h2 class="article-title"><a href="../articles/regard-famille-amis-mlm.html" style="color:inherit;text-decoration:none">Comment gérer le regard des autres quand on fait du MLM</a></h2>
+                    <div class="article-meta">
+                        <span>4 mars 2026</span>
+                        <span>6 min</span>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <p class="article-excerpt">Le jugement des autres est un défi majeur. Stratégies pour maintenir votre crédibilité et vos relations...</p>
+                    <a href="../articles/regard-famille-amis-mlm.html" class="article-link">Lire l'article →</a>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <span class="tag tag--green">Croissance</span>
+                    <h2 class="article-title"><a href="../articles/mlm-developpement-personnel.html" style="color:inherit;text-decoration:none">MLM et développement personnel : le duo puissant (mais à double tranchant)</a></h2>
+                    <div class="article-meta">
+                        <span>25 fév 2026</span>
+                        <span>8 min</span>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <p class="article-excerpt">Le MLM promet la croissance personnelle. Regardons cette promesse sous tous les angles...</p>
+                    <a href="../articles/mlm-developpement-personnel.html" class="article-link">Lire l'article →</a>
+                </div>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <span class="tag tag--green">Expérience</span>
+                    <h2 class="article-title"><a href="../articles/erreurs-debutant-mlm.html" style="color:inherit;text-decoration:none">Mes 3 premières années en MLM : les erreurs que je ne referai plus</a></h2>
+                    <div class="article-meta">
+                        <span>15 fév 2026</span>
+                        <span>9 min</span>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <p class="article-excerpt">Un retour personnel sur les erreurs courantes et comment les éviter pour maximiser vos chances...</p>
+                    <a href="../articles/erreurs-debutant-mlm.html" class="article-link">Lire l'article →</a>
+                </div>
+            </article>
+
+            <!-- Article 6 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <span class="tag tag--green">Transitions</span>
+                    <h2 class="article-title"><a href="../articles/quitter-le-mlm.html" style="color:inherit;text-decoration:none">Quitter le MLM : témoignage de ceux qui sont partis</a></h2>
+                    <div class="article-meta">
+                        <span>5 fév 2026</span>
+                        <span>7 min</span>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <p class="article-excerpt">La sortie du MLM est aussi importante que l'arrivée. Histoires de ceux qui ont su franchir le pas...</p>
+                    <a href="../articles/quitter-le-mlm.html" class="article-link">Lire l'article →</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>Rester informé</h2>
+        <p>Recevez nos derniers articles directement dans votre boîte mail, pour rester au cœur du sujet.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Votre email" required>
+            <button type="submit">S'inscrire</button>
+            <label class="rgpd-consent" style="display:flex;align-items:flex-start;gap:8px;font-size:0.8rem;color:#888;margin-top:10px;cursor:pointer">
+                <input type="checkbox" required style="margin-top:2px;flex-shrink:0">
+                <span>J'accepte de recevoir la newsletter. <a href="../confidentialite.html" style="color:var(--amber,#f5a623)">Désabonnement à tout moment.</a></span>
+            </label>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="footer-logo"><span style="color: var(--amber);">M</span>LM Décrypté</div>
+                <p class="footer-desc">Comprendre le MLM sans tabou. Un blog honnête sur le marketing de réseau, par Laurent Constantin.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Thématiques</h3>
+                <ul>
+                    <li><a href="./demystifier.html">Démystifier</a></li>
+                    <li><a href="./le-modele.html">Le modèle</a></li>
+                    <li><a href="./la-realite.html">La réalité</a></li>
+                    <li><a href="./temoignages.html">Témoignages</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Articles populaires</h3>
+                <ul>
+                    <li><a href="../articles/pourquoi-echouer-mlm.html">Pourquoi on échoue en MLM</a></li>
+                    <li><a href="../articles/competences-developpees-mlm.html">Compétences du MLM</a></li>
+                    <li><a href="../articles/quitter-le-mlm.html">Quitter le MLM</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Le blog</h3>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../a-propos.html">Qui suis-je</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 MLM Décrypté. Tous droits réservés.
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navDrawer = document.getElementById('navDrawer');
+        const overlay = document.getElementById('overlay');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navDrawer.classList.toggle('open');
+            overlay.classList.toggle('open');
+        });
+
+        overlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navDrawer.classList.remove('open');
+            overlay.classList.remove('open');
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                hamburger.classList.remove('active');
+                navDrawer.classList.remove('open');
+                overlay.classList.remove('open');
+            }
+        });
+
+        navDrawer.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                hamburger.classList.remove('active');
+                navDrawer.classList.remove('open');
+                overlay.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>

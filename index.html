@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MLM Décrypté — Comprendre le marketing de réseau sans préjugés. Articles, analyses et témoignages pour démystifier le MLM et réfléchir autrement." />
+  <meta name="keywords" content="MLM, marketing de réseau, vente directe, démystifier MLM, arnaque MLM, comprendre MLM, marketing relationnel" />
+  <meta property="og:title" content="MLM Décrypté — Comprendre le marketing de réseau" />
+  <meta property="og:description" content="Des articles honnêtes pour comprendre le MLM, démystifier les idées reçues et réfléchir autrement sur ce modèle économique." />
+  <meta property="og:type" content="website" />
+  <title>MLM Décrypté — Comprendre le marketing de réseau sans préjugés</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── RESET ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a2e; background: #fff; line-height: 1.7; font-size: 16px; overflow-x: hidden; }
+    body.nav-open { overflow: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; }
+
+    /* ─── VARIABLES ─── */
+    :root {
+      --green-dark:  #0d3b2e;
+      --green-mid:   #1a5c44;
+      --green-light: #2d8a64;
+      --amber:       #e8a020;
+      --amber-light: #f5c052;
+      --cream:       #faf8f3;
+      --grey-light:  #f4f4f6;
+      --grey-mid:    #9a9aaa;
+      --text-dark:   #1a1a2e;
+      --text-mid:    #4a4a6a;
+      --shadow-sm:   0 2px 8px rgba(0,0,0,0.07);
+      --shadow-md:   0 4px 20px rgba(0,0,0,0.10);
+      --shadow-lg:   0 8px 40px rgba(0,0,0,0.14);
+      --radius-sm:   8px;
+      --radius-md:   14px;
+      --radius-lg:   24px;
+      --nav-h:       68px;
+    }
+
+    /* ─── UTILITIES ─── */
+    .container       { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .container--sm   { max-width: 680px;  margin: 0 auto; padding: 0 24px; }
+
+    .tag {
+      display: inline-block; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 4px 11px; border-radius: 20px; white-space: nowrap;
+    }
+    .tag--green  { background: #d4f0e4; color: var(--green-mid); }
+    .tag--amber  { background: #fdefd0; color: #b07010; }
+    .tag--blue   { background: #dbeafe; color: #1e40af; }
+    .tag--red    { background: #fee2e2; color: #991b1b; }
+    .tag--purple { background: #ede9fe; color: #5b21b6; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+      padding: 13px 26px; border-radius: var(--radius-sm);
+      font-weight: 600; font-size: 0.92rem; cursor: pointer;
+      transition: all 0.2s ease; border: none; min-height: 48px;
+    }
+    .btn--primary { background: var(--green-mid); color: white; }
+    .btn--primary:hover { background: var(--green-dark); transform: translateY(-1px); }
+    .btn--outline { background: transparent; color: var(--green-mid); border: 2px solid var(--green-mid); }
+    .btn--outline:hover { background: var(--green-mid); color: white; }
+    .btn--amber { background: var(--amber); color: white; }
+    .btn--amber:hover { background: #c88010; transform: translateY(-1px); }
+
+    .section-eyebrow {
+      font-size: 0.73rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--green-mid); margin-bottom: 8px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700;
+      line-height: 1.25; color: var(--text-dark);
+    }
+    .section-title em { font-style: normal; color: var(--green-mid); }
+
+    .read-more {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.85rem; font-weight: 700; color: var(--green-mid);
+      transition: gap 0.2s;
+    }
+    .read-more::after { content: '→'; }
+    .read-more:hover { gap: 10px; }
+
+    /* ─── HEADER ─── */
+    header {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; height: var(--nav-h); }
+
+    .nav__logo { display: flex; align-items: center; gap: 10px; z-index: 201; }
+    .nav__logo-icon {
+      width: 38px; height: 38px; background: var(--green-mid); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; font-weight: 800; color: white; flex-shrink: 0;
+    }
+    .nav__logo-text { font-weight: 800; font-size: 1.12rem; color: var(--text-dark); }
+    .nav__logo-text span { color: var(--green-mid); }
+
+    /* Desktop links */
+    .nav__links {
+      display: flex; align-items: center; gap: 28px; list-style: none;
+    }
+    .nav__links a {
+      font-size: 0.88rem; font-weight: 500; color: var(--text-mid);
+      transition: color 0.2s; padding: 6px 0;
+    }
+    .nav__links a:hover { color: var(--green-mid); }
+
+    .nav__cta { display: flex; gap: 10px; align-items: center; }
+
+    /* ─── HAMBURGER ─── */
+    .hamburger {
+      display: none; flex-direction: column; justify-content: center;
+      gap: 5px; cursor: pointer; padding: 10px; margin-right: -10px;
+      background: none; border: none; z-index: 201;
+      min-width: 44px; min-height: 44px;
+    }
+    .hamburger__line {
+      display: block; width: 24px; height: 2px;
+      background: var(--text-dark); border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform-origin: center;
+    }
+    .hamburger.is-active .hamburger__line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.is-active .hamburger__line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.is-active .hamburger__line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ─── MOBILE NAV DRAWER ─── */
+    .mobile-nav {
+      display: none;
+      position: fixed; inset: 0; top: var(--nav-h); z-index: 190;
+      background: white;
+      padding: 32px 24px 40px;
+      flex-direction: column;
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+    .mobile-nav.is-open {
+      transform: translateX(0);
+    }
+    .mobile-nav__links {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+    .mobile-nav__links li { border-bottom: 1px solid var(--grey-light); }
+    .mobile-nav__links a {
+      display: block; padding: 16px 4px;
+      font-size: 1.1rem; font-weight: 600; color: var(--text-dark);
+      transition: color 0.2s;
+    }
+    .mobile-nav__links a:hover { color: var(--green-mid); }
+    .mobile-nav__cta { display: flex; flex-direction: column; gap: 12px; }
+    .mobile-nav__cta .btn { width: 100%; font-size: 1rem; }
+
+    /* Overlay derrière le drawer */
+    .nav-overlay {
+      display: none; position: fixed; inset: 0; top: var(--nav-h);
+      background: rgba(0,0,0,0.4); z-index: 189;
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .nav-overlay.is-open { opacity: 1; }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 60%, #1a6e50 100%);
+      color: white; padding: 72px 0 80px; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -80px; right: -80px;
+      width: 420px; height: 420px; background: rgba(255,255,255,0.04); border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero::after {
+      content: ''; position: absolute; bottom: -100px; left: 8%;
+      width: 320px; height: 320px; background: rgba(232,160,32,0.1); border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero__inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 56px;
+      align-items: center; position: relative; z-index: 1;
+    }
+    .hero__eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 18px;
+    }
+    .hero__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--amber-light); border-radius: 50%; }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 4vw, 2.9rem); line-height: 1.2; margin-bottom: 18px;
+    }
+    .hero h1 em { font-style: normal; color: var(--amber-light); }
+    .hero__sub {
+      font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,0.82);
+      margin-bottom: 32px; max-width: 480px;
+    }
+    .hero__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero__stats {
+      display: flex; gap: 32px; flex-wrap: wrap;
+      margin-top: 36px; padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .hero__stat-num { font-size: 1.55rem; font-weight: 800; color: var(--amber-light); }
+    .hero__stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 2px; }
+
+    /* Carte article mis en avant (desktop only) */
+    .hero__card {
+      background: white; border-radius: var(--radius-lg);
+      padding: 28px; color: var(--text-dark); box-shadow: var(--shadow-lg);
+    }
+    .hero__card-label {
+      font-size: 0.74rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--green-mid); margin-bottom: 10px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .hero__card-label::before { content: '★'; color: var(--amber); }
+    .hero__card-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 6px; line-height: 1.4; }
+    .hero__card-meta { font-size: 0.78rem; color: var(--grey-mid); margin-bottom: 14px; }
+    .hero__card-excerpt { font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; margin-bottom: 20px; }
+
+    /* ─── CATÉGORIES ─── */
+    .categories { padding: 72px 0; }
+    .section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 36px; flex-wrap: wrap; gap: 16px; }
+    .categories__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+    .cat-card {
+      padding: 22px 16px; border-radius: var(--radius-md); text-align: center;
+      cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
+      border: 1.5px solid transparent; min-height: 44px;
+    }
+    .cat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .cat-card--green  { background: #d4f0e4; border-color: #b0e0cc; }
+    .cat-card--amber  { background: #fdefd0; border-color: #f5d590; }
+    .cat-card--blue   { background: #dbeafe; border-color: #bfdbfe; }
+    .cat-card--red    { background: #fee2e2; border-color: #fecaca; }
+    .cat-card--purple { background: #ede9fe; border-color: #ddd6fe; }
+    .cat-card__icon { font-size: 1.7rem; margin-bottom: 10px; }
+    .cat-card__name { font-weight: 700; font-size: 0.86rem; color: var(--text-dark); margin-bottom: 4px; }
+    .cat-card__count { font-size: 0.74rem; color: var(--text-mid); }
+
+    /* ─── FEATURED ─── */
+    .featured { padding: 72px 0; background: var(--cream); }
+    .featured__grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 24px; align-items: start; }
+
+    .article-card {
+      background: white; border-radius: var(--radius-md);
+      overflow: hidden; box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .article-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .article-card__img-placeholder {
+      width: 100%; aspect-ratio: 16/9; display: flex;
+      align-items: center; justify-content: center; font-size: 2.8rem;
+    }
+    .img-green  { background: linear-gradient(135deg, #0d3b2e, #2d8a64); }
+    .img-amber  { background: linear-gradient(135deg, #92400e, #d97706); }
+    .img-blue   { background: linear-gradient(135deg, #1e3a8a, #2563eb); }
+    .img-purple { background: linear-gradient(135deg, #4c1d95, #7c3aed); }
+    .img-teal   { background: linear-gradient(135deg, #134e4a, #0d9488); }
+    .article-card__body { padding: 22px; }
+    .article-card--large .article-card__body { padding: 28px; }
+    .article-card__title {
+      font-weight: 700; font-size: 1.08rem; line-height: 1.4;
+      margin: 10px 0 8px; color: var(--text-dark);
+    }
+    .article-card--large .article-card__title { font-size: 1.35rem; }
+    .article-card__excerpt { font-size: 0.87rem; color: var(--text-mid); line-height: 1.65; margin-bottom: 14px; }
+    .article-card__meta {
+      display: flex; align-items: center; gap: 14px;
+      font-size: 0.77rem; color: var(--grey-mid); margin-bottom: 12px; flex-wrap: wrap;
+    }
+
+    /* ─── MYTHS ─── */
+    .myths { padding: 72px 0; }
+    .myths__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .myth-card { border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .myth-card__false { background: #fee2e2; padding: 17px 20px; display: flex; gap: 12px; align-items: flex-start; }
+    .myth-card__true  { background: #d4f0e4; padding: 17px 20px; display: flex; gap: 12px; align-items: flex-start; }
+    .myth-card__icon  { font-size: 1.15rem; flex-shrink: 0; margin-top: 2px; }
+    .myth-card__label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 3px; }
+    .myth-card__false .myth-card__label { color: #991b1b; }
+    .myth-card__true  .myth-card__label { color: var(--green-mid); }
+    .myth-card__text  { font-size: 0.88rem; color: var(--text-dark); line-height: 1.55; }
+
+    /* ─── QUOTE ─── */
+    .quote-section { padding: 72px 0; background: var(--green-dark); color: white; }
+    .quote-inner { max-width: 680px; margin: 0 auto; text-align: center; }
+    .quote-mark { font-family: 'Playfair Display', serif; font-size: 5rem; color: var(--amber); line-height: 0.6; margin-bottom: 22px; display: block; }
+    .quote-text { font-family: 'Playfair Display', serif; font-size: clamp(1.15rem, 2.5vw, 1.65rem); font-weight: 700; line-height: 1.5; margin-bottom: 18px; }
+    .quote-author { font-size: 0.83rem; color: rgba(255,255,255,0.55); }
+
+    /* ─── ARTICLES GRID ─── */
+    .articles { padding: 72px 0; background: var(--grey-light); }
+    .articles__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+
+    /* ─── ABOUT STRIP ─── */
+    .about-strip { padding: 60px 0; background: var(--cream); }
+    .about-strip__inner { display: grid; grid-template-columns: auto 1fr auto; gap: 36px; align-items: center; }
+    .about-strip__avatar {
+      width: 76px; height: 76px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--green-mid), var(--amber));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; color: white; font-weight: 800; flex-shrink: 0;
+    }
+    .about-strip__label { font-size: 0.73rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--green-mid); margin-bottom: 5px; }
+    .about-strip__name  { font-weight: 800; font-size: 1.2rem; margin-bottom: 6px; }
+    .about-strip__bio   { font-size: 0.87rem; color: var(--text-mid); max-width: 500px; }
+
+    /* ─── NEWSLETTER ─── */
+    .newsletter { padding: 72px 0; background: linear-gradient(135deg, #fff8ec, #fdf4e3); }
+    .newsletter__inner { max-width: 540px; margin: 0 auto; text-align: center; }
+    .newsletter__icon {
+      width: 58px; height: 58px; background: var(--amber); border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.55rem; margin: 0 auto 18px;
+    }
+    .newsletter h2 { font-family: 'Playfair Display', serif; font-size: 1.75rem; margin-bottom: 10px; }
+    .newsletter p { color: var(--text-mid); font-size: 0.9rem; margin-bottom: 24px; }
+    .newsletter__form { display: flex; gap: 10px; }
+    .newsletter__input {
+      flex: 1; padding: 13px 18px;
+      border: 1.5px solid #e0d8c8; border-radius: var(--radius-sm);
+      font-size: 0.9rem; font-family: 'Inter', sans-serif;
+      background: white; outline: none; transition: border-color 0.2s;
+      min-height: 48px;
+    }
+    .newsletter__input:focus { border-color: var(--amber); }
+    .newsletter__note { font-size: 0.74rem; color: var(--grey-mid); margin-top: 12px; }
+
+    /* ─── FOOTER ─── */
+    footer { background: var(--green-dark); color: rgba(255,255,255,0.7); padding: 56px 0 28px; }
+    .footer__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 44px; }
+    .footer__logo { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .footer__logo-icon {
+      width: 32px; height: 32px; background: var(--green-mid); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; color: white; font-size: 0.9rem;
+    }
+    .footer__logo-text { font-weight: 800; color: white; }
+    .footer__logo-text span { color: var(--amber-light); }
+    .footer__desc { font-size: 0.83rem; line-height: 1.7; margin-bottom: 18px; }
+    .footer__social { display: flex; gap: 8px; }
+    .footer__social-btn {
+      width: 36px; height: 36px; background: rgba(255,255,255,0.1); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; transition: background 0.2s;
+    }
+    .footer__social-btn:hover { background: var(--green-mid); }
+    .footer__col-title { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: white; margin-bottom: 14px; }
+    .footer__links { list-style: none; }
+    .footer__links li { margin-bottom: 9px; }
+    .footer__links a { font-size: 0.83rem; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+    .footer__links a:hover { color: var(--amber-light); }
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px;
+      display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem;
+    }
+    .footer__bottom-links { display: flex; gap: 18px; }
+    .footer__bottom-links a { color: rgba(255,255,255,0.45); transition: color 0.2s; }
+    .footer__bottom-links a:hover { color: white; }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE — TABLETTE (max 1024px)
+    ═══════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .hero__inner { gap: 36px; }
+      .categories__grid { grid-template-columns: repeat(3, 1fr); }
+      .cat-card:nth-child(4),
+      .cat-card:nth-child(5) { grid-column: span 1; }
+      .featured__grid { grid-template-columns: 1fr; }
+      .featured__grid .article-card--large .article-card__img-placeholder { aspect-ratio: 16/7; }
+      .footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .about-strip__inner { grid-template-columns: auto 1fr; }
+      .about-strip__cta { display: none; }
+    }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE — MOBILE (max 768px)
+    ═══════════════════════════════════════ */
+    @media (max-width: 768px) {
+      :root { --nav-h: 60px; }
+
+      /* Nav */
+      .nav__links, .nav__cta { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav { display: flex; }
+
+      /* Hero */
+      .hero { padding: 48px 0 56px; }
+      .hero__inner { grid-template-columns: 1fr; gap: 0; }
+      .hero__card { display: none; }
+      .hero h1 { font-size: clamp(1.65rem, 6vw, 2.2rem); }
+      .hero__sub { font-size: 0.95rem; }
+      .hero__actions { flex-direction: column; gap: 10px; }
+      .hero__actions .btn { width: 100%; font-size: 0.95rem; }
+      .hero__stats { gap: 20px; }
+      .hero__eyebrow { font-size: 0.72rem; }
+
+      /* Catégories */
+      .categories { padding: 52px 0; }
+      .categories__grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .cat-card:last-child { grid-column: 1 / -1; max-width: 50%; justify-self: center; }
+
+      /* Featured */
+      .featured { padding: 52px 0; }
+
+      /* Myths */
+      .myths { padding: 52px 0; }
+      .myths__grid { grid-template-columns: 1fr; gap: 14px; }
+
+      /* Articles */
+      .articles { padding: 52px 0; }
+      .articles__grid { grid-template-columns: 1fr; gap: 18px; }
+
+      /* About */
+      .about-strip { padding: 48px 0; }
+      .about-strip__inner { grid-template-columns: auto 1fr; gap: 20px; }
+      .about-strip__avatar { width: 60px; height: 60px; font-size: 1.4rem; }
+      .about-strip__name  { font-size: 1.05rem; }
+      .about-strip__bio   { font-size: 0.84rem; }
+
+      /* Newsletter */
+      .newsletter { padding: 52px 0; }
+      .newsletter__form { flex-direction: column; }
+      .newsletter__form .btn { width: 100%; }
+      .newsletter h2 { font-size: 1.45rem; }
+
+      /* Section headers */
+      .section-header { flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 24px; }
+      .section-header .btn--outline { align-self: flex-start; }
+
+      /* Footer */
+      footer { padding: 44px 0 24px; }
+      .footer__grid { grid-template-columns: 1fr; gap: 28px; margin-bottom: 32px; }
+      .footer__bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .footer__bottom-links { flex-wrap: wrap; justify-content: center; }
+
+      /* Quote */
+      .quote-section { padding: 52px 0; }
+      .quote-mark { font-size: 3.5rem; }
+    }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE — PETIT MOBILE (max 400px)
+    ═══════════════════════════════════════ */
+    @media (max-width: 400px) {
+      .container { padding: 0 16px; }
+      .hero h1 { font-size: 1.55rem; }
+      .categories__grid { grid-template-columns: 1fr 1fr; }
+      .cat-card:last-child { grid-column: 1 / -1; max-width: 100%; }
+      .hero__stats { flex-direction: column; gap: 12px; padding-top: 20px; margin-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ MOBILE NAV OVERLAY ═══ -->
+  <div class="nav-overlay" id="navOverlay" onclick="closeNav()" aria-hidden="true"></div>
+
+  <!-- ═══ HEADER ═══ -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="nav__logo" aria-label="MLM Décrypté — Accueil">
+        <div class="nav__logo-icon">M</div>
+        <span class="nav__logo-text">MLM <span>Décrypté</span></span>
+      </a>
+
+      <!-- Desktop -->
+      <ul class="nav__links">
+        <li><a href="#demystifier">Démystifier</a></li>
+        <li><a href="#comprendre">Le modèle</a></li>
+        <li><a href="#realite">La réalité</a></li>
+        <li><a href="#temoignages">Témoignages</a></li>
+        <li><a href="#apropos">À propos</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="#newsletter" class="btn btn--primary">📩 S'abonner</a>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNav">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile nav -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+      <ul class="mobile-nav__links">
+        <li><a href="#demystifier" onclick="closeNav()">🔍 Démystifier</a></li>
+        <li><a href="#comprendre"  onclick="closeNav()">📊 Le modèle</a></li>
+        <li><a href="#realite"     onclick="closeNav()">🌱 La réalité</a></li>
+        <li><a href="#temoignages" onclick="closeNav()">🗣️ Témoignages</a></li>
+        <li><a href="#apropos"     onclick="closeNav()">✍️ À propos</a></li>
+      </ul>
+      <div class="mobile-nav__cta">
+        <a href="#newsletter" class="btn btn--amber" onclick="closeNav()">📩 S'abonner à la newsletter</a>
+        <a href="#articles"   class="btn btn--outline" onclick="closeNav()">Lire les articles</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" aria-label="Introduction">
+    <div class="container">
+      <div class="hero__inner">
+        <div>
+          <div class="hero__eyebrow">Blog indépendant · Regard honnête</div>
+          <h1>Le MLM, c'est quoi <em>vraiment</em>&nbsp;?</h1>
+          <p class="hero__sub">Des articles pour comprendre le marketing de réseau sans jugement hâtif. Ni propagande pro-MLM, ni procès d'intention. Juste de la réflexion.</p>
+          <div class="hero__actions">
+            <a href="#articles" class="btn btn--amber">Lire les articles</a>
+            <a href="#demystifier" class="btn btn--outline" style="color:white;border-color:rgba(255,255,255,0.45)">Démystifier les idées reçues</a>
+          </div>
+          <div class="hero__stats">
+            <div>
+              <div class="hero__stat-num">41</div>
+              <div class="hero__stat-label">Articles publiés</div>
+            </div>
+            <div>
+              <div class="hero__stat-num">6</div>
+              <div class="hero__stat-label">Grandes thématiques</div>
+            </div>
+            <div>
+              <div class="hero__stat-num">100%</div>
+              <div class="hero__stat-label">Indépendant</div>
+            </div>
+          </div>
+        </div>
+        <aside class="hero__card" aria-label="Article à la une">
+          <div class="hero__card-label">Article à la une</div>
+          <h2 class="hero__card-title">MLM et pyramide de Ponzi : pourquoi tout le monde confond les deux</h2>
+          <p class="hero__card-meta">8 min de lecture · Démystifier</p>
+          <p class="hero__card-excerpt">La comparaison revient constamment dans les débats. Mais sur quoi repose-t-elle vraiment ? Quelles sont les différences légales et économiques fondamentales ?</p>
+          <a href="articles/mlm-vs-pyramide-de-ponzi.html" class="read-more">Lire l'article</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CATÉGORIES ═══ -->
+  <section class="categories" id="categories" aria-label="Thématiques">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">Explorer par thème</p>
+          <h2 class="section-title">Les <em>5 grands sujets</em> du blog</h2>
+        </div>
+      </div>
+      <div class="categories__grid">
+        <a href="categories/demystifier.html" class="cat-card cat-card--red">
+          <div class="cat-card__icon">🔍</div>
+          <div class="cat-card__name">Démystifier</div>
+          <div class="cat-card__count">Idées reçues</div>
+        </a>
+        <a href="categories/le-modele.html" class="cat-card cat-card--blue">
+          <div class="cat-card__icon">📊</div>
+          <div class="cat-card__name">Le modèle</div>
+          <div class="cat-card__count">Comment ça marche</div>
+        </a>
+        <a href="categories/la-realite.html" class="cat-card cat-card--green">
+          <div class="cat-card__icon">🌱</div>
+          <div class="cat-card__name">La réalité</div>
+          <div class="cat-card__count">Ni tout rose ni tout noir</div>
+        </a>
+        <a href="categories/temoignages.html" class="cat-card cat-card--amber">
+          <div class="cat-card__icon">🗣️</div>
+          <div class="cat-card__name">Témoignages</div>
+          <div class="cat-card__count">Vraies histoires</div>
+        </a>
+        <a href="categories/mon-regard.html" class="cat-card cat-card--purple">
+          <div class="cat-card__icon">✍️</div>
+          <div class="cat-card__name">Mon regard</div>
+          <div class="cat-card__count">Réflexions perso</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURED ═══ -->
+  <section class="featured" id="featured" aria-label="Articles mis en avant">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">À lire en premier</p>
+          <h2 class="section-title">Les articles <em>essentiels</em></h2>
+        </div>
+        <a href="categories/demystifier.html" class="btn btn--outline">Tous les articles</a>
+      </div>
+      <div class="featured__grid">
+        <article class="article-card article-card--large">
+          <div class="article-card__img-placeholder img-green">🔎</div>
+          <div class="article-card__body">
+            <span class="tag tag--red">Démystifier</span>
+            <h3 class="article-card__title">MLM vs Pyramide de Ponzi : la confusion qui fait tout rater</h3>
+            <div class="article-card__meta"><span>📅 15 mars 2026</span><span>⏱ 8 min</span></div>
+            <p class="article-card__excerpt">Chaque fois qu'on mentionne le MLM, quelqu'un sort le mot "pyramide". Mais cette comparaison est-elle justifiée ? Décryptage des différences légales, structurelles et économiques — sans passion, avec des faits.</p>
+            <a href="articles/mlm-vs-pyramide-de-ponzi.html" class="read-more">Lire l'article</a>
+          </div>
+        </article>
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <article class="article-card">
+            <div class="article-card__img-placeholder img-blue" style="aspect-ratio:16/7">📊</div>
+            <div class="article-card__body">
+              <span class="tag tag--blue">Le modèle</span>
+              <h3 class="article-card__title">Comment fonctionne vraiment la rémunération en MLM ?</h3>
+              <div class="article-card__meta"><span>📅 10 mars 2026</span><span>⏱ 6 min</span></div>
+              <a href="articles/plan-de-compensation-mlm.html" class="read-more">Lire l'article</a>
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="article-card__img-placeholder img-amber" style="aspect-ratio:16/7">🌱</div>
+            <div class="article-card__body">
+              <span class="tag tag--amber">La réalité</span>
+              <h3 class="article-card__title">Pourquoi tant de personnes abandonnent en MLM</h3>
+              <div class="article-card__meta"><span>📅 5 mars 2026</span><span>⏱ 7 min</span></div>
+              <a href="articles/pourquoi-echouer-mlm.html" class="read-more">Lire l'article</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MYTH BUSTERS ═══ -->
+  <section class="myths" id="demystifier" aria-label="Démystifier les idées reçues">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">Idées reçues</p>
+          <h2 class="section-title">Ce qu'on croit savoir <em>vs la réalité</em></h2>
+        </div>
+      </div>
+      <div class="myths__grid">
+        <div class="myth-card">
+          <div class="myth-card__false"><span class="myth-card__icon">✗</span><div><div class="myth-card__label">Idée reçue</div><p class="myth-card__text">"Le MLM, c'est une arnaque. Seul celui qui est en haut gagne."</p></div></div>
+          <div class="myth-card__true"><span class="myth-card__icon">✓</span><div><div class="myth-card__label">La réalité</div><p class="myth-card__text">Un MLM légal repose sur la vente de vrais produits. Les compétences commerciales comptent autant que la position dans l'arbre.</p></div></div>
+        </div>
+        <div class="myth-card">
+          <div class="myth-card__false"><span class="myth-card__icon">✗</span><div><div class="myth-card__label">Idée reçue</div><p class="myth-card__text">"Les produits MLM sont toujours trop chers et de mauvaise qualité."</p></div></div>
+          <div class="myth-card__true"><span class="myth-card__icon">✓</span><div><div class="myth-card__label">La réalité</div><p class="myth-card__text">Certains produits MLM sont surévalués — d'autres sont compétitifs. La vigilance s'impose des deux côtés, comme pour n'importe quelle marque.</p></div></div>
+        </div>
+        <div class="myth-card">
+          <div class="myth-card__false"><span class="myth-card__icon">✗</span><div><div class="myth-card__label">Idée reçue</div><p class="myth-card__text">"Faire du MLM, c'est profiter de ses amis et sa famille."</p></div></div>
+          <div class="myth-card__true"><span class="myth-card__icon">✓</span><div><div class="myth-card__label">La réalité</div><p class="myth-card__text">Partager honnêtement un produit qu'on utilise soi-même, c'est du commerce — pas de la manipulation. La frontière existe et mérite d'être connue.</p></div></div>
+        </div>
+        <div class="myth-card">
+          <div class="myth-card__false"><span class="myth-card__icon">✗</span><div><div class="myth-card__label">Idée reçue</div><p class="myth-card__text">"Tout le monde qui fait du MLM perd de l'argent."</p></div></div>
+          <div class="myth-card__true"><span class="myth-card__icon">✓</span><div><div class="myth-card__label">La réalité</div><p class="myth-card__text">Les statistiques méritent d'être lues avec nuance. Les résultats dépendent de l'engagement réel — comme dans tout entrepreneuriat.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ QUOTE ═══ -->
+  <section class="quote-section" aria-label="Citation">
+    <div class="container">
+      <div class="quote-inner">
+        <span class="quote-mark" aria-hidden="true">"</span>
+        <p class="quote-text">Avant de critiquer un modèle économique, assurons-nous de le comprendre. La nuance est le début de toute réflexion honnête.</p>
+        <p class="quote-author">— La philosophie de MLM Décrypté</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ARTICLES GRID ═══ -->
+  <section class="articles" id="articles" aria-label="Tous les articles">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">Toutes les publications</p>
+          <h2 class="section-title">Derniers <em>articles</em></h2>
+        </div>
+      </div>
+      <div class="articles__grid">
+        <article class="article-card">
+          <div class="article-card__img-placeholder img-teal">🏛️</div>
+          <div class="article-card__body">
+            <span class="tag tag--blue">Le modèle</span>
+            <h3 class="article-card__title">Vente directe vs marketing de réseau : quelle est vraiment la différence ?</h3>
+            <div class="article-card__meta"><span>📅 1 mars 2026</span><span>⏱ 5 min</span></div>
+            <p class="article-card__excerpt">Deux termes souvent utilisés comme synonymes — mais qui désignent des réalités bien distinctes.</p>
+            <a href="articles/difference-vente-directe-mlm.html" class="read-more">Lire l'article</a>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="article-card__img-placeholder img-purple">🗣️</div>
+          <div class="article-card__body">
+            <span class="tag tag--purple">Témoignage</span>
+            <h3 class="article-card__title">Sarah, 3 ans en MLM : "J'ai appris plus sur moi-même que dans mon ancien boulot"</h3>
+            <div class="article-card__meta"><span>📅 22 fév. 2026</span><span>⏱ 6 min</span></div>
+            <p class="article-card__excerpt">Un témoignage sans filtre : les débuts difficiles, les doutes, les petites victoires.</p>
+            <a href="articles/temoignage-mlm-argent.html" class="read-more">Lire l'article</a>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="article-card__img-placeholder img-amber">⚖️</div>
+          <div class="article-card__body">
+            <span class="tag tag--amber">La réalité</span>
+            <h3 class="article-card__title">Les 3 raisons pour lesquelles le MLM est difficile — et personne ne vous le dit</h3>
+            <div class="article-card__meta"><span>📅 14 fév. 2026</span><span>⏱ 7 min</span></div>
+            <p class="article-card__excerpt">L'honnêteté avant tout. Voici les obstacles réels que vous allez rencontrer.</p>
+            <a href="articles/erreurs-debutant-mlm.html" class="read-more">Lire l'article</a>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="article-card__img-placeholder img-green">🌍</div>
+          <div class="article-card__body">
+            <span class="tag tag--green">Le modèle</span>
+            <h3 class="article-card__title">Le MLM dans le monde : comment ce modèle a évolué en 50 ans</h3>
+            <div class="article-card__meta"><span>📅 5 fév. 2026</span><span>⏱ 9 min</span></div>
+            <p class="article-card__excerpt">De l'Amérique des années 70 aux marchés émergents d'aujourd'hui, l'histoire d'un modèle controversé.</p>
+            <a href="articles/plus-grandes-entreprises-mlm.html" class="read-more">Lire l'article</a>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="article-card__img-placeholder img-blue">🧠</div>
+          <div class="article-card__body">
+            <span class="tag tag--red">Démystifier</span>
+            <h3 class="article-card__title">Recrutement ou vente ? Pourquoi cette question révèle tout sur une société MLM</h3>
+            <div class="article-card__meta"><span>📅 28 jan. 2026</span><span>⏱ 6 min</span></div>
+            <p class="article-card__excerpt">Si une société MLM valorise plus le recrutement que la vente, c'est un signal d'alerte fort.</p>
+            <a href="articles/mlm-recrutement-ou-vente.html" class="read-more">Lire l'article</a>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="article-card__img-placeholder img-teal">✍️</div>
+          <div class="article-card__body">
+            <span class="tag tag--purple">Mon regard</span>
+            <h3 class="article-card__title">Pourquoi j'ai décidé d'écrire sur le MLM — et pas pour le défendre aveuglément</h3>
+            <div class="article-card__meta"><span>📅 15 jan. 2026</span><span>⏱ 4 min</span></div>
+            <p class="article-card__excerpt">Le premier article de ce blog. Une explication franche de ma démarche et de mes engagements.</p>
+            <a href="articles/pourquoi-blog-mlm-decrypte.html" class="read-more">Lire l'article</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT STRIP ═══ -->
+  <section class="about-strip" id="apropos" aria-label="À propos de l'auteur">
+    <div class="container">
+      <div class="about-strip__inner">
+        <div class="about-strip__avatar" aria-hidden="true">CL</div>
+        <div>
+          <p class="about-strip__label">Qui écrit ce blog ?</p>
+          <h2 class="about-strip__name">Laurent Constantin</h2>
+          <p class="about-strip__bio">Praticien du MLM depuis plusieurs années, je ne suis ni un évangéliste ni un détracteur. J'écris pour partager une vision nuancée, basée sur mon expérience terrain — parce que ce sujet mérite mieux que les caricatures habituelles.</p>
+        </div>
+        <div class="about-strip__cta">
+          <a href="a-propos.html" class="btn btn--primary">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ NEWSLETTER ═══ -->
+  <section class="newsletter" id="newsletter" aria-label="Newsletter">
+    <div class="container">
+      <div class="newsletter__inner">
+        <div class="newsletter__icon" aria-hidden="true">📩</div>
+        <h2>Restez informé, pensez par vous-même</h2>
+        <p>Un nouvel article par semaine, directement dans votre boîte mail. Pas de spam, pas de recrutement — juste de la réflexion.</p>
+        <form class="newsletter__form" onsubmit="return handleNewsletter(event)" novalidate>
+          <input type="email" class="newsletter__input" placeholder="votre@email.com" aria-label="Votre adresse email" required />
+          <button type="submit" class="btn btn--amber">S'abonner</button>
+        </form>
+        <div class="newsletter__note" style="text-align:left;margin-top:12px">
+          <label style="display:flex;align-items:flex-start;gap:7px;cursor:pointer;font-size:0.75rem;color:#9a9aaa;line-height:1.5">
+            <input type="checkbox" required style="margin-top:3px;flex-shrink:0;accent-color:#1a5c44;width:14px;height:14px">
+            <span>J'accepte de recevoir la newsletter hebdomadaire de MLM Décrypté. Désabonnement à tout moment en un clic. <a href="confidentialite.html" style="color:#1a5c44;text-decoration:underline">Politique de confidentialité</a></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer aria-label="Pied de page">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <div class="footer__logo-icon">M</div>
+            <span class="footer__logo-text">MLM <span>Décrypté</span></span>
+          </div>
+          <p class="footer__desc">Un blog indépendant pour comprendre le marketing de réseau sans a priori. Ni pro-MLM forcené, ni procès permanent — juste de la réflexion honnête.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-btn" aria-label="Instagram">📷</a>
+            <a href="#" class="footer__social-btn" aria-label="Facebook">📘</a>
+            <a href="#" class="footer__social-btn" aria-label="LinkedIn">💼</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Thématiques</h3>
+          <ul class="footer__links">
+            <li><a href="categories/demystifier.html">Démystifier</a></li>
+            <li><a href="categories/le-modele.html">Le modèle économique</a></li>
+            <li><a href="categories/la-realite.html">La réalité du terrain</a></li>
+            <li><a href="categories/temoignages.html">Témoignages</a></li>
+            <li><a href="categories/mon-regard.html">Mon regard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Articles populaires</h3>
+          <ul class="footer__links">
+            <li><a href="articles/mlm-vs-pyramide-de-ponzi.html">MLM vs Ponzi : les différences</a></li>
+            <li><a href="articles/plan-de-compensation-mlm.html">Comment fonctionne la rémunération</a></li>
+            <li><a href="articles/pourquoi-echouer-mlm.html">Pourquoi beaucoup abandonnent</a></li>
+            <li><a href="articles/plus-grandes-entreprises-mlm.html">L'histoire du MLM en 50 ans</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Le blog</h3>
+          <ul class="footer__links">
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Proposer un témoignage</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 MLM Décrypté · Tous droits réservés</p>
+        <div class="footer__bottom-links">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ─── MENU MOBILE ─── */
+    const hamburger  = document.getElementById('hamburger');
+    const mobileNav  = document.getElementById('mobileNav');
+    const navOverlay = document.getElementById('navOverlay');
+
+    function toggleNav() {
+      const isOpen = mobileNav.classList.contains('is-open');
+      isOpen ? closeNav() : openNav();
+    }
+    function openNav() {
+      hamburger.classList.add('is-active');
+      hamburger.setAttribute('aria-expanded', 'true');
+      mobileNav.classList.add('is-open');
+      navOverlay.classList.add('is-open');
+      navOverlay.style.display = 'block';
+      document.body.classList.add('nav-open');
+    }
+    function closeNav() {
+      hamburger.classList.remove('is-active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileNav.classList.remove('is-open');
+      navOverlay.classList.remove('is-open');
+      setTimeout(() => { navOverlay.style.display = 'none'; }, 300);
+      document.body.classList.remove('nav-open');
+    }
+    /* Fermer avec Echap */
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+
+    /* ─── NEWSLETTER ─── */
+    function handleNewsletter(e) {
+      e.preventDefault();
+      const form  = e.target;
+      const input = form.querySelector('input[type="email"]');
+      const btn   = form.querySelector('button');
+      const email = input.value.trim();
+      if (!email) return false;
+
+      btn.textContent = 'Inscription…';
+      btn.disabled = true;
+
+      /* Simuler l'envoi — remplacer par l'appel API Brevo en production */
+      setTimeout(() => {
+        btn.textContent = '✓ Abonné(e) !';
+        btn.style.background = '#16a34a';
+        input.value = '';
+        setTimeout(() => {
+          btn.textContent = 'S\'abonner';
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3500);
+      }, 1000);
+      return false;
+    }
+  </script>
+<!-- ═══ COOKIE CONSENT + TRACKERS ═══ -->
+<style>
+  #cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fff;border-top:2px solid #e8e8f0;box-shadow:0 -4px 24px rgba(0,0,0,0.1);padding:20px 24px;font-family:'Inter',sans-serif}
+  #cookie-banner .cb-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+  #cookie-banner .cb-text{flex:1;min-width:260px;font-size:0.84rem;color:#4a4a6a;line-height:1.6}
+  #cookie-banner .cb-text strong{color:#1a1a2e}
+  #cookie-banner .cb-text a{color:#1a5c44;text-decoration:underline}
+  #cookie-banner .cb-btns{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}
+  #cookie-banner .cb-btn{padding:10px 20px;border-radius:8px;font-weight:700;font-size:0.84rem;cursor:pointer;border:none;min-height:42px;transition:opacity 0.2s}
+  #cookie-banner .cb-btn:hover{opacity:0.85}
+  #cookie-banner .cb-accept{background:#1a5c44;color:#fff}
+  #cookie-banner .cb-refuse{background:#f4f4f6;color:#1a1a2e;border:1.5px solid #e8e8f0}
+  #cookie-banner .cb-custom{background:transparent;color:#1a5c44;text-decoration:underline;padding:10px 8px;font-size:0.8rem}
+  #cookie-modal{display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.5);align-items:center;justify-content:center}
+  #cookie-modal.is-open{display:flex}
+  #cookie-modal .cm-box{background:#fff;border-radius:14px;padding:32px;max-width:520px;width:90%;max-height:85vh;overflow-y:auto}
+  #cookie-modal h3{font-size:1.1rem;font-weight:700;color:#1a1a2e;margin-bottom:16px}
+  #cookie-modal .cm-item{border:1.5px solid #e8e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px}
+  #cookie-modal .cm-item-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+  #cookie-modal .cm-item-title{font-weight:600;font-size:0.9rem;color:#1a1a2e}
+  #cookie-modal .cm-item-desc{font-size:0.8rem;color:#4a4a6a;line-height:1.5}
+  .cm-toggle{position:relative;width:44px;height:24px;flex-shrink:0}
+  .cm-toggle input{opacity:0;width:0;height:0}
+  .cm-toggle .slider{position:absolute;inset:0;background:#e8e8f0;border-radius:24px;cursor:pointer;transition:0.3s}
+  .cm-toggle input:checked+.slider{background:#1a5c44}
+  .cm-toggle .slider:before{content:'';position:absolute;width:18px;height:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:0.3s}
+  .cm-toggle input:checked+.slider:before{transform:translateX(20px)}
+  .cm-toggle input:disabled+.slider{opacity:0.6;cursor:not-allowed}
+  #cookie-modal .cm-footer{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+  #cookie-modal .cm-save{flex:1;padding:12px;background:#1a5c44;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:0.9rem}
+  #cookie-modal .cm-refuse-all{flex:1;padding:12px;background:#f4f4f6;color:#1a1a2e;border:1.5px solid #e8e8f0;border-radius:8px;font-weight:700;cursor:pointer;font-size:0.9rem}
+  @media(max-width:600px){#cookie-banner .cb-inner{flex-direction:column;align-items:flex-start}#cookie-banner .cb-btns{width:100%}#cookie-banner .cb-btn{flex:1;text-align:center}}
+</style>
+
+<!-- Bannière -->
+<div id="cookie-banner" style="display:none" role="dialog" aria-label="Gestion des cookies">
+  <div class="cb-inner">
+    <div class="cb-text">
+      <strong>🍪 Ce site utilise des cookies.</strong> Google Analytics et Meta Pixel nous aident à comprendre notre audience et améliorer le contenu. Vos données ne sont pas revendues.
+      <a href="confidentialite.html">Politique de confidentialité</a>
+    </div>
+    <div class="cb-btns">
+      <button class="cb-btn cb-accept" onclick="cbAcceptAll()">Tout accepter</button>
+      <button class="cb-btn cb-refuse" onclick="cbRefuseAll()">Tout refuser</button>
+      <button class="cb-btn cb-custom" onclick="cbOpenModal()">Personnaliser</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal personnalisation -->
+<div id="cookie-modal" role="dialog" aria-modal="true" aria-label="Paramètres cookies">
+  <div class="cm-box">
+    <h3>⚙️ Paramètres des cookies</h3>
+    <div class="cm-item">
+      <div class="cm-item-header">
+        <span class="cm-item-title">Cookies essentiels</span>
+        <label class="cm-toggle"><input type="checkbox" checked disabled><span class="slider"></span></label>
+      </div>
+      <div class="cm-item-desc">Nécessaires au fonctionnement du site. Ne peuvent pas être désactivés.</div>
+    </div>
+    <div class="cm-item">
+      <div class="cm-item-header">
+        <span class="cm-item-title">Google Analytics (audience)</span>
+        <label class="cm-toggle"><input type="checkbox" id="toggle-ga"><span class="slider"></span></label>
+      </div>
+      <div class="cm-item-desc">Mesure d'audience anonymisée — pages vues, durée de visite, provenance du trafic. Aucune donnée personnelle identifiable.</div>
+    </div>
+    <div class="cm-item">
+      <div class="cm-item-header">
+        <span class="cm-item-title">Meta Pixel (publicité)</span>
+        <label class="cm-toggle"><input type="checkbox" id="toggle-meta"><span class="slider"></span></label>
+      </div>
+      <div class="cm-item-desc">Utilisé pour mesurer l'efficacité des publicités Facebook/Instagram et créer des audiences de retargeting.</div>
+    </div>
+    <div class="cm-footer">
+      <button class="cm-refuse-all" onclick="cbRefuseAll()">Tout refuser</button>
+      <button class="cm-save" onclick="cbSaveCustom()">Enregistrer mes choix</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var GA_ID = 'GA_MEASUREMENT_ID';   // ← Remplacer par ex: G-ABC123XYZ
+  var META_ID = 'META_PIXEL_ID';     // ← Remplacer par ex: 123456789012345
+  var STORAGE_KEY = 'mlmd_cookie_consent';
+
+  function getConsent(){ try{ return JSON.parse(localStorage.getItem(STORAGE_KEY)); }catch(e){ return null; } }
+  function setConsent(obj){ localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); }
+
+  function loadGA(){
+    if(GA_ID === 'GA_MEASUREMENT_ID') return;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID, {anonymize_ip: true});
+  }
+
+  function loadMeta(){
+    if(META_ID === 'META_PIXEL_ID') return;
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+      t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', META_ID);
+    fbq('track', 'PageView');
+  }
+
+  function applyConsent(consent){
+    if(consent.analytics) loadGA();
+    if(consent.advertising) loadMeta();
+  }
+
+  function hideBanner(){ document.getElementById('cookie-banner').style.display='none'; }
+  function hideModal(){ document.getElementById('cookie-modal').classList.remove('is-open'); }
+
+  window.cbAcceptAll = function(){
+    setConsent({analytics:true, advertising:true});
+    loadGA(); loadMeta(); hideBanner();
+  };
+  window.cbRefuseAll = function(){
+    setConsent({analytics:false, advertising:false});
+    hideBanner(); hideModal();
+  };
+  window.cbOpenModal = function(){
+    document.getElementById('cookie-modal').classList.add('is-open');
+  };
+  window.cbSaveCustom = function(){
+    var ga = document.getElementById('toggle-ga').checked;
+    var meta = document.getElementById('toggle-meta').checked;
+    setConsent({analytics:ga, advertising:meta});
+    if(ga) loadGA();
+    if(meta) loadMeta();
+    hideBanner(); hideModal();
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var consent = getConsent();
+    if(!consent){
+      document.getElementById('cookie-banner').style.display='block';
+    } else {
+      applyConsent(consent);
+    }
+    // Close modal on overlay click
+    document.getElementById('cookie-modal').addEventListener('click', function(e){
+      if(e.target === this) cbRefuseAll();
+    });
+  });
+})();
+</script>
+<!-- ═══ FIN COOKIE CONSENT ═══ -->
+</body>
+</html>

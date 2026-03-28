@@ -1,0 +1,49 @@
+name: Publication automatique MLM Décrypté
+
+on:
+  schedule:
+    # Chaque mardi à 8h00 (UTC+1 = 7h UTC)
+    - cron: '0 7 * * 2'
+    # Chaque vendredi à 8h00
+    - cron: '0 7 * * 5'
+  # Permet de déclencher manuellement depuis GitHub
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Configurer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Publier les articles du jour
+        run: python3 publish.py
+
+      - name: Afficher le statut
+        run: python3 publish.py --status
+
+      - name: Committer les changements
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "MLM Décrypté Bot"
+          git diff --quiet && echo "Aucun changement" || (git add -A && git commit -m "Publication automatique — $(date +'%Y-%m-%d')")
+
+      - name: Pousser vers GitHub
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Déclencher le déploiement Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          pip install netlify-cli 2>/dev/null || true
+          curl -X POST -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" \
+            "https://api.netlify.com/api/v1/sites/$NETLIFY_SITE_ID/builds"
+          echo "Déploiement Netlify déclenché"

@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qui est derrière MLM Décrypté ? Laurent Constantin partage sa vision, son parcours et sa philosophie éditoriale sur le marketing de réseau.">
+    <title>À propos — Laurent Constantin | MLM Décrypté</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-dark: #0d3b2e;
+            --green-mid: #1a5c44;
+            --amber: #e8a020;
+            --amber-light: #f5c052;
+            --cream: #faf8f3;
+            --grey-light: #f4f4f6;
+            --grey-mid: #9a9aaa;
+            --text-dark: #1a1a2e;
+            --text-mid: #4a4a6a;
+            --nav-h: 68px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            border-bottom: 1px solid #e8e8e8;
+            height: var(--nav-h);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--green-dark);
+            text-decoration: none;
+        }
+
+        nav.desktop {
+            display: flex;
+            gap: 32px;
+        }
+
+        nav.desktop a {
+            text-decoration: none;
+            color: var(--text-mid);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav.desktop a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--amber);
+            transition: width 0.3s ease;
+        }
+
+        nav.desktop a:hover::after {
+            width: 100%;
+        }
+
+        nav.desktop a.active {
+            color: var(--green-dark);
+            font-weight: 600;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2.5px;
+            background: var(--text-dark);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-overlay {
+            display: none;
+            position: fixed;
+            top: var(--nav-h);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 99;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
+        nav.mobile {
+            display: none;
+            position: fixed;
+            top: var(--nav-h);
+            left: 0;
+            width: 280px;
+            height: calc(100vh - var(--nav-h));
+            background: white;
+            flex-direction: column;
+            padding: 24px 0;
+            z-index: 101;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav.mobile.active {
+            transform: translateX(0);
+        }
+
+        nav.mobile a {
+            text-decoration: none;
+            color: var(--text-mid);
+            font-size: 16px;
+            padding: 16px 24px;
+            transition: background 0.2s ease, color 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+
+        nav.mobile a:hover {
+            background: var(--grey-light);
+            color: var(--green-dark);
+        }
+
+        nav.mobile a.active {
+            background: var(--cream);
+            color: var(--green-dark);
+            border-left-color: var(--amber);
+            font-weight: 600;
+        }
+
+        /* ===== RESPONSIVE HEADER ===== */
+        @media (max-width: 1024px) {
+            nav.desktop {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav.mobile {
+                display: flex;
+            }
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        main {
+            min-height: calc(100vh - var(--nav-h) - 300px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-sm {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-md {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+            color: white;
+            padding: 80px 24px;
+            text-align: center;
+        }
+
+        .breadcrumb {
+            font-size: 13px;
+            margin-bottom: 24px;
+            opacity: 0.85;
+            letter-spacing: 0.5px;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.7;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-hero {
+            background: var(--cream);
+            padding: 80px 24px;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 48px;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-avatar {
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .avatar-circle {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--green-mid) 0%, var(--amber) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: white;
+            margin: 0 auto 16px;
+        }
+
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--green-dark);
+            margin-bottom: 8px;
+        }
+
+        .about-title {
+            font-size: 16px;
+            color: var(--amber);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .about-bio {
+            font-size: 15px;
+            color: var(--text-mid);
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--amber);
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-mid);
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== PHILOSOPHY SECTION ===== */
+        .philosophy {
+            background: white;
+            padding: 80px 24px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--cream);
+            padding: 32px 24px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e8e8e8;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--green-dark);
+            margin-bottom: 12px;
+        }
+
+        .card-text {
+            font-size: 14px;
+            color: var(--text-mid);
+            line-height: 1.6;
+        }
+
+        /* ===== NOT SECTION ===== */
+        .not-section {
+            background: var(--grey-light);
+            padding: 80px 24px;
+        }
+
+        .not-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--green-dark);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .not-list {
+            max-width: 600px;
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        .not-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 15px;
+            color: var(--text-mid);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .not-list li:last-child {
+            border-bottom: none;
+        }
+
+        .not-list li::before {
+            content: '✕';
+            color: #d32f2f;
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: -2px;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: var(--amber-light);
+            padding: 60px 24px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            min-width: 200px;
+            padding: 12px 16px;
+            border: 1.5px solid var(--amber);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            background: white;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--green-dark);
+            box-shadow: 0 0 0 3px rgba(13, 59, 46, 0.1);
+        }
+
+        .newsletter-form button {
+            padding: 12px 32px;
+            background: var(--green-dark);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--green-mid);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--green-dark);
+            color: white;
+            padding: 60px 24px 40px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            font-size: 13px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .footer-col a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            transition: opacity 0.2s ease;
+        }
+
+        .footer-col a:hover {
+            opacity: 0.7;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* ===== PARCOURS TIMELINE ===== */
+        .parcours {
+            background: white;
+            padding: 80px 24px;
+        }
+        .parcours-intro {
+            font-size: 15px;
+            color: var(--text-mid);
+            max-width: 700px;
+            margin: 0 auto 56px;
+            text-align: center;
+            line-height: 1.8;
+        }
+        .timeline {
+            max-width: 760px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--green-mid), var(--amber));
+        }
+        .timeline-item {
+            display: flex;
+            gap: 28px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .timeline-dot {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            z-index: 1;
+            border: 3px solid white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .dot--green { background: var(--green-mid); }
+        .dot--red { background: #dc2626; }
+        .dot--grey { background: #6b7280; }
+        .dot--amber { background: var(--amber); }
+        .timeline-body {
+            padding-top: 10px;
+            flex: 1;
+        }
+        .timeline-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 7px;
+        }
+        .tag-sport { background: #dbeafe; color: #1e40af; }
+        .tag-echec { background: #fee2e2; color: #991b1b; }
+        .tag-pause { background: #f3f4f6; color: #4b5563; }
+        .tag-maintenant { background: #d4f0e4; color: var(--green-mid); }
+        .timeline-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .timeline-text {
+            font-size: 0.88rem;
+            color: var(--text-mid);
+            line-height: 1.75;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .about-content {
+                gap: 32px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+
+            .about-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0 16px;
+            }
+
+            .hero {
+                padding: 60px 16px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero-subtitle {
+                font-size: 15px;
+            }
+
+            .about-hero {
+                padding: 60px 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .about-text h2 {
+                font-size: 24px;
+            }
+
+            .philosophy {
+                padding: 60px 16px;
+            }
+
+            .not-section {
+                padding: 60px 16px;
+            }
+
+            .not-section h2 {
+                font-size: 24px;
+            }
+
+            .cta-section {
+                padding: 50px 16px;
+            }
+
+            .cta-section h2 {
+                font-size: 24px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input,
+            .newsletter-form button {
+                width: 100%;
+            }
+
+            footer {
+                padding: 40px 16px 30px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                margin-bottom: 24px;
+            }
+
+            .footer-bottom {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .logo {
+                font-size: 24px;
+            }
+
+            header {
+                height: 60px;
+                padding: 0 12px;
+            }
+
+            :root {
+                --nav-h: 60px;
+            }
+
+            .hero {
+                padding: 48px 12px;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .hero-subtitle {
+                font-size: 14px;
+            }
+
+            .about-avatar {
+                margin-bottom: 32px;
+            }
+
+            .avatar-circle {
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+            }
+
+            .about-text h2 {
+                font-size: 20px;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-top: 24px;
+            }
+
+            .section-title {
+                font-size: 22px;
+                margin-bottom: 32px;
+            }
+
+            .card {
+                padding: 24px 16px;
+            }
+
+            .card-icon {
+                font-size: 32px;
+            }
+
+            .card-title {
+                font-size: 18px;
+            }
+
+            .card-text {
+                font-size: 13px;
+            }
+
+            .not-section h2 {
+                font-size: 20px;
+                margin-bottom: 24px;
+            }
+
+            .not-list li {
+                font-size: 14px;
+                padding: 12px 0;
+            }
+
+            .cta-section {
+                padding: 40px 12px;
+            }
+
+            .cta-section h2 {
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+
+            .newsletter-form input::placeholder {
+                font-size: 13px;
+            }
+
+            nav.mobile {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo">M</a>
+        <nav class="desktop">
+            <a href="index.html">Accueil</a>
+            <a href="categories/demystifier.html">Démystifier</a>
+            <a href="categories/le-modele.html">Le modèle</a>
+            <a href="categories/la-realite.html">La réalité</a>
+            <a href="categories/temoignages.html">Témoignages</a>
+            <a href="categories/mon-regard.html">Mon regard</a>
+            <a href="a-propos.html" class="active">À propos</a>
+        </nav>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile">
+            <a href="index.html">Accueil</a>
+            <a href="categories/demystifier.html">Démystifier</a>
+            <a href="categories/le-modele.html">Le modèle</a>
+            <a href="categories/la-realite.html">La réalité</a>
+            <a href="categories/temoignages.html">Témoignages</a>
+            <a href="categories/mon-regard.html">Mon regard</a>
+            <a href="a-propos.html" class="active">À propos</a>
+        </nav>
+        <div class="nav-overlay"></div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Accueil</a> › À propos
+                </div>
+                <h1>À propos de MLM Décrypté</h1>
+                <p class="hero-subtitle">Un blog né de la conviction qu'on peut parler du MLM honnêtement.</p>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-avatar" style="flex-shrink:0;text-align:center">
+                        <img src="assets/images/laurent-about.jpg"
+                             alt="Laurent Constantin — MLM Décrypté"
+                             style="width:220px;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.18);object-fit:cover;object-position:center top">
+                    </div>
+                    <div class="about-text">
+                        <h2>Laurent Constantin</h2>
+                        <p class="about-title">Ancien joueur professionnel · Équipe de France de badminton · Coach · Entrepreneur · Auteur</p>
+                        <p class="about-bio">
+                            Avant d'écrire une seule ligne sur le MLM, il faut que tu saches qui je suis — vraiment. Parce que mon regard sur ce sujet vient directement de mon parcours, et ce parcours n'est pas celui d'un influenceur qui a découvert le marketing de réseau sur Instagram.
+                        </p>
+                        <p class="about-bio">
+                            J'ai été joueur de badminton professionnel, sélectionné en équipe de France. Le sport de haut niveau m'a appris une chose que je n'oublierai jamais : <strong>le talent ne suffit pas</strong>. Ce qui fait la différence entre ceux qui réussissent et les autres, c'est la discipline, la formation continue, et la capacité à encaisser l'échec sans se définir par lui. Je suis ensuite devenu entraîneur, formateur de coachs, et j'ai créé <strong>Fuzions Badminton</strong> — une structure qui organise des stages, produit du contenu, forme les entraîneurs, et partage ma passion à travers des publications dont un livre et deux guides pratiques.
+                        </p>
+                        <p class="about-bio">
+                            Aujourd'hui, je suis salarié et entrepreneur simultanément. Le MLM, je l'ai rejoint non pas pour fuir quelque chose, mais pour ajouter un levier à une vie professionnelle déjà construite — et parce que ma belle-sœur m'a présenté une opportunité qui, cette fois, méritait vraiment d'être regardée sérieusement. Depuis quelques mois, je développe cette activité avec sérieux, j'ai construit une équipe, j'ai connu des victoires et des zones d'ombre. Et c'est précisément tout ça que ce blog a vocation à raconter.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">🏸</div>
+                                <div class="stat-label">Équipe de France</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">3</div>
+                                <div class="stat-label">Publications (livre + 2 guides)</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">0€</div>
+                                <div class="stat-label">Commission si tu rejoins un MLM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARCOURS TIMELINE -->
+        <section class="parcours">
+            <div class="container">
+                <h2 class="section-title">Mon parcours MLM — sans filtre</h2>
+                <p class="parcours-intro">Je t'épargne le discours lisse. Voilà ce qui s'est vraiment passé, dans l'ordre, avec les réussites et les échecs.</p>
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot dot--green">🏸</div>
+                        <div class="timeline-body">
+                            <span class="timeline-tag tag-sport">Le point de départ</span>
+                            <div class="timeline-title">Sportif de haut niveau, puis entrepreneur du badminton</div>
+                            <p class="timeline-text">Des années à m'entraîner, à me former, à transmettre. Le sport de haut niveau n'est pas différent de l'entrepreneuriat : seule une minorité atteint le sommet, et c'est rarement grâce au talent seul. J'ai créé Fuzions Badminton, écrit, formé, construit. Cette mentalité — apprendre, persévérer, ne pas confondre l'échec avec une sentence définitive — est ce qui colore tout ce que je pense du MLM aujourd'hui.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot dot--red">❌</div>
+                        <div class="timeline-body">
+                            <span class="timeline-tag tag-echec">Premier essai — Échec</span>
+                            <div class="timeline-title">ACN : le modèle des services télécom, mais sans les bonnes fondations</div>
+                            <p class="timeline-text">Ma première expérience MLM. Un modèle de services, une opportunité qui semblait sérieuse. Résultat : j'ai arrêté. Pourquoi ? Manque d'accompagnement de mon sponsor, manque d'engagement de ma part, une proposition que je ne défendais pas vraiment avec conviction. J'en parle sans amertume — ce n'était pas le modèle le problème, c'était moi qui n'étais pas au bon endroit au bon moment.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot dot--red">❌</div>
+                        <div class="timeline-body">
+                            <span class="timeline-tag tag-echec">Deuxième essai — Échec</span>
+                            <div class="timeline-title">Kyani : des produits bien-être, mais toujours le même problème</div>
+                            <p class="timeline-text">Deuxième tentative, modèle différent — produits de santé cette fois. Et le même constat : je n'en parlais pas assez, je n'étais pas profondément en phase avec les produits, et je supportais mal l'idée d'être "ce gars qui vend à ses amis". J'ai arrêté, et je me suis dit que le MLM n'était tout simplement pas fait pour moi. Ce que je ne savais pas, c'est que le problème n'était pas le MLM — c'était la combinaison société + produit + timing + état d'esprit.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot dot--grey">⏸</div>
+                        <div class="timeline-body">
+                            <span class="timeline-tag tag-pause">La parenthèse</span>
+                            <div class="timeline-title">"Jamais plus" — et pourtant</div>
+                            <p class="timeline-text">Après deux échecs, j'ai tourné la page. Mais je n'ai jamais été anti-MLM pour autant. J'avais vu des gens réussir. J'avais compris que mes échecs étaient en partie les miens. Je gardais juste une conviction : si je revenais un jour dans ce monde, ce serait avec une société que je choisirais moi-même, pour de vraies raisons, pas sous la pression de quelqu'un.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot dot--amber">🌱</div>
+                        <div class="timeline-body">
+                            <span class="timeline-tag tag-maintenant">Aujourd'hui</span>
+                            <div class="timeline-title">Un retour par conviction, pas par hasard</div>
+                            <p class="timeline-text">C'est ma belle-sœur qui m'a présenté l'opportunité. Pas un inconnu sur les réseaux, pas un recruteur agressif — quelqu'un de proche, en qui j'ai confiance, et qui m'a laissé le temps de réfléchir. J'ai trouvé une société de services dont les valeurs humaines correspondaient aux miennes, une équipe qui partage la même vision : une aventure humaine bienveillante avant d'être un business. Pour la première fois, je ne ressentais pas ce malaise de "vendre à mes proches" — je partageais quelque chose en quoi je croyais vraiment.</p>
+                            <p class="timeline-text" style="margin-top:10px">Depuis quelques mois, je développe cette activité sérieusement. J'ai construit une équipe. J'ai eu des victoires — et des moments de doute, des obstacles, des erreurs. Ce blog et le contenu que je crée autour sont nés de là : l'envie de raconter tout ça avec transparence, les bons comme les mauvais côtés, pour que tu aies une vraie image de ce que c'est de lancer et développer un MLM quand on part de zéro avec les yeux ouverts.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PHILOSOPHY SECTION -->
+        <section class="philosophy">
+            <div class="container">
+                <h2 class="section-title">Ce que je crois vraiment</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-icon">🏆</div>
+                        <h3 class="card-title">Ce n'est pas le modèle, c'est ce qu'on en fait</h3>
+                        <p class="card-text">J'ai échoué deux fois en MLM. Ce n'est pas le marketing de réseau qui est en cause — c'est l'alignement entre la personne, la société et le moment. Un couteau n'est ni bon ni mauvais : tout dépend de qui le tient et pourquoi.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📈</div>
+                        <h3 class="card-title">Le MLM sera de plus en plus cherché</h3>
+                        <p class="card-text">Le monde du travail change. La liberté de gestion du temps, le revenu complémentaire, la flexibilité — ce sont des aspirations croissantes. Le MLM, dans ses formes sérieuses, répond à ces besoins mieux que beaucoup d'alternatives.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🧠</div>
+                        <h3 class="card-title">L'éducation financière avant tout</h3>
+                        <p class="card-text">Certains perdent de l'argent en MLM. Mais dépenser plus qu'on gagne, c'est un problème universel — pas spécifique au MLM. Ce qui manque, c'est l'éducation financière, pas la suppression du modèle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOT SECTION -->
+        <section class="not-section">
+            <div class="container">
+                <h2>Ce blog n'est pas...</h2>
+                <ul class="not-list">
+                    <li>Un outil de recrutement déguisé pour une société MLM</li>
+                    <li>Un blog anti-MLM qui condamne le modèle sans le connaître</li>
+                    <li>Le discours d'un "expert" qui a tout réussi du premier coup</li>
+                    <li>Financé par des commissions ou des partenariats non déclarés</li>
+                    <li>La promesse que le MLM va changer ta vie si tu t'y mets</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section">
+            <div class="container-sm">
+                <h2>Tu partages cette vision ?</h2>
+                <p style="font-size: 15px; color: var(--text-mid); margin-bottom: 24px;">Rejoins les lecteurs de MLM Décrypté et reçois les nouveaux articles directement dans ta boîte mail.</p>
+                <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit">S'abonner</button>
+                    <label class="rgpd-consent" style="display:flex;align-items:flex-start;gap:8px;font-size:0.8rem;color:var(--text-mid);margin-top:10px;cursor:pointer">
+                        <input type="checkbox" required style="margin-top:2px;flex-shrink:0">
+                        <span>J'accepte de recevoir la newsletter hebdomadaire. <a href="confidentialite.html" style="color:var(--amber)">Désabonnement à tout moment.</a></span>
+                    </label>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>MLM Décrypté</h3>
+                <p>Un blog sur le marketing de réseau. Honnête, basé sur les faits, respectueux de votre intelligence.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Navigation</h3>
+                <a href="index.html">Accueil</a>
+                <a href="categories/demystifier.html">Démystifier</a>
+                <a href="categories/le-modele.html">Le modèle</a>
+                <a href="categories/la-realite.html">La réalité</a>
+            </div>
+            <div class="footer-col">
+                <h3>Ressources</h3>
+                <a href="categories/temoignages.html">Témoignages</a>
+                <a href="categories/mon-regard.html">Mon regard</a>
+                <a href="a-propos.html">À propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h3>Légal</h3>
+                <a href="mentions-legales.html">Mentions légales</a>
+                <a href="confidentialite.html">Confidentialité</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MLM Décrypté. Tous droits réservés. | Design par Laurent Constantin</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('nav.mobile');
+        const navOverlay = document.querySelector('.nav-overlay');
+        const mobileLinks = document.querySelectorAll('nav.mobile a');
+
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', toggleMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Close menu on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+
+        // Newsletter form
+        function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const input = e.target.querySelector('input');
+            const button = e.target.querySelector('button');
+            const originalText = button.textContent;
+
+            button.textContent = 'Inscrit !';
+            button.style.background = 'var(--green-mid)';
+            input.value = '';
+
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '';
+            }, 3000);
+        }
+
+        // Set active nav link
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    </script>
+<!-- ═══ COOKIE CONSENT + TRACKERS ═══ -->
+<style>
+  #cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fff;border-top:2px solid #e8e8f0;box-shadow:0 -4px 24px rgba(0,0,0,0.1);padding:20px 24px;font-family:'Inter',sans-serif}
+  #cookie-banner .cb-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+  #cookie-banner .cb-text{flex:1;min-width:260px;font-size:0.84rem;color:#4a4a6a;line-height:1.6}
+  #cookie-banner .cb-text strong{color:#1a1a2e}
+  #cookie-banner .cb-text a{color:#1a5c44;text-decoration:underline}
+  #cookie-banner .cb-btns{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}
+  #cookie-banner .cb-btn{padding:10px 20px;border-radius:8px;font-weight:700;font-size:0.84rem;cursor:pointer;border:none;min-height:42px;transition:opacity 0.2s}
+  #cookie-banner .cb-btn:hover{opacity:0.85}
+  #cookie-banner .cb-accept{background:#1a5c44;color:#fff}
+  #cookie-banner .cb-refuse{background:#f4f4f6;color:#1a1a2e;border:1.5px solid #e8e8f0}
+  #cookie-banner .cb-custom{background:transparent;color:#1a5c44;text-decoration:underline;padding:10px 8px;font-size:0.8rem}
+  #cookie-modal{display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.5);align-items:center;justify-content:center}
+  #cookie-modal.is-open{display:flex}
+  #cookie-modal .cm-box{background:#fff;border-radius:14px;padding:32px;max-width:520px;width:90%;max-height:85vh;overflow-y:auto}
+  #cookie-modal h3{font-size:1.1rem;font-weight:700;color:#1a1a2e;margin-bottom:16px}
+  #cookie-modal .cm-item{border:1.5px solid #e8e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px}
+  #cookie-modal .cm-item-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+  #cookie-modal .cm-item-title{font-weight:600;font-size:0.9rem;color:#1a1a2e}
+  #cookie-modal .cm-item-desc{font-size:0.8rem;color:#4a4a6a;line-height:1.5}
+  .cm-toggle{position:relative;width:44px;height:24px;flex-shrink:0}
+  .cm-toggle input{opacity:0;width:0;height:0}
+  .cm-toggle .slider{position:absolute;inset:0;background:#e8e8f0;border-radius:24px;cursor:pointer;transition:0.3s}
+  .cm-toggle input:checked+.slider{background:#1a5c44}
+  .cm-toggle .slider:before{content:'';position:absolute;width:18px;height:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:0.3s}
+  .cm-toggle input:checked+.slider:before{transform:translateX(20px)}
+  .cm-toggle input:disabled+.slider{opacity:0.6;cursor:not-allowed}
+  #cookie-modal .cm-footer{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+  #cookie-modal .cm-save{flex:1;padding:12px;background:#1a5c44;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:0.9rem}
+  #cookie-modal .cm-refuse-all{flex:1;padding:12px;background:#f4f4f6;color:#1a1a2e;border:1.5px solid #e8e8f0;border-radius:8px;font-weight:700;cursor:pointer;font-size:0.9rem}
+  @media(max-width:600px){#cookie-banner .cb-inner{flex-direction:column;align-items:flex-start}#cookie-banner .cb-btns{width:100%}#cookie-banner .cb-btn{flex:1;text-align:center}}
+</style>
+
+<!-- Bannière -->
+<div id="cookie-banner" style="display:none" role="dialog" aria-label="Gestion des cookies">
+  <div class="cb-inner">
+    <div class="cb-text">
+      <strong>🍪 Ce site utilise des cookies.</strong> Google Analytics et Meta Pixel nous aident à comprendre notre audience et améliorer le contenu. Vos données ne sont pas revendues.
+      <a href="confidentialite.html">Politique de confidentialité</a>
+    </div>
+    <div class="cb-btns">
+      <button class="cb-btn cb-accept" onclick="cbAcceptAll()">Tout accepter</button>
+      <button class="cb-btn cb-refuse" onclick="cbRefuseAll()">Tout refuser</button>
+      <button class="cb-btn cb-custom" onclick="cbOpenModal()">Personnaliser</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal personnalisation -->
+<div id="cookie-modal" role="dialog" aria-modal="true" aria-label="Paramètres cookies">
+  <div class="cm-box">
+    <h3>⚙️ Paramètres des cookies</h3>
+    <div class="cm-item">
+      <div class="cm-item-header">
+        <span class="cm-item-title">Cookies essentiels</span>
+        <label class="cm-toggle"><input type="checkbox" checked disabled><span class="slider"></span></label>
+      </div>
+      <div class="cm-item-desc">Nécessaires au fonctionnement du site. Ne peuvent pas être désactivés.</div>
+    </div>
+    <div class="cm-item">
+      <div class="cm-item-header">
+        <span class="cm-item-title">Google Analytics (audience)</span>
+        <label class="cm-toggle"><input type="checkbox" id="toggle-ga"><span class="slider"></span></label>
+      </div>
+      <div class="cm-item-desc">Mesure d'audience anonymisée — pages vues, durée de visite, provenance du trafic. Aucune donnée personnelle identifiable.</div>
+    </div>
+    <div class="cm-item">
+      <div class="cm-item-header">
+        <span class="cm-item-title">Meta Pixel (publicité)</span>
+        <label class="cm-toggle"><input type="checkbox" id="toggle-meta"><span class="slider"></span></label>
+      </div>
+      <div class="cm-item-desc">Utilisé pour mesurer l'efficacité des publicités Facebook/Instagram et créer des audiences de retargeting.</div>
+    </div>
+    <div class="cm-footer">
+      <button class="cm-refuse-all" onclick="cbRefuseAll()">Tout refuser</button>
+      <button class="cm-save" onclick="cbSaveCustom()">Enregistrer mes choix</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var GA_ID = 'GA_MEASUREMENT_ID';   // ← Remplacer par ex: G-ABC123XYZ
+  var META_ID = 'META_PIXEL_ID';     // ← Remplacer par ex: 123456789012345
+  var STORAGE_KEY = 'mlmd_cookie_consent';
+
+  function getConsent(){ try{ return JSON.parse(localStorage.getItem(STORAGE_KEY)); }catch(e){ return null; } }
+  function setConsent(obj){ localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); }
+
+  function loadGA(){
+    if(GA_ID === 'GA_MEASUREMENT_ID') return;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID, {anonymize_ip: true});
+  }
+
+  function loadMeta(){
+    if(META_ID === 'META_PIXEL_ID') return;
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+      t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', META_ID);
+    fbq('track', 'PageView');
+  }
+
+  function applyConsent(consent){
+    if(consent.analytics) loadGA();
+    if(consent.advertising) loadMeta();
+  }
+
+  function hideBanner(){ document.getElementById('cookie-banner').style.display='none'; }
+  function hideModal(){ document.getElementById('cookie-modal').classList.remove('is-open'); }
+
+  window.cbAcceptAll = function(){
+    setConsent({analytics:true, advertising:true});
+    loadGA(); loadMeta(); hideBanner();
+  };
+  window.cbRefuseAll = function(){
+    setConsent({analytics:false, advertising:false});
+    hideBanner(); hideModal();
+  };
+  window.cbOpenModal = function(){
+    document.getElementById('cookie-modal').classList.add('is-open');
+  };
+  window.cbSaveCustom = function(){
+    var ga = document.getElementById('toggle-ga').checked;
+    var meta = document.getElementById('toggle-meta').checked;
+    setConsent({analytics:ga, advertising:meta});
+    if(ga) loadGA();
+    if(meta) loadMeta();
+    hideBanner(); hideModal();
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var consent = getConsent();
+    if(!consent){
+      document.getElementById('cookie-banner').style.display='block';
+    } else {
+      applyConsent(consent);
+    }
+    // Close modal on overlay click
+    document.getElementById('cookie-modal').addEventListener('click', function(e){
+      if(e.target === this) cbRefuseAll();
+    });
+  });
+})();
+</script>
+<!-- ═══ FIN COOKIE CONSENT ═══ -->
+</body>
+</html>

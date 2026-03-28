@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Politique de confidentialité et gestion des données personnelles du blog MLM Décrypté. Conforme RGPD.">
+    <title>Politique de confidentialité | MLM Décrypté</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-dark: #0d3b2e;
+            --green-mid: #1a5c44;
+            --amber: #e8a020;
+            --amber-light: #f5c052;
+            --cream: #faf8f3;
+            --grey-light: #f4f4f6;
+            --grey-mid: #9a9aaa;
+            --text-dark: #1a1a2e;
+            --text-mid: #4a4a6a;
+            --nav-h: 68px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            border-bottom: 1px solid #e8e8e8;
+            height: var(--nav-h);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--green-dark);
+            text-decoration: none;
+        }
+
+        nav.desktop {
+            display: flex;
+            gap: 32px;
+        }
+
+        nav.desktop a {
+            text-decoration: none;
+            color: var(--text-mid);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav.desktop a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--amber);
+            transition: width 0.3s ease;
+        }
+
+        nav.desktop a:hover::after {
+            width: 100%;
+        }
+
+        nav.desktop a.active {
+            color: var(--green-dark);
+            font-weight: 600;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2.5px;
+            background: var(--text-dark);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-overlay {
+            display: none;
+            position: fixed;
+            top: var(--nav-h);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 99;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
+        nav.mobile {
+            display: none;
+            position: fixed;
+            top: var(--nav-h);
+            left: 0;
+            width: 280px;
+            height: calc(100vh - var(--nav-h));
+            background: white;
+            flex-direction: column;
+            padding: 24px 0;
+            z-index: 101;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav.mobile.active {
+            transform: translateX(0);
+        }
+
+        nav.mobile a {
+            text-decoration: none;
+            color: var(--text-mid);
+            font-size: 16px;
+            padding: 16px 24px;
+            transition: background 0.2s ease, color 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+
+        nav.mobile a:hover {
+            background: var(--grey-light);
+            color: var(--green-dark);
+        }
+
+        nav.mobile a.active {
+            background: var(--cream);
+            color: var(--green-dark);
+            border-left-color: var(--amber);
+            font-weight: 600;
+        }
+
+        /* ===== RESPONSIVE HEADER ===== */
+        @media (max-width: 1024px) {
+            nav.desktop {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav.mobile {
+                display: flex;
+            }
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        main {
+            min-height: calc(100vh - var(--nav-h) - 300px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-md {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+            color: white;
+            padding: 80px 24px;
+        }
+
+        .breadcrumb {
+            font-size: 13px;
+            margin-bottom: 24px;
+            opacity: 0.85;
+            letter-spacing: 0.5px;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.7;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        /* ===== LEGAL CONTENT ===== */
+        .legal-content {
+            background: white;
+            padding: 80px 24px;
+        }
+
+        .legal-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--green-dark);
+            margin: 40px 0 20px 0;
+            padding-top: 20px;
+            border-top: 2px solid var(--amber-light);
+        }
+
+        .legal-content h2:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .legal-content p {
+            font-size: 15px;
+            color: var(--text-mid);
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .legal-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .legal-content a {
+            color: var(--green-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .legal-content a:hover {
+            color: var(--amber);
+        }
+
+        .legal-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 16px;
+        }
+
+        .legal-content li {
+            font-size: 15px;
+            color: var(--text-mid);
+            padding-left: 24px;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .legal-content li::before {
+            content: '•';
+            color: var(--amber);
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+        }
+
+        .highlight-box {
+            background: var(--cream);
+            border-left: 4px solid var(--amber);
+            padding: 16px;
+            margin: 24px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--green-dark);
+            color: white;
+            padding: 60px 24px 40px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            font-size: 13px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .footer-col a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            transition: opacity 0.2s ease;
+        }
+
+        .footer-col a:hover {
+            opacity: 0.7;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0 16px;
+            }
+
+            .hero {
+                padding: 60px 16px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .legal-content {
+                padding: 60px 16px;
+            }
+
+            .legal-content h2 {
+                font-size: 22px;
+            }
+
+            .legal-content p {
+                font-size: 14px;
+            }
+
+            footer {
+                padding: 40px 16px 30px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                margin-bottom: 24px;
+            }
+
+            .footer-bottom {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .logo {
+                font-size: 24px;
+            }
+
+            header {
+                height: 60px;
+                padding: 0 12px;
+            }
+
+            :root {
+                --nav-h: 60px;
+            }
+
+            .hero {
+                padding: 48px 12px;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .breadcrumb {
+                font-size: 12px;
+            }
+
+            .legal-content {
+                padding: 48px 12px;
+            }
+
+            .legal-content h2 {
+                font-size: 20px;
+            }
+
+            .legal-content p {
+                font-size: 13px;
+            }
+
+            .legal-content li {
+                font-size: 13px;
+            }
+
+            .highlight-box {
+                padding: 12px;
+            }
+
+            nav.mobile {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo">M</a>
+        <nav class="desktop">
+            <a href="index.html">Accueil</a>
+            <a href="categories/demystifier.html">Démystifier</a>
+            <a href="categories/le-modele.html">Le modèle</a>
+            <a href="categories/la-realite.html">La réalité</a>
+            <a href="categories/temoignages.html">Témoignages</a>
+            <a href="categories/mon-regard.html">Mon regard</a>
+            <a href="a-propos.html">À propos</a>
+        </nav>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile">
+            <a href="index.html">Accueil</a>
+            <a href="categories/demystifier.html">Démystifier</a>
+            <a href="categories/le-modele.html">Le modèle</a>
+            <a href="categories/la-realite.html">La réalité</a>
+            <a href="categories/temoignages.html">Témoignages</a>
+            <a href="categories/mon-regard.html">Mon regard</a>
+            <a href="a-propos.html">À propos</a>
+        </nav>
+        <div class="nav-overlay"></div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Accueil</a> › Politique de confidentialité
+                </div>
+                <h1>Politique de confidentialité</h1>
+            </div>
+        </section>
+
+        <!-- LEGAL CONTENT -->
+        <section class="legal-content">
+            <div class="container-md">
+                <h2>Responsable du traitement</h2>
+                <p>
+                    <strong>Laurent Constantin</strong> est le responsable du traitement des données personnelles collectées via ce site.
+                </p>
+
+                <h2>Données collectées</h2>
+                <p>
+                    MLM Décrypté collecte uniquement votre adresse email via le formulaire d'inscription à la newsletter. Aucune autre donnée personnelle n'est collectée automatiquement ou manuellement sur ce site.
+                </p>
+
+                <h2>Finalité de la collecte</h2>
+                <p>
+                    Votre adresse email est collectée uniquement pour vous envoyer une newsletter hebdomadaire contenant les nouveaux articles publiés sur le blog. Nous ne l'utilisons pour aucune autre fin.
+                </p>
+
+                <h2>Base légale du traitement</h2>
+                <p>
+                    Le traitement de vos données personnelles repose sur votre consentement explicite. Vous avez donné ce consentement en remplissant le formulaire d'inscription à la newsletter et en cliquant sur "S'abonner".
+                </p>
+
+                <h2>Durée de conservation</h2>
+                <p>
+                    Votre adresse email est conservée dans notre base de données tant que vous restez abonné à la newsletter. Dès que vous vous désabonnez, votre email est supprimé de notre système dans les 24 heures.
+                </p>
+
+                <h2>Vos droits</h2>
+                <p>
+                    Conformément au Règlement général sur la protection des données (RGPD), vous disposez des droits suivants :
+                </p>
+                <ul>
+                    <li><strong>Droit d'accès :</strong> vous pouvez demander à accéder aux données personnelles que nous détenons à votre sujet.</li>
+                    <li><strong>Droit de rectification :</strong> vous pouvez demander la correction de données inexactes.</li>
+                    <li><strong>Droit à la suppression :</strong> vous pouvez demander la suppression de vos données (droit à l'oubli).</li>
+                    <li><strong>Droit à la limitation du traitement :</strong> vous pouvez demander à limiter le traitement de vos données.</li>
+                    <li><strong>Droit à la portabilité :</strong> vous pouvez demander à recevoir vos données dans un format structuré et interopérable.</li>
+                    <li><strong>Droit d'opposition :</strong> vous pouvez vous opposer au traitement de vos données.</li>
+                </ul>
+
+                <h2>Service d'email marketing : Brevo</h2>
+                <p>
+                    MLM Décrypté utilise <strong>Brevo</strong> (anciennement Sendinblue) pour gérer et envoyer la newsletter. Brevo est une entreprise française conforme au RGPD.
+                </p>
+                <div class="highlight-box">
+                    <p>
+                        <strong>Brevo SAS</strong><br>
+                        55, rue d'Amsterdam<br>
+                        75008 Paris, France<br>
+                        <a href="https://www.brevo.com" target="_blank">www.brevo.com</a>
+                    </p>
+                </div>
+                <p>
+                    Vos données sont traitées par Brevo conformément à ses conditions d'utilisation et sa politique de confidentialité. Pour plus d'information sur le traitement de vos données par Brevo, consultez leur <a href="https://www.brevo.com/fr/politique-de-confidentialite/" target="_blank">politique de confidentialité</a>.
+                </p>
+
+                <h2>Sécurité des données</h2>
+                <p>
+                    Nous mettons en place des mesures de sécurité appropriées pour protéger vos données personnelles contre l'accès non autorisé, l'altération ou la destruction. Cependant, aucun système de transmission sur Internet n'est 100% sécurisé.
+                </p>
+
+                <h2>Cookies</h2>
+                <p>
+                    Ce site utilise des cookies analytics (Google Analytics) et publicitaires (Meta Pixel) <strong>uniquement avec votre consentement explicite</strong>. En l'absence de consentement, aucun cookie n'est déposé. Voir la section "Cookies et traceurs" ci-dessous.
+                </p>
+
+                
+                <h2>Cookies et traceurs</h2>
+                <p>
+                    Ce site utilise deux types de cookies tiers, soumis à votre consentement préalable :
+                </p>
+                <ul>
+                    <li><strong>Google Analytics 4</strong> — mesure d'audience anonymisée (pages consultées, durée de visite, provenance du trafic). L'adresse IP est anonymisée. Aucune donnée personnelle identifiable n'est collectée. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité Google</a>.</li>
+                    <li><strong>Meta Pixel</strong> — utilisé uniquement en cas de campagnes publicitaires Facebook/Instagram actives, pour mesurer les conversions et créer des audiences de retargeting. <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Politique de confidentialité Meta</a>.</li>
+                </ul>
+                <p>
+                    Ces cookies ne sont chargés qu'après votre accord explicite via la bannière de consentement. Vous pouvez à tout moment modifier vos choix en cliquant sur le lien "Gérer mes cookies" en bas de page, ou en effaçant les données de navigation de votre navigateur.
+                </p>
+                <p>
+                    En l'absence de consentement (refus ou absence de réponse), aucun cookie de traçage n'est déposé sur votre appareil.
+                </p>
+
+<h2>Liens externes</h2>
+                <p>
+                    MLM Décrypté peut contenir des liens vers des sites tiers. Nous ne sommes pas responsables de leurs politiques de confidentialité. Nous vous encourageons à consulter leur politique de confidentialité avant de partager vos données personnelles avec ces sites.
+                </p>
+
+                <h2>Exercer vos droits</h2>
+                <p>
+                    Pour exercer l'un de vos droits RGPD, veuillez nous contacter à l'adresse suivante : <a href="mailto:contact@mlm-decrypte.fr">contact@mlm-decrypte.fr</a>
+                </p>
+                <p>
+                    Nous traiterons votre demande dans les 30 jours suivant sa réception. Si vous estimez que vos droits ne sont pas respectés, vous avez également le droit de déposer une plainte auprès de la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés).
+                </p>
+
+                <h2>Modifications de la politique</h2>
+                <p>
+                    Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Les modifications entreront en vigueur dès leur publication sur ce site. Nous vous conseillons de consulter régulièrement cette page pour rester informé des changements.
+                </p>
+
+                <h2>Dernière mise à jour</h2>
+                <p>
+                    <strong>25 mars 2026</strong>
+                </p>
+
+                <h2>Nous contacter</h2>
+                <p>
+                    Si vous avez des questions concernant cette politique de confidentialité ou la gestion de vos données personnelles, contactez-nous à : <a href="mailto:contact@mlm-decrypte.fr">contact@mlm-decrypte.fr</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>MLM Décrypté</h3>
+                <p>Un blog sur le marketing de réseau. Honnête, basé sur les faits, respectueux de votre intelligence.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Navigation</h3>
+                <a href="index.html">Accueil</a>
+                <a href="categories/demystifier.html">Démystifier</a>
+                <a href="categories/le-modele.html">Le modèle</a>
+                <a href="categories/la-realite.html">La réalité</a>
+            </div>
+            <div class="footer-col">
+                <h3>Ressources</h3>
+                <a href="categories/temoignages.html">Témoignages</a>
+                <a href="categories/mon-regard.html">Mon regard</a>
+                <a href="a-propos.html">À propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h3>Légal</h3>
+                <a href="mentions-legales.html">Mentions légales</a>
+                <a href="confidentialite.html">Confidentialité</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MLM Décrypté. Tous droits réservés. | Design par Laurent Constantin</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('nav.mobile');
+        const navOverlay = document.querySelector('.nav-overlay');
+        const mobileLinks = document.querySelectorAll('nav.mobile a');
+
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', toggleMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Close menu on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+
+        // Set active nav link
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
