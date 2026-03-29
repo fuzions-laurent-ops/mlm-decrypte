@@ -1,0 +1,55 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#302b63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#24243e;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="accentGradient" cx="70%" cy="30%">
+      <stop offset="0%" style="stop-color:#16213e;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  <rect width="1200" height="630" fill="url(#accentGradient)"/>
+
+  <!-- Decorative geometric pattern -->
+  <rect x="0" y="0" width="300" height="300" fill="#16213e" opacity="0.08" transform="rotate(45 150 150)"/>
+  <circle cx="1050" cy="550" r="110" fill="#16213e" opacity="0.1"/>
+
+  <!-- Balance Scale Icon -->
+  <g transform="translate(900, 160)">
+    <!-- Stand -->
+    <rect x="-3" y="25" width="6" height="45" fill="#16213e"/>
+    <polygon points="-25,70 25,70 20,75 -20,75" fill="#16213e"/>
+    <!-- Beam -->
+    <rect x="-40" y="25" width="80" height="4" rx="2" fill="#16213e"/>
+    <!-- Left pan -->
+    <rect x="-55" y="35" width="20" height="15" rx="2" fill="#ff6b6b" stroke="#16213e" stroke-width="1.5"/>
+    <!-- Right pan -->
+    <rect x="35" y="35" width="20" height="15" rx="2" fill="#51cf66" stroke="#16213e" stroke-width="1.5"/>
+    <!-- Left weight (X) -->
+    <text x="-45" y="48" font-family="Arial" font-size="20" font-weight="bold" fill="#16213e" text-anchor="middle">X</text>
+    <!-- Right checkmark -->
+    <path d="M 45 42 L 50 48 L 58 38" stroke="#16213e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Main Title -->
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" fill="white">
+    MLM : arnaque ou
+  </text>
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" fill="white">
+    vraie opportunité ?
+  </text>
+
+  <!-- Decorative line -->
+  <line x1="250" y1="380" x2="950" y2="380" stroke="#16213e" stroke-width="2" opacity="0.5"/>
+
+  <!-- Branding -->
+  <text x="1150" y="605" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="end" fill="#16213e" opacity="0.8">
+    MLM DÉCRYPTÉ
+  </text>
+</svg>

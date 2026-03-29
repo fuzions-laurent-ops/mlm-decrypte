@@ -417,17 +417,19 @@ ml('account', '2228137');
         </div>
         <script>
         (function(){
-          var u=encodeURIComponent(window.location.href);
-          var t=encodeURIComponent(document.title);
-          var wa=document.getElementById('sh-wa');
-          var fb=document.getElementById('sh-fb');
-          var li=document.getElementById('sh-li');
-          var x=document.getElementById('sh-x');
-          if(wa)wa.href='https://wa.me/?text='+t+'%20'+u;
-          if(fb)fb.href='https://www.facebook.com/sharer/sharer.php?u='+u;
-          if(li)li.href='https://www.linkedin.com/shareArticle?mini=true&url='+u+'&title='+t;
-          if(x)x.href='https://twitter.com/intent/tweet?url='+u+'&text='+t;
-        })();
+  var canonical=document.querySelector('link[rel="canonical"]');
+  var pageUrl=canonical?canonical.href:window.location.href;
+  var u=encodeURIComponent(pageUrl);
+  var t=encodeURIComponent(document.title.split(' — ')[0]);
+  var wa=document.getElementById('sh-wa');
+  var fb=document.getElementById('sh-fb');
+  var li=document.getElementById('sh-li');
+  var x=document.getElementById('sh-x');
+  if(wa){wa.href='https://wa.me/?text='+t+'%20'+u;wa.onclick=function(e){e.preventDefault();window.open(this.href,'wa','width=600,height=500');}}
+  if(fb){fb.href='https://www.facebook.com/sharer/sharer.php?u='+u;fb.onclick=function(e){e.preventDefault();window.open(this.href,'fb','width=600,height=400');}}
+  if(li){li.href='https://www.linkedin.com/sharing/share-offsite/?url='+u;li.onclick=function(e){e.preventDefault();window.open(this.href,'li','width=600,height=400');}}
+  if(x){x.href='https://twitter.com/intent/tweet?url='+u+'&text='+t;x.onclick=function(e){e.preventDefault();window.open(this.href,'tw','width=600,height=400');}}
+})();
         </script>
         <div class="author-box">
           <div class="author-box__avatar" style="background:none;padding:0;overflow:hidden"><img src="../assets/images/laurent-avatar.jpg" alt="Laurent Constantin" style="width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center top" loading="lazy"></div>
@@ -470,10 +472,10 @@ ml('account', '2228137');
       <div style="margin:40px 0;padding:24px;background:#faf8f3;border-radius:14px;text-align:center">
   <p style="font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;color:#1a5c44;margin-bottom:12px">Partager cet article</p>
   <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-    <a onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'fb','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#1877F2;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">Facebook</a>
-    <a onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title),'tw','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#1DA1F2;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">Twitter</a>
-    <a onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href),'li','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#0A66C2;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">LinkedIn</a>
-    <a onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.title+' '+location.href),'wa','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#25D366;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">WhatsApp</a>
+    <a onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href.split('?')[0]),'fb','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#1877F2;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">Facebook</a>
+    <a onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href.split('?')[0])+'&text='+encodeURIComponent(document.title.split(' — ')[0]),'tw','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#1DA1F2;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">Twitter</a>
+    <a onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href.split('?')[0]),'li','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#0A66C2;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">LinkedIn</a>
+    <a onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.title.split(' — ')[0]+' '+window.location.href.split('?')[0]),'wa','width=600,height=500')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#25D366;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">WhatsApp</a>
   </div>
 </div>
 

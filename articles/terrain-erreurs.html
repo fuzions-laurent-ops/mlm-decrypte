@@ -359,17 +359,19 @@ ml('account', '2228137');
         </div>
         <script>
         (function(){
-          var u=encodeURIComponent(window.location.href);
-          var t=encodeURIComponent(document.title);
-          var wa=document.getElementById('sh-wa');
-          var fb=document.getElementById('sh-fb');
-          var li=document.getElementById('sh-li');
-          var x=document.getElementById('sh-x');
-          if(wa)wa.href='https://wa.me/?text='+t+'%20'+u;
-          if(fb)fb.href='https://www.facebook.com/sharer/sharer.php?u='+u;
-          if(li)li.href='https://www.linkedin.com/shareArticle?mini=true&url='+u+'&title='+t;
-          if(x)x.href='https://twitter.com/intent/tweet?url='+u+'&text='+t;
-        })();
+  var canonical=document.querySelector('link[rel="canonical"]');
+  var pageUrl=canonical?canonical.href:window.location.href;
+  var u=encodeURIComponent(pageUrl);
+  var t=encodeURIComponent(document.title.split(' — ')[0]);
+  var wa=document.getElementById('sh-wa');
+  var fb=document.getElementById('sh-fb');
+  var li=document.getElementById('sh-li');
+  var x=document.getElementById('sh-x');
+  if(wa){wa.href='https://wa.me/?text='+t+'%20'+u;wa.onclick=function(e){e.preventDefault();window.open(this.href,'wa','width=600,height=500');}}
+  if(fb){fb.href='https://www.facebook.com/sharer/sharer.php?u='+u;fb.onclick=function(e){e.preventDefault();window.open(this.href,'fb','width=600,height=400');}}
+  if(li){li.href='https://www.linkedin.com/sharing/share-offsite/?url='+u;li.onclick=function(e){e.preventDefault();window.open(this.href,'li','width=600,height=400');}}
+  if(x){x.href='https://twitter.com/intent/tweet?url='+u+'&text='+t;x.onclick=function(e){e.preventDefault();window.open(this.href,'tw','width=600,height=400');}}
+})();
         </script>
 
       </article>

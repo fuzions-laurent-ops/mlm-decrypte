@@ -1,0 +1,59 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#302b63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#24243e;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="accentGradient" cx="70%" cy="30%">
+      <stop offset="0%" style="stop-color:#16213e;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  <rect width="1200" height="630" fill="url(#accentGradient)"/>
+
+  <!-- Decorative geometric pattern -->
+  <circle cx="1050" cy="150" r="100" fill="#16213e" opacity="0.1"/>
+  <circle cx="100" cy="500" r="85" fill="#16213e" opacity="0.1"/>
+
+  <!-- Chart/Money Icon -->
+  <g transform="translate(880, 160)">
+    <!-- Dollar sign background -->
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#51cf66" stroke-width="2" opacity="0.3"/>
+
+    <!-- Bars chart -->
+    <g fill="#51cf66" opacity="0.8">
+      <rect x="-30" y="5" width="8" height="20" rx="1"/>
+      <rect x="-15" y="-5" width="8" height="30" rx="1"/>
+      <rect x="0" y="-15" width="8" height="40" rx="1"/>
+      <rect x="15" y="0" width="8" height="25" rx="1"/>
+      <rect x="30" y="10" width="8" height="15" rx="1"/>
+    </g>
+
+    <!-- Trend line -->
+    <polyline points="-28,15 -12,0 5,-20 22,5 35,-5" fill="none" stroke="#ffd700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+
+    <!-- Dollar symbol -->
+    <text x="0" y="35" font-family="Arial" font-size="16" font-weight="bold" fill="#51cf66" text-anchor="middle">$</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" fill="white">
+    Peut-on vraiment
+  </text>
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" fill="white">
+    vivre du MLM ?
+  </text>
+
+  <!-- Decorative line -->
+  <line x1="250" y1="380" x2="950" y2="380" stroke="#51cf66" stroke-width="2" opacity="0.5"/>
+
+  <!-- Branding -->
+  <text x="1150" y="605" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="end" fill="#16213e" opacity="0.8">
+    MLM DÉCRYPTÉ
+  </text>
+</svg>
