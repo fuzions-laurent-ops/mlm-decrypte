@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /push-github.html
+
+Sitemap: https://mlm-decrypte.fr/sitemap.xml
+RSS: https://mlm-decrypte.fr/feed.xml

@@ -161,12 +161,6 @@
     "publish_date": "2026-06-09",
     "status": "scheduled"
   },
-  "terrain-premiers-jours-mwr.html": {
-    "title": "Mes premiers jours chez MWR Life",
-    "category": "sur-le-terrain",
-    "publish_date": "2026-06-12",
-    "status": "scheduled"
-  },
   "terrain-premier-echec.html": {
     "title": "Mon premier échec en MLM",
     "category": "sur-le-terrain",
@@ -213,30 +207,6 @@
     "title": "70 collaborateurs : ce que ça m'a appris",
     "category": "sur-le-terrain",
     "publish_date": "2026-07-10",
-    "status": "scheduled"
-  },
-  "temoignage-mlm-argent.html": {
-    "title": "Témoignage : l'argent en MLM",
-    "category": "temoignages",
-    "publish_date": "2026-07-14",
-    "status": "scheduled"
-  },
-  "perdre-argent-mlm-temoignage.html": {
-    "title": "Témoignage : j'ai perdu de l'argent en MLM",
-    "category": "temoignages",
-    "publish_date": "2026-07-17",
-    "status": "scheduled"
-  },
-  "portrait-mere-famille-mlm.html": {
-    "title": "Portrait : mère de famille en MLM",
-    "category": "temoignages",
-    "publish_date": "2026-07-21",
-    "status": "scheduled"
-  },
-  "quitter-emploi-pour-mlm.html": {
-    "title": "Quitter son emploi pour le MLM",
-    "category": "temoignages",
-    "publish_date": "2026-07-24",
     "status": "scheduled"
   },
   "quitter-le-mlm.html": {

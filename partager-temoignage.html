@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partagez votre témoignage MLM — MLM Décrypté</title>
+  <meta name="description" content="Vous avez une expérience MLM à partager ? Succès, échec, doute, reconversion — toutes les histoires vraies ont leur place sur MLM Décrypté." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;color:#1a1a2e;background:#fff;line-height:1.7;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    :root{
+      --green-dark:#0d3b2e;--green-mid:#1a5c44;--amber:#e8a020;
+      --cream:#faf8f3;--grey-light:#f4f4f6;--grey-mid:#9a9aaa;
+      --text-dark:#1a1a2e;--text-mid:#4a4a6a;--nav-h:68px
+    }
+    .container{max-width:1140px;margin:0 auto;padding:0 24px}
+    .container--narrow{max-width:680px;margin:0 auto;padding:0 24px}
+
+    /* HEADER */
+    header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,0.08)}
+    nav{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h)}
+    .nav__logo{display:flex;align-items:center;gap:10px}
+    .nav__logo-icon{width:38px;height:38px;background:var(--green-mid);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:800;color:white}
+    .nav__logo-text{font-weight:800;font-size:1.12rem;color:var(--text-dark)}
+    .nav__logo-text span{color:var(--green-mid)}
+    .nav__links{display:flex;align-items:center;gap:28px;list-style:none}
+    .nav__links a{font-size:0.88rem;font-weight:500;color:var(--text-mid);transition:color 0.2s}
+    .nav__links a:hover{color:var(--green-mid)}
+    .nav__cta .btn{display:inline-flex;align-items:center;padding:10px 22px;border-radius:8px;font-weight:600;font-size:0.88rem;border:none;cursor:pointer;background:var(--green-mid);color:white;transition:background 0.2s}
+    .nav__cta .btn:hover{background:var(--green-dark)}
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:10px;margin-right:-10px;background:none;border:none;z-index:201;min-width:44px;min-height:44px}
+    .hamburger__line{display:block;width:24px;height:2px;background:var(--text-dark);border-radius:2px;transition:transform 0.3s ease,opacity 0.3s ease;transform-origin:center}
+    .hamburger.is-active .hamburger__line:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.is-active .hamburger__line:nth-child(2){opacity:0;transform:scaleX(0)}
+    .hamburger.is-active .hamburger__line:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav-overlay{display:none;position:fixed;inset:0;top:var(--nav-h);background:rgba(0,0,0,0.4);z-index:189;opacity:0;transition:opacity 0.3s ease}
+    .nav-overlay.is-open{opacity:1}
+    .mobile-nav{display:none;position:fixed;inset:0;top:var(--nav-h);z-index:190;background:white;padding:28px 24px 40px;flex-direction:column;overflow-y:auto;transform:translateX(100%);transition:transform 0.3s ease}
+    .mobile-nav.is-open{transform:translateX(0)}
+    .mobile-nav__links{list-style:none;margin-bottom:24px}
+    .mobile-nav__links li{border-bottom:1px solid var(--grey-light)}
+    .mobile-nav__links a{display:block;padding:15px 4px;font-size:1.05rem;font-weight:600;color:var(--text-dark)}
+    .mobile-nav__links a:hover{color:var(--green-mid)}
+    .mobile-nav__cta{display:flex;flex-direction:column;gap:10px}
+    .btn-mobile{display:block;padding:13px;border-radius:8px;font-weight:700;font-size:0.95rem;text-align:center;min-height:48px}
+    .btn-outline-green{background:transparent;color:var(--green-mid);border:2px solid var(--green-mid)}
+
+    /* HERO */
+    .hero{background:linear-gradient(135deg,var(--green-dark) 0%,var(--green-mid) 100%);color:white;padding:64px 0 72px;text-align:center}
+    .hero__icon{font-size:3.5rem;margin-bottom:18px}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.2;margin-bottom:18px;font-weight:800}
+    .hero__sub{font-size:1rem;color:rgba(255,255,255,0.8);max-width:560px;margin:0 auto;line-height:1.75}
+
+    /* PROFILES */
+    .profiles{padding:56px 0;background:var(--cream)}
+    .profiles__title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;text-align:center;margin-bottom:36px;color:var(--text-dark)}
+    .profiles__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .profile-card{background:white;border-radius:14px;padding:24px;border:1.5px solid #e8e8f0;display:flex;flex-direction:column;gap:10px}
+    .profile-card__icon{font-size:1.8rem}
+    .profile-card__title{font-weight:700;font-size:0.95rem;color:var(--text-dark)}
+    .profile-card__desc{font-size:0.84rem;color:var(--text-mid);line-height:1.65}
+
+    /* FORM SECTION */
+    .form-section{padding:64px 0}
+    .form-section__title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:800;margin-bottom:8px;color:var(--text-dark)}
+    .form-section__sub{font-size:0.92rem;color:var(--text-mid);margin-bottom:36px;line-height:1.7}
+
+    /* FORM */
+    .form-card{background:white;border:1.5px solid #e8e8f0;border-radius:16px;padding:40px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+    .form-group{margin-bottom:22px}
+    .form-label{display:block;font-size:0.86rem;font-weight:600;color:var(--text-dark);margin-bottom:7px}
+    .form-label span{color:var(--grey-mid);font-weight:400}
+    .form-input,.form-select,.form-textarea{
+      width:100%;padding:12px 16px;border:1.5px solid #e0e0ec;border-radius:9px;
+      font-size:0.92rem;font-family:'Inter',sans-serif;color:var(--text-dark);
+      background:white;outline:none;transition:border-color 0.2s,box-shadow 0.2s
+    }
+    .form-input:focus,.form-select:focus,.form-textarea:focus{
+      border-color:var(--green-mid);box-shadow:0 0 0 3px rgba(26,92,68,0.1)
+    }
+    .form-textarea{resize:vertical;min-height:160px;line-height:1.7}
+    .form-select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239a9aaa' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .form-hint{font-size:0.77rem;color:var(--grey-mid);margin-top:6px;line-height:1.5}
+    .form-checkbox{display:flex;align-items:flex-start;gap:10px;cursor:pointer}
+    .form-checkbox input{margin-top:3px;flex-shrink:0;width:16px;height:16px;accent-color:var(--green-mid)}
+    .form-checkbox-label{font-size:0.85rem;color:var(--text-mid);line-height:1.55}
+    .form-checkbox-label a{color:var(--green-mid);text-decoration:underline}
+    .form-submit{width:100%;padding:15px;background:var(--green-mid);color:white;border:none;border-radius:9px;font-weight:700;font-size:1rem;cursor:pointer;transition:background 0.2s;margin-top:8px;font-family:'Inter',sans-serif}
+    .form-submit:hover{background:var(--green-dark)}
+    .form-submit:disabled{background:var(--grey-mid);cursor:not-allowed}
+
+    /* SUCCESS */
+    .success-msg{display:none;background:#f0faf5;border:1.5px solid #a7dfc0;border-radius:12px;padding:32px;text-align:center;margin-top:24px}
+    .success-msg__icon{font-size:2.5rem;margin-bottom:12px}
+    .success-msg__title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:8px;color:var(--green-dark)}
+    .success-msg__text{font-size:0.9rem;color:var(--text-mid);line-height:1.7}
+
+    /* REASSURANCE */
+    .reassurance{display:flex;gap:24px;margin-top:32px;flex-wrap:wrap}
+    .reassurance__item{display:flex;align-items:flex-start;gap:10px;flex:1;min-width:200px}
+    .reassurance__icon{font-size:1.3rem;flex-shrink:0;margin-top:2px}
+    .reassurance__text{font-size:0.82rem;color:var(--text-mid);line-height:1.55}
+    .reassurance__text strong{display:block;color:var(--text-dark);font-weight:600;margin-bottom:2px}
+
+    /* FOOTER */
+    footer{background:var(--green-dark);color:rgba(255,255,255,0.7);padding:40px 0 24px}
+    .footer__bottom{display:flex;justify-content:space-between;align-items:center;font-size:0.77rem;flex-wrap:wrap;gap:10px}
+    .footer__links{display:flex;gap:16px}
+    .footer__links a{color:rgba(255,255,255,0.45)}
+    .footer__links a:hover{color:white}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      :root{--nav-h:60px}
+      .nav__links,.nav__cta{display:none}
+      .hamburger{display:flex}
+      .mobile-nav{display:flex}
+      .profiles__grid{grid-template-columns:1fr}
+      .form-row{grid-template-columns:1fr}
+      .form-card{padding:28px 20px}
+      .hero{padding:48px 0 56px}
+      .reassurance{flex-direction:column}
+    }
+    @media(max-width:400px){.container,.container--narrow{padding:0 16px}}
+  </style>
+  <meta property="og:image" content="https://mlm-decrypte.fr/assets/images/laurent-avatar-circle.png" />
+  <meta name="twitter:image" content="https://mlm-decrypte.fr/assets/images/laurent-avatar-circle.png" />
+</head>
+<body>
+
+  <div class="nav-overlay" id="navOverlay" onclick="closeNav()"></div>
+  <header>
+    <nav class="container">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">M</div>
+        <span class="nav__logo-text">MLM <span>Décrypté</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="categories/demystifier.html">Démystifier</a></li>
+        <li><a href="categories/le-modele.html">Le modèle</a></li>
+        <li><a href="categories/la-realite.html">La réalité</a></li>
+        <li><a href="partager-temoignage.html">Témoigner</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+      </ul>
+      <div class="nav__cta"><a href="partager-temoignage.html" class="btn">🗣️ Témoigner</a></div>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu" aria-expanded="false">
+        <span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span>
+      </button>
+    </nav>
+    <nav class="mobile-nav" id="mobileNav">
+      <ul class="mobile-nav__links">
+        <li><a href="categories/demystifier.html" onclick="closeNav()">🔍 Démystifier</a></li>
+        <li><a href="categories/le-modele.html" onclick="closeNav()">📊 Le modèle</a></li>
+        <li><a href="categories/la-realite.html" onclick="closeNav()">🌱 La réalité</a></li>
+        <li><a href="partager-temoignage.html" onclick="closeNav()">🗣️ Témoigner</a></li>
+        <li><a href="a-propos.html" onclick="closeNav()">✍️ À propos</a></li>
+      </ul>
+      <div class="mobile-nav__cta">
+        <a href="index.html" class="btn-mobile btn-outline-green" onclick="closeNav()">← Accueil</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container--narrow">
+      <div class="hero__icon">🎙️</div>
+      <h1>Vous avez une histoire à raconter ?</h1>
+      <p class="hero__sub">Succès, échec, doute, reconversion — toutes les expériences honnêtes ont leur place ici. Pas de filtre, pas d'idéalisation.</p>
+    </div>
+  </section>
+
+  <!-- PROFILS RECHERCHÉS -->
+  <section class="profiles">
+    <div class="container">
+      <h2 class="profiles__title">Les expériences qui m'intéressent</h2>
+      <div class="profiles__grid">
+        <div class="profile-card">
+          <div class="profile-card__icon">📉</div>
+          <div class="profile-card__title">Vous avez perdu de l'argent</div>
+          <div class="profile-card__desc">Vous avez investi du temps ou de l'argent dans un MLM qui n'a pas tenu ses promesses. Vous avez des choses honnêtes à dire sur ce que vous avez vécu.</div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-card__icon">📈</div>
+          <div class="profile-card__title">Vous avez réussi financièrement</div>
+          <div class="profile-card__desc">Vous générez (ou avez généré) un vrai revenu avec le MLM. Vous êtes prêt à parler des coulisses, des sacrifices et de ce que ça représente vraiment.</div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-card__icon">🏠</div>
+          <div class="profile-card__title">Mère ou père de famille</div>
+          <div class="profile-card__desc">Vous avez tenté de concilier le MLM avec la vie de famille. La réalité était différente de la promesse — en bien ou en moins bien.</div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-card__icon">🚪</div>
+          <div class="profile-card__title">Vous avez quitté le MLM</div>
+          <div class="profile-card__desc">Vous êtes parti, pour de bonnes raisons ou non. Vous avez du recul aujourd'hui et vous pouvez en parler avec lucidité.</div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-card__icon">💼</div>
+          <div class="profile-card__title">Vous avez quitté votre emploi</div>
+          <div class="profile-card__desc">Vous avez sauté le pas — CDI, statut, sécurité — pour vous lancer à plein temps. La vérité deux ans plus tard, sans embellissement.</div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-card__icon">💬</div>
+          <div class="profile-card__title">Autre expérience</div>
+          <div class="profile-card__desc">Votre histoire ne rentre dans aucune case ? C'est souvent les plus intéressantes. Racontez-moi, je lirai avec attention.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULAIRE -->
+  <section class="form-section">
+    <div class="container--narrow">
+      <h2 class="form-section__title">Partagez votre témoignage</h2>
+      <p class="form-section__sub">Je lis chaque message personnellement. Si votre histoire correspond à ce que je recherche, je vous recontacte pour un entretien. Votre témoignage peut être anonymisé — vous validez toujours avant publication.</p>
+
+      <div class="form-card">
+        <form name="temoignage" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="temoignageForm" novalidate>
+          <!-- Netlify bot field caché -->
+          <input type="hidden" name="form-name" value="temoignage" />
+          <p style="display:none"><input name="bot-field" /></p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="prenom">Prénom <span>(ou pseudonyme)</span></label>
+              <input class="form-input" type="text" id="prenom" name="prenom" placeholder="Ex : Marie" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="votre@email.com" required />
+              <p class="form-hint">Pour vous recontacter — jamais partagé ni utilisé à d'autres fins.</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="type">Type d'expérience</label>
+            <select class="form-select form-input" id="type" name="type" required>
+              <option value="" disabled selected>Choisissez…</option>
+              <option value="perte-argent">J'ai perdu de l'argent en MLM</option>
+              <option value="reussite">J'ai réussi financièrement en MLM</option>
+              <option value="famille">Mère / père de famille en MLM</option>
+              <option value="quitter-mlm">J'ai quitté le MLM</option>
+              <option value="quitter-emploi">J'ai quitté mon emploi pour le MLM</option>
+              <option value="autre">Autre expérience</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Votre histoire en quelques lignes</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Racontez-moi votre expérience : ce que vous avez vécu, combien de temps, ce que vous en retenez aujourd'hui..." required></textarea>
+            <p class="form-hint">Pas besoin d'être parfait — quelques phrases suffisent pour que je comprenne votre parcours.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="anonymat">Souhait d'anonymat <span>(optionnel)</span></label>
+            <select class="form-select form-input" id="anonymat" name="anonymat">
+              <option value="non">Non, je peux apparaître avec mon vrai prénom</option>
+              <option value="prenom">Oui, prénom modifié uniquement</option>
+              <option value="total">Oui, anonymat complet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-checkbox">
+              <input type="checkbox" name="consentement" required />
+              <span class="form-checkbox-label">J'accepte que mes informations soient utilisées uniquement dans le cadre de ce projet éditorial. <a href="confidentialite.html">Politique de confidentialité</a></span>
+            </label>
+          </div>
+
+          <button type="submit" class="form-submit" id="submitBtn">✉️ Envoyer mon témoignage</button>
+        </form>
+
+        <div class="success-msg" id="successMsg">
+          <div class="success-msg__icon">✅</div>
+          <div class="success-msg__title">Message bien reçu !</div>
+          <p class="success-msg__text">Merci pour votre confiance. Je lis chaque message personnellement et vous recontacte dans les 48h si votre histoire correspond à ce que je cherche.</p>
+        </div>
+      </div>
+
+      <!-- Réassurance -->
+      <div class="reassurance">
+        <div class="reassurance__item">
+          <div class="reassurance__icon">🔒</div>
+          <div class="reassurance__text">
+            <strong>Vos données restent privées</strong>
+            Votre email n'est jamais partagé. Jamais utilisé pour la newsletter sans votre accord.
+          </div>
+        </div>
+        <div class="reassurance__item">
+          <div class="reassurance__icon">✏️</div>
+          <div class="reassurance__text">
+            <strong>Vous validez avant publication</strong>
+            Je rédige le témoignage avec vous. Vous lisez et approuvez avant que quoi que ce soit soit publié.
+          </div>
+        </div>
+        <div class="reassurance__item">
+          <div class="reassurance__icon">👤</div>
+          <div class="reassurance__text">
+            <strong>L'anonymat est possible</strong>
+            Prénom modifié, détails floutés — on adapte selon vos préférences.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer__bottom">
+        <span>© 2026 MLM Décrypté — Laurent Constantin</span>
+        <div class="footer__links">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+          <a href="index.html">← Accueil</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav mobile
+    var mobileNav=document.getElementById('mobileNav'),navOverlay=document.getElementById('navOverlay'),hamburger=document.getElementById('hamburger');
+    function openNav(){mobileNav.classList.add('is-open');navOverlay.style.display='block';requestAnimationFrame(function(){navOverlay.classList.add('is-open')});hamburger.classList.add('is-active');hamburger.setAttribute('aria-expanded','true');document.body.classList.add('nav-open')}
+    function closeNav(){mobileNav.classList.remove('is-open');navOverlay.classList.remove('is-open');hamburger.classList.remove('is-active');hamburger.setAttribute('aria-expanded','false');document.body.classList.remove('nav-open');setTimeout(function(){navOverlay.style.display='none'},300)}
+    function toggleNav(){mobileNav.classList.contains('is-open')?closeNav():openNav()}
+
+    // Formulaire — soumission Netlify + message de succès
+    var form = document.getElementById('temoignageForm');
+    var successMsg = document.getElementById('successMsg');
+    var submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Validation simple
+      var required = form.querySelectorAll('[required]');
+      var valid = true;
+      required.forEach(function(field) {
+        if (!field.value.trim() || (field.type === 'checkbox' && !field.checked)) {
+          field.style.borderColor = '#e55';
+          valid = false;
+        } else {
+          field.style.borderColor = '';
+        }
+      });
+      if (!valid) return;
+
+      submitBtn.textContent = 'Envoi en cours…';
+      submitBtn.disabled = true;
+
+      var data = new FormData(form);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString()
+      })
+      .then(function() {
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+        window.scrollTo({ top: successMsg.offsetTop - 100, behavior: 'smooth' });
+      })
+      .catch(function() {
+        // Fallback email si Netlify échoue
+        var subject = encodeURIComponent('Témoignage MLM — ' + (form.prenom.value || 'Anonyme'));
+        var body = encodeURIComponent(form.message.value || '');
+        window.location.href = 'mailto:contact@mlm-decrypte.fr?subject=' + subject + '&body=' + body;
+        submitBtn.textContent = '✉️ Envoyer mon témoignage';
+        submitBtn.disabled = false;
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+.DS_Store
+assets/.DS_Store
+push-to-github.sh
+PUSH-VERS-GITHUB.command
+*.command
+.github/workflows/

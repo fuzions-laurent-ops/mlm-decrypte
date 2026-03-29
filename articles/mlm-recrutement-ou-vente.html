@@ -9,10 +9,17 @@
   <meta name="description" content="L'idée reçue la plus répandue sur le MLM : pour gagner, il faut recruter. Décryptage d'une affirmation plus complexe qu'il n'y paraît." />
   <link rel="canonical" href="https://mlm-decrypte.fr/articles/mlm-recrutement-ou-vente.html" />
   <meta property="og:title" content=""On ne gagne que si on recrute" — vrai ou faux en MLM ?" />
+  <meta property="og:description" content="L'idée reçue la plus répandue sur le MLM : pour gagner, il faut recruter. Décryptage d'une affirmation plus complexe qu'il n'y paraît." />
+  <meta property="og:image" content="https://mlm-decrypte.fr/assets/images/laurent-avatar-circle.png" />
+  <meta name="twitter:image" content="https://mlm-decrypte.fr/assets/images/laurent-avatar-circle.png" />
   <meta property="og:type" content="article" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:description" content="L'idée reçue la plus répandue sur le MLM : pour gagner, il faut recruter. Décryptage d'une affirmation plus complexe qu'il n'y paraît." />
+  
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -192,9 +199,17 @@
     .author-box__name{font-weight:700;font-size:0.92rem;margin-bottom:4px}
     .author-box__bio{font-size:0.83rem;color:var(--text-mid);line-height:1.65}
     @media(max-width:400px){.container,.container--narrow{padding:0 16px}}
-  </style>
+  .reading-progress{position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,#1a5c44,#d4972e);z-index:10000;transition:width 0.1s linear}</style>
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2228137');
+</script>
+<!-- End MailerLite Universal -->
 </head>
 <body>
+<div class="reading-progress" id="readingProgress"></div>
   <div class="nav-overlay" id="navOverlay" onclick="closeNav()"></div>
   <header>
     <nav class="container">
@@ -203,7 +218,7 @@
         <li><a href="../categories/demystifier.html">Démystifier</a></li>
         <li><a href="../categories/le-modele.html">Le modèle</a></li>
         <li><a href="../categories/la-realite.html">La réalité</a></li>
-        <li><a href="../categories/temoignages.html">Témoignages</a></li>
+        <li><a href="../partager-temoignage.html">Témoigner</a></li>
         <li><a href="../a-propos.html">À propos</a></li>
       </ul>
       <div class="nav__cta"><a href="#newsletter" class="btn">📩 Newsletter</a></div>
@@ -216,7 +231,7 @@
         <li><a href="../categories/demystifier.html" onclick="closeNav()">🔍 Démystifier</a></li>
         <li><a href="../categories/le-modele.html" onclick="closeNav()">📊 Le modèle</a></li>
         <li><a href="../categories/la-realite.html" onclick="closeNav()">🌱 La réalité</a></li>
-        <li><a href="../categories/temoignages.html" onclick="closeNav()">🗣️ Témoignages</a></li>
+        <li><a href="../partager-temoignage.html" onclick="closeNav()">🗣️ Témoigner</a></li>
         <li><a href="../a-propos.html" onclick="closeNav()">✍️ À propos</a></li>
       </ul>
       <div class="mobile-nav__cta">
@@ -235,7 +250,7 @@
       <p class="article-hero__intro">Cette phrase résume à elle seule le scepticisme général envers le MLM. Est-elle vraie ? Parfois oui. Mais la réalité est bien plus nuancée.</p>
       <div class="article-meta">
         <div class="article-meta__author">
-          <div class="article-meta__avatar" style="background:none;padding:0;overflow:hidden"><img src="../assets/images/laurent-avatar.jpg" alt="Laurent Constantin" style="width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:center top"></div>
+          <div class="article-meta__avatar" style="background:none;padding:0;overflow:hidden"><img src="../assets/images/laurent-avatar.jpg" alt="Laurent Constantin" style="width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:center top" loading="lazy"></div>
           <div><div class="article-meta__name">Laurent Constantin</div><div class="article-meta__date">22 fév 2026</div></div>
         </div>
         <div class="article-meta__info"><span>⏱ 5 min de lecture</span></div>
@@ -288,41 +303,55 @@
           <p><strong>Point clé :</strong> Un MLM légal doit générer la majorité de ses revenus de la vente de produits à des clients finaux, pas de la vente aux distributeurs. C'est la ligne de démarcation juridique entre un business et une arnaque.</p>
         </div>
 
-        <h2 id="realite">La réalité terrain : les deux sont nécessaires, mais pas équivalents</h2>
+        <h2 id="realite">La réalité terrain : ça dépend du modèle</h2>
 
-        <p>Dans mon expérience, voici comment les choses fonctionnent vraiment dans un MLM légitime :</p>
+        <p>La réponse à "faut-il recruter pour gagner ?" dépend énormément du type de MLM dans lequel tu es. Et c'est là que les modèles de services par abonnement changent la donne.</p>
 
-        <p><strong>La vente, c'est le socle.</strong> C'est elle qui nourrit le distributeur. Si tu recrutes 10 personnes mais que tu n'arrives à elles vendre du produit à personne, tu vas pleurer. Si tu as une bonne clientèle personnelle, tu peux survivre même si ton recrutement est faible. La vente est fiable.</p>
+        <p><strong>Dans un MLM de produits classique</strong>, la distinction est nette : il y a les clients (qui achètent) et les distributeurs (qui vendent et recrutent). Tu dois vendre des produits à des clients finaux, et recruter des distributeurs pour multiplier tes revenus. Les deux sont nécessaires, mais la vente est le socle.</p>
 
-        <p><strong>Le recrutement, c'est l'accélérateur.</strong> Recruter des gens permet de multiplier tes revenus — via les commissions de vente de ton équipe. C'est là que les chiffres deviennent vraiment intéressants. Mais c'est aussi plus imprévisible, parce que cela dépend de la qualité des gens que tu recrutes, de leur motivation, de leur formation.</p>
+        <p><strong>Dans un MLM de services par abonnement</strong> (voyage, énergie, bien-être...), la logique est différente. Chaque personne qui rejoint le réseau devient d'abord un client du service — elle s'abonne et consomme. Ensuite, si elle le souhaite, elle peut aussi devenir ambassadrice et développer le réseau à son tour. Tu peux donc faire du développement uniquement client, ou combiner client et ambassadeur — ce qui est généralement la norme.</p>
 
-        <p>L'ordre importe. Tu dois d'abord savoir vendre pour recruter correctement. Pourquoi ? Parce que si tu recrutes quelqu'un sans lui montrer comment générer des clients, tu le condamnes à ne survivre que par le recrutement aussi. Et tu créés une chaîne fragile où chaque maillon recrute sans savoir vendre.</p>
+        <p>C'est un double effet intéressant : tu n'as pas besoin de "recruter" au sens classique. Tu partages un service que tu utilises toi-même, et la personne en face choisit si elle veut juste en profiter ou aussi le partager.</p>
+
+        <h3>L'essentiel : consommer vraiment le service</h3>
+
+        <p>Et c'est là qu'il y a un point crucial. Dans un modèle par abonnement, le piège serait de construire un réseau de gens qui paient l'abonnement mais ne consomment jamais réellement le service. Sur le papier, ils sont "clients". Et techniquement, oui — payer un abonnement suffit à être client, c'est la même logique que n'importe quel business SaaS. Personne ne vérifie si tu utilises ton abonnement Netflix tous les jours.</p>
+
+        <p>Mais dans la pratique, une personne qui ne consomme pas vraiment finira par arrêter de payer. C'est inévitable. Et si ton réseau est rempli de gens qui ne consomment pas, tu construis sur du sable — un système fragile qui ressemble dangereusement à une pyramide, même si ce n'en est pas une légalement.</p>
+
+        <div class="highlight-box">
+          <p><strong>Le vrai test :</strong> Est-ce que tu utilises le service toi-même, indépendamment de l'opportunité business ? Si tu n'as aucun intérêt pour ce que tu proposes, je ne vois pas comment tu vas pouvoir t'investir sérieusement pour un produit ou service dont tu n'as aucune utilisation. Tes proches le verront. Tes prospects aussi. C'est pour ça que le choix du service ou produit est LA première décision — avant le plan de compensation, avant l'équipe, avant tout le reste.</p>
+        </div>
 
         <h2 id="piege">Le piège du recrutement à tout prix</h2>
 
-        <p>Beaucoup de distributeurs tombent dans ce piège. Surtout en début de mois, quand les objectifs frappent à la porte : "je dois recruter, recruter, recruter." Et du coup, ils oublient la vente.</p>
+        <p>Beaucoup de distributeurs tombent dans ce piège. Surtout en début de mois, quand les objectifs frappent à la porte : "je dois recruter, recruter, recruter." Et du coup, ils oublient l'essentiel — le produit ou le service.</p>
 
-        <p>Voici ce qui se passe :</p>
+        <p>Dans un <strong>MLM classique de produits</strong>, ça se traduit par des recrues à qui on promet monts et merveilles, avec de l'urgence artificielle ("il ne reste que 2 places cette semaine"), et qu'on lâche ensuite dans la nature sans accompagnement. Résultat : elles échouent, elles partent, et tu as perdu des semaines pour rien.</p>
 
-        <p>Tu recrutes quelqu'un juste parce qu'il a dit oui, sans vérifier s'il était vraiment motivé. Tu lui promets monts et merveilles, tu crées de l'urgence artificielle ("il ne reste que 2 places cette semaine"). Puis, quand il entre, tu le laisses se débrouiller pour vendre. Résultat : il échoue, il parte, et tu as passé deux semaines pour du vent.</p>
+        <p>Dans un <strong>MLM par abonnement de services</strong>, le piège est plus subtil mais tout aussi réel. Comme chaque recrue paie un abonnement, elle est techniquement "cliente". Ça peut donner l'illusion que tout va bien — les chiffres montent, l'équipe grandit. Mais si ces personnes ne consomment pas réellement le service, elles finiront par arrêter de payer. Tu te retrouves avec une équipe qui s'effrite mois après mois.</p>
 
-        <p>Plus grave : tu endommagea ta crédibilité. Une personne qui recrute et abandonne son recrue, ça se sait. Et ça détruit ta capacité à recruter d'autres à l'avenir.</p>
+        <p>C'est exactement là que se situe la frontière avec un système de type Ponzi : quand une majorité de membres paie un abonnement sans utiliser le service, la structure repose sur le recrutement et non sur une vraie consommation. À l'inverse, quand tes membres utilisent réellement ce qu'ils paient — comme dans n'importe quel business SaaS — la base est saine.</p>
+
+        <p>Plus grave encore : recruter à tout prix détruit ta crédibilité. Une personne qui recrute et abandonne sa recrue, ça se sait. Et ça détruit ta capacité à construire une équipe durable.</p>
 
         <div class="alert-box">
-          <p><strong>Alerte :</strong> Si ton upline (ou toi, si tu recrutes) met la pression sur le recrutement sans mettre l'accent sur la vente, c'est un signal d'alarme. Un bon MLM équilibre les deux.</p>
+          <p><strong>Alerte :</strong> Que ce soit un MLM de produits ou de services, le signal d'alarme est le même : quand la pression est mise sur le recrutement sans s'assurer que les gens consomment vraiment ce qu'ils paient. Un bon MLM, c'est d'abord des clients satisfaits — qu'ils soient ambassadeurs ou non.</p>
         </div>
 
         <h2 id="equilibre">Comment trouver l'équilibre</h2>
 
-        <p>Voici la stratégie qui marche, basée sur ce que j'ai appris :</p>
+        <p>Voici la stratégie qui marche, basée sur ce que j'ai appris — et elle s'applique que tu sois dans un MLM de produits ou de services.</p>
 
-        <p><strong>Étape 1 : Construis une clientèle solide d'abord.</strong> Trouve 20-30 clients qui achètent régulièrement. Peu importe si ce n'est pas spectaculaire, peu importe si ça prend 3 mois. Ce socle te donne deux choses : du revenu réel, et une crédibilité pour recruter.</p>
+        <p><strong>Étape 1 : Sois d'abord un vrai client.</strong> Avant de parler à qui que ce soit, utilise le produit ou le service. Vraiment. Si c'est un service de voyage, voyage avec. Si c'est un complément alimentaire, teste-le sur la durée. Tu ne peux pas recommander quelque chose que tu ne consommes pas toi-même — et les gens le sentent.</p>
 
-        <p><strong>Étape 2 : Enseigne ce que tu as appris.</strong> Une fois que tu maîtrises la vente, montre à tes recrues comment faire. Donne-leur tes listes, tes scripts, tes méthodes. La seule raison de recruter quelqu'un, c'est de lui permettre de reproduire ce que tu as fait — en mieux, si possible.</p>
+        <p><strong>Étape 2 : Construis une base de clients réels.</strong> Dans un MLM de produits, ça veut dire trouver 20-30 clients réguliers. Dans un MLM par abonnement, ça veut dire des personnes qui utilisent activement le service — pas juste des abonnés fantômes. Ce socle te donne du revenu récurrent et une crédibilité pour développer ton équipe.</p>
 
-        <p><strong>Étape 3 : Recrute sélectivement.</strong> Pas chaque personne qui passe. Seulement celles qui ont montré une vraie curiosité, pas celles qui croyaient que tu avais une solution magique. Et explique-leur dès le départ : "tu vas devoir travailler sur la vente d'abord."</p>
+        <p><strong>Étape 3 : Développe ton équipe intelligemment.</strong> Dans un modèle par abonnement, chaque nouvelle personne est à la fois cliente et potentiellement ambassadrice. Tu peux développer uniquement du client, ou combiner client et ambassadeur — c'est généralement la norme. L'important, c'est que chaque membre de ton équipe utilise réellement le service. C'est ce qui fait la différence entre une structure saine et un château de cartes.</p>
 
-        <p><strong>Étape 4 : Mesure, ajuste, réitère.</strong> Regarde tes revenus. Combien vient de la vente directe ? Combien vient de l'équipe ? Si tu as 70% vente et 30% recrutement, c'est sain. Si c'est l'inverse, tu dois revoir ton approche.</p>
+        <p><strong>Étape 4 : Recrute sélectivement.</strong> Pas chaque personne qui passe. Seulement celles qui ont un vrai intérêt pour le produit ou le service — indépendamment de l'opportunité business. Et explique-leur dès le départ ce que ça implique vraiment.</p>
+
+        <p><strong>Étape 5 : Mesure et ajuste.</strong> Regarde tes chiffres. Combien de tes membres consomment activement le service ? Quel est ton taux de rétention mensuel ? Si tes abonnés restent et utilisent le service, ta structure est solide. Si tu perds 30% de ton équipe chaque mois, c'est que le recrutement a pris le dessus sur la vraie valeur.</p>
 
         <hr style="margin:48px 0;border:none;border-top:1px solid #e8e8f0">
 
@@ -330,22 +359,29 @@
           <h3 class="faq__title">Questions fréquentes</h3>
           <div class="faq__item">
             <button class="faq__question" onclick="toggleFaq(this)">
-              <span>Peut-on vraiment vivre de vente seule dans un MLM ?</span>
+              <span>Peut-on vraiment gagner sans recruter dans un MLM ?</span>
               <span class="faq__icon">+</span>
             </button>
             <div class="faq__answer">
-              <p>Oui, dans les bons MLM. J'ai rencontré des distributeurs qui gagnaient 2000-3000 euros par mois uniquement avec une bonne clientèle personnelle, sans recruter personne. Ça dépend du produit, de sa marge, et de ta capacité à vendre. Mais c'est possible et c'est même la méthode la plus durable.</p>
+              <p>Oui, dans les bons MLM. Certains distributeurs gagnent bien leur vie uniquement avec une clientèle personnelle, sans développer d'équipe. Dans un modèle par abonnement, tu peux aussi te concentrer sur le développement de clients uniquement. Mais la vraie puissance du modèle vient de la combinaison : des clients satisfaits dont certains deviennent naturellement ambassadeurs.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" onclick="toggleFaq(this)">
+              <span>Dans un MLM par abonnement, payer suffit-il à être considéré comme client ?</span>
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Techniquement, oui — comme dans n'importe quel business SaaS, un abonné qui paie est un client. Mais une personne qui paie sans consommer finira par arrêter. C'est pour ça que la qualité de ton équipe se mesure au taux d'utilisation réelle du service, pas juste au nombre d'abonnés. Si tes membres utilisent vraiment ce qu'ils paient, ta structure est solide.</p>
             </div>
           </div>
           <div class="faq__item">
             <button class="faq__question" onclick="toggleFaq(this)">
               <span>Comment savoir si mon MLM mise trop sur le recrutement ?</span>
-              <span class="faq__question">
-              <span>Pose ces trois questions : (1) Les produits se vendent-ils à des clients externes, ou juste aux distributeurs ? (2) Mon upline me parle-t-il plus de recrutement que de vente ? (3) Les gens qui gagnent le plus sont-ils les meilleurs vendeurs ou simplement les plus gros recruteurs ? Si c'est 3 fois "non" aux questions 1 et 2, et "juste les recruteurs" pour la 3, c'est un signal d'alarme.</span>
               <span class="faq__icon">+</span>
             </button>
             <div class="faq__answer">
-              <p>Pose ces trois questions : (1) Les produits se vendent-ils à des clients externes, ou juste aux distributeurs ? (2) Mon upline me parle-t-il plus de recrutement que de vente ? (3) Les gens qui gagnent le plus sont-ils les meilleurs vendeurs ou simplement les plus gros recruteurs ? Si c'est "non" aux questions 1 et 2, et "juste les recruteurs" pour la 3, c'est un signal d'alarme.</p>
+              <p>Pose-toi ces questions : les membres de ton équipe utilisent-ils réellement le produit ou le service ? Est-ce que ton upline parle plus de recrutement que de valeur du service ? Les gens qui gagnent le plus sont-ils les meilleurs consommateurs-ambassadeurs ou simplement les plus gros recruteurs ? Si la majorité de tes abonnés ne consomme pas vraiment, c'est un signal d'alarme — quel que soit le modèle.</p>
             </div>
           </div>
           <div class="faq__item">
@@ -354,7 +390,7 @@
               <span class="faq__icon">+</span>
             </button>
             <div class="faq__answer">
-              <p>Ça arrive. Mais tu dois recruter intelligemment : des gens vraiment intéressés, à qui tu peux vraiment enseigner ta méthode, pas juste des numéros. Si tu recrutes 5 personnes en panique qui ne dureront pas 3 mois, tu auras perdu ton temps. Si tu recrutes 1 personne bien, elle peut durer et générer des revenus pendant des années.</p>
+              <p>Ça arrive. Mais recrute intelligemment : des gens qui ont un vrai intérêt pour le service, à qui tu peux enseigner ta méthode. Si tu recrutes 5 personnes en panique qui n'utiliseront jamais le service, elles arrêteront en quelques mois. Une personne qui consomme vraiment et qui croit au produit peut rester des années et développer sa propre clientèle.</p>
             </div>
           </div>
         </div>
@@ -407,7 +443,7 @@
         })();
         </script>
         <div class="author-box">
-          <div class="author-box__avatar" style="background:none;padding:0;overflow:hidden"><img src="../assets/images/laurent-avatar.jpg" alt="Laurent Constantin" style="width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center top"></div>
+          <div class="author-box__avatar" style="background:none;padding:0;overflow:hidden"><img src="../assets/images/laurent-avatar.jpg" alt="Laurent Constantin" style="width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center top" loading="lazy"></div>
           <div>
             <div class="author-box__name">Laurent Constantin</div>
             <div class="author-box__bio">Ancien joueur professionnel de badminton, créateur de Fuzions Badminton, et distributeur MLM transparent. Après deux expériences de MLM sans alignement produit ni accompagnement, Laurent construit maintenant dans MWRlife avec honnêteté et nuance.</div>
@@ -418,8 +454,8 @@
         <div class="sidebar-newsletter">
           <h3>📩 Ne ratez pas cet article</h3>
           <p>Soyez notifié dès la publication. Un email par semaine, pas de spam.</p>
-          <form onsubmit="return false"><input type="email" placeholder="votre@email.com" /><button type="submit">S'abonner</button></form>
-          <p style="font-size:0.68rem;color:rgba(255,255,255,0.5);margin-top:6px;line-height:1.4"><label style="display:flex;align-items:flex-start;gap:6px;cursor:pointer"><input type="checkbox" required style="margin-top:2px;flex-shrink:0;width:12px;height:12px"> <span>J'accepte de recevoir la newsletter. <a href="../confidentialite.html" style="color:rgba(255,255,255,0.7);text-decoration:underline">Confidentialité</a></span></label></p>
+          <form onsubmit="return handleNewsletter(event)"><input type="email" placeholder="votre@email.com" /><button type="submit">S'abonner</button></form>
+          <p style="font-size:0.68rem;color:rgba(255,255,255,0.5);margin-top:6px;line-height:1.4"><label style="display:flex;align-items:flex-start;gap:6px;cursor:pointer"><input type="checkbox" required style="margin-top:2px;flex-shrink:0;width:12px;height:12px;accent-color:#1a5c44"> <span>J'accepte de recevoir la newsletter hebdomadaire de MLM Décrypté. Désabonnement à tout moment en un clic. <a href="../confidentialite.html" style="color:rgba(255,255,255,0.7);text-decoration:underline">Politique de confidentialité</a></span></label></p>
         </div>
         <div class="sidebar-card">
           <div class="sidebar-card__title">📖 Dans la même rubrique</div>
@@ -444,7 +480,17 @@
 
   <section class="internal-links">
     <div class="container">
-      <h2 class="internal-links__title">Lire aussi</h2>
+      <div style="margin:40px 0;padding:24px;background:#faf8f3;border-radius:14px;text-align:center">
+  <p style="font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;color:#1a5c44;margin-bottom:12px">Partager cet article</p>
+  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+    <a onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'fb','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#1877F2;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">Facebook</a>
+    <a onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title),'tw','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#1DA1F2;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">Twitter</a>
+    <a onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href),'li','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#0A66C2;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">LinkedIn</a>
+    <a onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.title+' '+location.href),'wa','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#25D366;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">WhatsApp</a>
+  </div>
+</div>
+
+<h2 class="internal-links__title">Lire aussi</h2>
       <div class="internal-links__grid">
         <a href="signaux-alarme-mlm-douteux.html" class="link-card" style="text-decoration:none;color:inherit">
           <div class="link-card__icon">🔍</div>
@@ -473,7 +519,7 @@
       <div style="font-size:2rem;margin-bottom:12px">📩</div>
       <h2>Un article par semaine dans votre boîte</h2>
       <p>Rejoignez les lecteurs qui veulent comprendre le MLM sans préjugés.</p>
-      <form class="newsletter-form" onsubmit="return false"><input type="email" placeholder="votre@email.com" /><button type="submit">S'abonner</button></form>
+      <form class="newsletter-form" onsubmit="return handleNewsletter(event)"><input type="email" placeholder="votre@email.com" /><button type="submit">S'abonner</button></form>
             <p class="rgpd-consent" style="font-size:0.74rem;color:#9a9aaa;margin-top:10px;text-align:left;max-width:480px;margin-left:auto;margin-right:auto"><label style="display:flex;align-items:flex-start;gap:7px;cursor:pointer"><input type="checkbox" required style="margin-top:3px;flex-shrink:0;accent-color:#1a5c44;width:14px;height:14px"> <span>J'accepte de recevoir la newsletter hebdomadaire de MLM Décrypté. Désabonnement à tout moment en un clic. <a href="../confidentialite.html" style="color:#1a5c44;text-decoration:underline">Politique de confidentialité</a></span></label></p>
     </div>
   </section>
@@ -491,7 +537,7 @@
             <li><a href="../categories/demystifier.html">Démystifier</a></li>
             <li><a href="../categories/le-modele.html">Le modèle</a></li>
             <li><a href="../categories/la-realite.html">La réalité</a></li>
-            <li><a href="../categories/temoignages.html">Témoignages</a></li>
+            <li><a href="../partager-temoignage.html">Témoigner</a></li>
             <li><a href="../categories/mon-regard.html">Mon regard</a></li>
           </ul>
         </div>
@@ -601,7 +647,7 @@
 
 <script>
 (function(){
-  var GA_ID = 'GA_MEASUREMENT_ID';   // ← Remplacer par ex: G-ABC123XYZ
+  var GA_ID = 'G-BFEG1EH0N7';   // ← Remplacer par ex: G-ABC123XYZ
   var META_ID = 'META_PIXEL_ID';     // ← Remplacer par ex: 123456789012345
   var STORAGE_KEY = 'mlmd_cookie_consent';
 
@@ -609,7 +655,7 @@
   function setConsent(obj){ localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); }
 
   function loadGA(){
-    if(GA_ID === 'GA_MEASUREMENT_ID') return;
+    if(!GA_ID || GA_ID === 'GA_MEASUREMENT_ID') return;
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
@@ -675,5 +721,184 @@
 })();
 </script>
 <!-- ═══ FIN COOKIE CONSENT ═══ -->
+<script src="/chatbot-widget.js" defer></script>
+<script>
+(function(){var bar=document.getElementById('readingProgress');if(!bar)return;window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=h>0?(window.scrollY/h*100)+'%':'0%'})})();
+</script>
+<script>
+function handleNewsletter(e){
+  e.preventDefault();
+  var form=e.target,input=form.querySelector('input[type="email"]'),checkbox=form.querySelector('input[type="checkbox"]'),btn=form.querySelector('button'),email=input.value.trim();
+  if(!email)return false;
+  if(checkbox&&!checkbox.checked){alert('Veuillez accepter de recevoir la newsletter pour continuer.');return false;}
+  btn.textContent='Inscription…';btn.disabled=true;
+  var fd=new FormData();fd.append('fields[email]',email);fd.append('ml-submit','1');fd.append('anticsrf','true');
+  fetch('https://assets.mailerlite.com/jsonp/2228137/forms/183173787849590271/subscribe',{method:'POST',body:fd})
+  .then(function(r){return r.json()})
+  .then(function(){btn.textContent='✓ Abonné(e) !';btn.style.background='#16a34a';input.value='';setTimeout(function(){btn.textContent="S'abonner";btn.style.background='';btn.disabled=false},4000)})
+  .catch(function(){var s=document.createElement('script');s.src='https://assets.mailerlite.com/jsonp/2228137/forms/183173787849590271/subscribe?fields[email]={0}&ml-submit=1&anticsrf=true&callback=mlSubscribeCallback';document.body.appendChild(s);btn.textContent='✓ Abonné(e) !';btn.style.background='#16a34a';input.value='';setTimeout(function(){btn.textContent="S'abonner";btn.style.background='';btn.disabled=false;s.remove()},4000)});
+  return false;
+}
+window.mlSubscribeCallback=function(){};
+</script>
+
+
+<!-- ═══ TOC SIDEBAR v3 ═══ -->
+<style>
+/* Anti-flash : cache la TOC dans l'article sur desktop dès le chargement CSS */
+@media(min-width:769px){
+  .article-content .toc{visibility:hidden !important;pointer-events:none !important}
+}
+/* Mobile : TOC inline propre */
+@media(max-width:768px){
+  .toc{background:white !important;border:1.5px solid #e8e8f0 !important;
+    border-left:4px solid var(--green-mid,#1a5c44) !important;
+    border-radius:12px !important;box-shadow:0 2px 8px rgba(0,0,0,.06) !important;
+    margin:0 0 28px !important;overflow:hidden !important}
+  .toc__toggle{padding:14px 16px !important}
+  .toc__toggle-label{font-size:.83rem !important;color:var(--text-dark,#1a1a2e) !important;font-weight:700 !important}
+  .toc.is-open .toc__body{max-height:500px !important;overflow:hidden !important;padding:4px 12px 12px !important}
+  .toc__list a{padding:7px 8px !important;border-radius:6px !important;display:block !important;font-size:.84rem !important}
+  .toc__list a::before{content:none !important}
+}
+/* Badge temps de lecture */
+.reading-time-badge{display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.18);border-radius:20px;
+  padding:5px 12px;font-size:.78rem;font-weight:600}
+/* Barre progression */
+.reading-progress{top:var(--nav-h,68px) !important;height:3px !important}
+</style>
+<script>
+(function(){
+  var GREEN_DARK='#0d3b2e', GREEN_MID='#1a5c44', TEXT_MID='#4a4a6a', BG_ACTIVE='#d4f0e4';
+  var isMobile=window.innerWidth<=768;
+  var toc=document.querySelector('.toc');
+  var sidebar=document.querySelector('.sidebar');
+
+  /* ── DESKTOP : déplacer la TOC dans la sidebar ── */
+  if(!isMobile && toc && sidebar){
+
+    /* 1. Créer la carte wrapper */
+    var wrap=document.createElement('div');
+    Object.assign(wrap.style,{
+      background:'white',
+      border:'1.5px solid #e8e8f0',
+      borderRadius:'14px',
+      padding:'16px 12px 12px',
+      marginBottom:'18px',
+      maxHeight:'calc(100vh - 170px)',
+      overflowY:'auto'
+    });
+
+    /* 2. Titre de la carte */
+    var hdr=document.createElement('p');
+    hdr.innerHTML='📋 <strong>Sur cette page</strong>';
+    Object.assign(hdr.style,{
+      fontSize:'.72rem',fontWeight:'700',textTransform:'uppercase',
+      letterSpacing:'.08em',color:'#9a9aaa',
+      margin:'0 0 10px 2px'
+    });
+    wrap.appendChild(hdr);
+
+    /* 3. Réinitialiser les styles de la TOC via cssText inline */
+    toc.removeAttribute('style');
+    toc.style.cssText=[
+      'background:transparent','border:none','box-shadow:none',
+      'border-left:none','border-radius:0','margin:0','overflow:visible',
+      'visibility:visible','pointer-events:auto'
+    ].join(';');
+    toc.classList.add('is-open');
+
+    /* 4. Cacher le bouton toggle */
+    var btn=toc.querySelector('.toc__toggle');
+    if(btn) btn.style.display='none';
+
+    /* 5. Ouvrir et fixer le corps */
+    var body=toc.querySelector('.toc__body');
+    if(body){
+      body.style.cssText=[
+        'max-height:none','overflow:visible','padding:0','transition:none'
+      ].join(';');
+    }
+
+    /* 6. Styliser chaque lien */
+    var links=toc.querySelectorAll('.toc__list a');
+    links.forEach(function(a){
+      a.style.cssText=[
+        'font-size:.84rem','color:'+TEXT_MID,'font-weight:400',
+        'padding:7px 10px','border-radius:8px',
+        'display:block','line-height:1.4',
+        'text-decoration:none','transition:none'
+      ].join(';');
+      /* Supprimer les pseudo-éléments ::before via attribut */
+      a.setAttribute('data-no-counter','1');
+    });
+
+    /* 7. Déplacer la TOC dans la sidebar */
+    wrap.appendChild(toc);
+    sidebar.insertBefore(wrap,sidebar.firstChild);
+
+    /* 8. Hover sur les liens */
+    links.forEach(function(a){
+      a.addEventListener('mouseenter',function(){
+        if(!a.classList.contains('toc-active'))
+          a.style.background='#f0faf5';
+      });
+      a.addEventListener('mouseleave',function(){
+        if(!a.classList.contains('toc-active'))
+          a.style.background='';
+      });
+    });
+
+  } else if(isMobile && toc){
+    /* Mobile : ouvrir par défaut */
+    toc.classList.add('is-open');
+    var mb=toc.querySelector('.toc__toggle');
+    if(mb) mb.setAttribute('aria-expanded','true');
+  }
+
+  /* ── Temps de lecture dynamique ── */
+  var content=document.querySelector('.article-content');
+  var timeEl=document.querySelector('.article-meta__info span');
+  if(content && timeEl){
+    var words=(content.innerText||content.textContent||'').trim()
+      .split(/\s+/).filter(function(w){return w.length>0}).length;
+    var mins=Math.max(1,Math.ceil(words/200));
+    timeEl.textContent='⏱ '+mins+' min de lecture';
+    timeEl.className='reading-time-badge';
+  }
+
+  /* ── Scroll spy ── */
+  var navLinks=document.querySelectorAll('.toc__list a[href^="#"]');
+  if(!navLinks.length) return;
+  var sections=[];
+  navLinks.forEach(function(l){
+    var id=l.getAttribute('href').slice(1);
+    var el=document.getElementById(id);
+    if(el) sections.push({el:el,link:l});
+  });
+  function updateActive(){
+    var y=window.scrollY+140;
+    var active=null;
+    sections.forEach(function(s){if(s.el.offsetTop<=y)active=s;});
+    navLinks.forEach(function(l){
+      l.classList.remove('toc-active');
+      l.style.background='';
+      l.style.color=TEXT_MID;
+      l.style.fontWeight='400';
+    });
+    if(active){
+      active.link.classList.add('toc-active');
+      active.link.style.background=BG_ACTIVE;
+      active.link.style.color=GREEN_DARK;
+      active.link.style.fontWeight='600';
+    }
+  }
+  window.addEventListener('scroll',updateActive,{passive:true});
+  updateActive();
+})();
+</script>
+<!-- ═══ FIN TOC SIDEBAR v3 ═══ -->
 </body>
+
 </html>

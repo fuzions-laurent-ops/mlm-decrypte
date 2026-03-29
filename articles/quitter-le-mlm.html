@@ -5,14 +5,22 @@
   <meta name="robots" content="noindex,nofollow">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quitter le MLM : témoignage de ceux qui sont partis (et pourquoi) — MLM Décrypté</title>
+  <title>Quitter le MLM : comprendre pourquoi certains partent (et ce que ça nous apprend) — MLM Décrypté</title>
   <meta name="description" content="Tout le monde ne reste pas en MLM — et c'est normal. Voici des témoignages honnêtes de personnes qui sont parties, et ce qu'elles en retiennent." />
   <link rel="canonical" href="https://mlm-decrypte.fr/articles/quitter-le-mlm.html" />
-  <meta property="og:title" content="Quitter le MLM : témoignage de ceux qui sont partis (et pourquoi)" />
+  <meta property="og:title" content="Quitter le MLM : comprendre pourquoi certains partent (et ce que ça nous apprend)" />
+  <meta property="og:description" content="Tout le monde ne reste pas en MLM — et c'est normal. Voici des témoignages honnêtes de personnes qui sont parties, et ce qu'elles en retiennent." />
+  
+  <meta property="og:image" content="https://mlm-decrypte.fr/assets/images/laurent-avatar-circle.png" />
+  <meta name="twitter:image" content="https://mlm-decrypte.fr/assets/images/laurent-avatar-circle.png" />
   <meta property="og:type" content="article" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Quitter le MLM : comprendre pourquoi certains partent (et ce que ça nous apprend)" />
+  <meta name="twitter:description" content="Tout le monde ne reste pas en MLM — et c'est normal. Voici des témoignages honnêtes de personnes qui sont parties, et ce qu'elles en retiennent." />
+  
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -192,9 +200,40 @@
     .author-box__name{font-weight:700;font-size:0.92rem;margin-bottom:4px}
     .author-box__bio{font-size:0.83rem;color:var(--text-mid);line-height:1.65}
     @media(max-width:400px){.container,.container--narrow{padding:0 16px}}
-  </style>
+  .reading-progress{position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,#1a5c44,#d4972e);z-index:10000;transition:width 0.1s linear}</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Quitter le MLM : comprendre pourquoi certains partent (et ce que ça nous apprend)",
+  "description": "Tout le monde ne reste pas en MLM — et c'est normal. Voici des témoignages honnêtes de personnes qui sont parties, et ce qu'elles en retiennent.",
+  "url": "https://mlm-decrypte.fr/articles/quitter-le-mlm.html",
+  "datePublished": "2026-07-28",
+  "author": {
+    "@type": "Person",
+    "name": "Laurent Constantin"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MLM Décrypté",
+    "url": "https://mlm-decrypte.fr"
+  },
+  "inLanguage": "fr",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mlm-decrypte.fr/articles/quitter-le-mlm.html"
+  }</script>
+  <!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2228137');
+</script>
+<!-- End MailerLite Universal -->
 </head>
 <body>
+<div class="reading-progress" id="readingProgress"></div>
   <div class="nav-overlay" id="navOverlay" onclick="closeNav()"></div>
   <header>
     <nav class="container">
@@ -203,7 +242,7 @@
         <li><a href="../categories/la-realite.html">La réalité</a></li>
         <li><a href="../categories/le-modele.html">Le modèle</a></li>
         <li><a href="../categories/la-realite.html">La réalité</a></li>
-        <li><a href="../categories/temoignages.html">Témoignages</a></li>
+        <li><a href="../partager-temoignage.html">Témoigner</a></li>
         <li><a href="../a-propos.html">À propos</a></li>
       </ul>
       <div class="nav__cta"><a href="#newsletter" class="btn">📩 Newsletter</a></div>
@@ -216,7 +255,7 @@
         <li><a href="../categories/la-realite.html" onclick="closeNav()">🔍 La réalité</a></li>
         <li><a href="../categories/le-modele.html" onclick="closeNav()">📊 Le modèle</a></li>
         <li><a href="../categories/la-realite.html" onclick="closeNav()">🌱 La réalité</a></li>
-        <li><a href="../categories/temoignages.html" onclick="closeNav()">🗣️ Témoignages</a></li>
+        <li><a href="../partager-temoignage.html" onclick="closeNav()">🗣️ Témoigner</a></li>
         <li><a href="../a-propos.html" onclick="closeNav()">✍️ À propos</a></li>
       </ul>
       <div class="mobile-nav__cta">
@@ -226,16 +265,16 @@
     </nav>
   </header>
 
-  <div class="breadcrumb"><div class="container"><a href="../index.html">Accueil</a><span>›</span><a href="../categories/demystifier.html">Démystifier</a><span>›</span><span>Quitter le MLM</span></div></div>
+  <div class="breadcrumb"><div class="container"><a href="../index.html">Accueil</a><span>›</span><a href="../categories/la-realite.html">La réalité</a><span>›</span><span>Quitter le MLM</span></div></div>
 
   <section class="article-hero">
     <div class="container">
-      <div class="article-hero__tags"><span class="tag tag--green">Démystifier</span></div>
-      <h1>Quitter le MLM : témoignage de ceux qui sont partis (et pourquoi)</h1>
+      <div class="article-hero__tags"><span class="tag tag--blue">La réalité</span></div>
+      <h1>Quitter le MLM : comprendre pourquoi certains partent (et ce que ça nous apprend)</h1>
       <p class="article-hero__intro">Parler de ceux qui quittent le MLM, c'est un sujet qu'on évite souvent. Pourtant, c'est l'une des histoires les plus instructives qui soit.</p>
       <div class="article-meta">
         <div class="article-meta__author">
-          <div class="article-meta__avatar" style="background:none;padding:0;overflow:hidden"><img src="../assets/images/laurent-avatar.jpg" alt="Laurent Constantin" style="width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:center top"></div>
+          <div class="article-meta__avatar" style="background:none;padding:0;overflow:hidden"><img src="../assets/images/laurent-avatar.jpg" alt="Laurent Constantin" style="width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:center top" loading="lazy"></div>
           <div><div class="article-meta__name">Laurent Constantin</div><div class="article-meta__date">5 fév 2026</div></div>
         </div>
         <div class="article-meta__info"><span>⏱ 7 min de lecture</span></div>
@@ -409,7 +448,7 @@
         })();
         </script>
         <div class="author-box">
-          <div class="author-box__avatar" style="background:none;padding:0;overflow:hidden"><img src="../assets/images/laurent-avatar.jpg" alt="Laurent Constantin" style="width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center top"></div>
+          <div class="author-box__avatar" style="background:none;padding:0;overflow:hidden"><img src="../assets/images/laurent-avatar.jpg" alt="Laurent Constantin" style="width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center top" loading="lazy"></div>
           <div>
             <div class="author-box__name">Laurent Constantin</div>
             <div class="author-box__bio">J'ai quitté deux MLM. Et je suis plus fort pour ça. Partir, c'était pas donner. C'était prendre une décision adulte basée sur la réalité, pas sur la promesse.</div>
@@ -420,8 +459,8 @@
         <div class="sidebar-newsletter">
           <h3>📩 Ne ratez pas cet article</h3>
           <p>Soyez notifié dès la publication. Un email par semaine, pas de spam.</p>
-          <form onsubmit="return false"><input type="email" placeholder="votre@email.com" /><button type="submit">S'abonner</button></form>
-          <p style="font-size:0.68rem;color:rgba(255,255,255,0.5);margin-top:6px;line-height:1.4"><label style="display:flex;align-items:flex-start;gap:6px;cursor:pointer"><input type="checkbox" required style="margin-top:2px;flex-shrink:0;width:12px;height:12px"> <span>J'accepte de recevoir la newsletter. <a href="../confidentialite.html" style="color:rgba(255,255,255,0.7);text-decoration:underline">Confidentialité</a></span></label></p>
+          <form onsubmit="return handleNewsletter(event)"><input type="email" placeholder="votre@email.com" /><button type="submit">S'abonner</button></form>
+          <p style="font-size:0.68rem;color:rgba(255,255,255,0.5);margin-top:6px;line-height:1.4"><label style="display:flex;align-items:flex-start;gap:6px;cursor:pointer"><input type="checkbox" required style="margin-top:2px;flex-shrink:0;width:12px;height:12px;accent-color:#1a5c44"> <span>J'accepte de recevoir la newsletter hebdomadaire de MLM Décrypté. Désabonnement à tout moment en un clic. <a href="../confidentialite.html" style="color:rgba(255,255,255,0.7);text-decoration:underline">Politique de confidentialité</a></span></label></p>
         </div>
         <div class="sidebar-card">
           <div class="sidebar-card__title">📖 Dans la même rubrique</div>
@@ -446,7 +485,17 @@
 
   <section class="internal-links">
     <div class="container">
-      <h2 class="internal-links__title">Lire aussi</h2>
+      <div style="margin:40px 0;padding:24px;background:#faf8f3;border-radius:14px;text-align:center">
+  <p style="font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;color:#1a5c44;margin-bottom:12px">Partager cet article</p>
+  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+    <a onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'fb','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#1877F2;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">Facebook</a>
+    <a onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title),'tw','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#1DA1F2;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">Twitter</a>
+    <a onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href),'li','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#0A66C2;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">LinkedIn</a>
+    <a onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.title+' '+location.href),'wa','width=600,height=400')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#25D366;color:white;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none">WhatsApp</a>
+  </div>
+</div>
+
+<h2 class="internal-links__title">Lire aussi</h2>
       <div class="internal-links__grid">
         <a href="pourquoi-echouer-mlm.html" class="link-card" style="text-decoration:none;color:inherit">
           <div class="link-card__icon">🌱</div>
@@ -475,7 +524,7 @@
       <div style="font-size:2rem;margin-bottom:12px">📩</div>
       <h2>Un article par semaine dans votre boîte</h2>
       <p>Rejoignez les lecteurs qui veulent comprendre le MLM sans préjugés.</p>
-      <form class="newsletter-form" onsubmit="return false"><input type="email" placeholder="votre@email.com" /><button type="submit">S'abonner</button></form>
+      <form class="newsletter-form" onsubmit="return handleNewsletter(event)"><input type="email" placeholder="votre@email.com" /><button type="submit">S'abonner</button></form>
             <p class="rgpd-consent" style="font-size:0.74rem;color:#9a9aaa;margin-top:10px;text-align:left;max-width:480px;margin-left:auto;margin-right:auto"><label style="display:flex;align-items:flex-start;gap:7px;cursor:pointer"><input type="checkbox" required style="margin-top:3px;flex-shrink:0;accent-color:#1a5c44;width:14px;height:14px"> <span>J'accepte de recevoir la newsletter hebdomadaire de MLM Décrypté. Désabonnement à tout moment en un clic. <a href="../confidentialite.html" style="color:#1a5c44;text-decoration:underline">Politique de confidentialité</a></span></label></p>
     </div>
   </section>
@@ -493,7 +542,7 @@
             <li><a href="../categories/demystifier.html">Démystifier</a></li>
             <li><a href="../categories/le-modele.html">Le modèle</a></li>
             <li><a href="../categories/la-realite.html">La réalité</a></li>
-            <li><a href="../categories/temoignages.html">Témoignages</a></li>
+            <li><a href="../partager-temoignage.html">Témoigner</a></li>
             <li><a href="../categories/mon-regard.html">Mon regard</a></li>
           </ul>
         </div>
@@ -603,7 +652,7 @@
 
 <script>
 (function(){
-  var GA_ID = 'GA_MEASUREMENT_ID';   // ← Remplacer par ex: G-ABC123XYZ
+  var GA_ID = 'G-BFEG1EH0N7';   // ← Remplacer par ex: G-ABC123XYZ
   var META_ID = 'META_PIXEL_ID';     // ← Remplacer par ex: 123456789012345
   var STORAGE_KEY = 'mlmd_cookie_consent';
 
@@ -611,7 +660,7 @@
   function setConsent(obj){ localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); }
 
   function loadGA(){
-    if(GA_ID === 'GA_MEASUREMENT_ID') return;
+    if(!GA_ID || GA_ID === 'GA_MEASUREMENT_ID') return;
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
@@ -677,5 +726,184 @@
 })();
 </script>
 <!-- ═══ FIN COOKIE CONSENT ═══ -->
+<script src="/chatbot-widget.js" defer></script>
+<script>
+(function(){var bar=document.getElementById('readingProgress');if(!bar)return;window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=h>0?(window.scrollY/h*100)+'%':'0%'})})();
+</script>
+<script>
+function handleNewsletter(e){
+  e.preventDefault();
+  var form=e.target,input=form.querySelector('input[type="email"]'),checkbox=form.querySelector('input[type="checkbox"]'),btn=form.querySelector('button'),email=input.value.trim();
+  if(!email)return false;
+  if(checkbox&&!checkbox.checked){alert('Veuillez accepter de recevoir la newsletter pour continuer.');return false;}
+  btn.textContent='Inscription…';btn.disabled=true;
+  var fd=new FormData();fd.append('fields[email]',email);fd.append('ml-submit','1');fd.append('anticsrf','true');
+  fetch('https://assets.mailerlite.com/jsonp/2228137/forms/183173787849590271/subscribe',{method:'POST',body:fd})
+  .then(function(r){return r.json()})
+  .then(function(){btn.textContent='✓ Abonné(e) !';btn.style.background='#16a34a';input.value='';setTimeout(function(){btn.textContent="S'abonner";btn.style.background='';btn.disabled=false},4000)})
+  .catch(function(){var s=document.createElement('script');s.src='https://assets.mailerlite.com/jsonp/2228137/forms/183173787849590271/subscribe?fields[email]={0}&ml-submit=1&anticsrf=true&callback=mlSubscribeCallback';document.body.appendChild(s);btn.textContent='✓ Abonné(e) !';btn.style.background='#16a34a';input.value='';setTimeout(function(){btn.textContent="S'abonner";btn.style.background='';btn.disabled=false;s.remove()},4000)});
+  return false;
+}
+window.mlSubscribeCallback=function(){};
+</script>
+
+
+<!-- ═══ TOC SIDEBAR v3 ═══ -->
+<style>
+/* Anti-flash : cache la TOC dans l'article sur desktop dès le chargement CSS */
+@media(min-width:769px){
+  .article-content .toc{visibility:hidden !important;pointer-events:none !important}
+}
+/* Mobile : TOC inline propre */
+@media(max-width:768px){
+  .toc{background:white !important;border:1.5px solid #e8e8f0 !important;
+    border-left:4px solid var(--green-mid,#1a5c44) !important;
+    border-radius:12px !important;box-shadow:0 2px 8px rgba(0,0,0,.06) !important;
+    margin:0 0 28px !important;overflow:hidden !important}
+  .toc__toggle{padding:14px 16px !important}
+  .toc__toggle-label{font-size:.83rem !important;color:var(--text-dark,#1a1a2e) !important;font-weight:700 !important}
+  .toc.is-open .toc__body{max-height:500px !important;overflow:hidden !important;padding:4px 12px 12px !important}
+  .toc__list a{padding:7px 8px !important;border-radius:6px !important;display:block !important;font-size:.84rem !important}
+  .toc__list a::before{content:none !important}
+}
+/* Badge temps de lecture */
+.reading-time-badge{display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.18);border-radius:20px;
+  padding:5px 12px;font-size:.78rem;font-weight:600}
+/* Barre progression */
+.reading-progress{top:var(--nav-h,68px) !important;height:3px !important}
+</style>
+<script>
+(function(){
+  var GREEN_DARK='#0d3b2e', GREEN_MID='#1a5c44', TEXT_MID='#4a4a6a', BG_ACTIVE='#d4f0e4';
+  var isMobile=window.innerWidth<=768;
+  var toc=document.querySelector('.toc');
+  var sidebar=document.querySelector('.sidebar');
+
+  /* ── DESKTOP : déplacer la TOC dans la sidebar ── */
+  if(!isMobile && toc && sidebar){
+
+    /* 1. Créer la carte wrapper */
+    var wrap=document.createElement('div');
+    Object.assign(wrap.style,{
+      background:'white',
+      border:'1.5px solid #e8e8f0',
+      borderRadius:'14px',
+      padding:'16px 12px 12px',
+      marginBottom:'18px',
+      maxHeight:'calc(100vh - 170px)',
+      overflowY:'auto'
+    });
+
+    /* 2. Titre de la carte */
+    var hdr=document.createElement('p');
+    hdr.innerHTML='📋 <strong>Sur cette page</strong>';
+    Object.assign(hdr.style,{
+      fontSize:'.72rem',fontWeight:'700',textTransform:'uppercase',
+      letterSpacing:'.08em',color:'#9a9aaa',
+      margin:'0 0 10px 2px'
+    });
+    wrap.appendChild(hdr);
+
+    /* 3. Réinitialiser les styles de la TOC via cssText inline */
+    toc.removeAttribute('style');
+    toc.style.cssText=[
+      'background:transparent','border:none','box-shadow:none',
+      'border-left:none','border-radius:0','margin:0','overflow:visible',
+      'visibility:visible','pointer-events:auto'
+    ].join(';');
+    toc.classList.add('is-open');
+
+    /* 4. Cacher le bouton toggle */
+    var btn=toc.querySelector('.toc__toggle');
+    if(btn) btn.style.display='none';
+
+    /* 5. Ouvrir et fixer le corps */
+    var body=toc.querySelector('.toc__body');
+    if(body){
+      body.style.cssText=[
+        'max-height:none','overflow:visible','padding:0','transition:none'
+      ].join(';');
+    }
+
+    /* 6. Styliser chaque lien */
+    var links=toc.querySelectorAll('.toc__list a');
+    links.forEach(function(a){
+      a.style.cssText=[
+        'font-size:.84rem','color:'+TEXT_MID,'font-weight:400',
+        'padding:7px 10px','border-radius:8px',
+        'display:block','line-height:1.4',
+        'text-decoration:none','transition:none'
+      ].join(';');
+      /* Supprimer les pseudo-éléments ::before via attribut */
+      a.setAttribute('data-no-counter','1');
+    });
+
+    /* 7. Déplacer la TOC dans la sidebar */
+    wrap.appendChild(toc);
+    sidebar.insertBefore(wrap,sidebar.firstChild);
+
+    /* 8. Hover sur les liens */
+    links.forEach(function(a){
+      a.addEventListener('mouseenter',function(){
+        if(!a.classList.contains('toc-active'))
+          a.style.background='#f0faf5';
+      });
+      a.addEventListener('mouseleave',function(){
+        if(!a.classList.contains('toc-active'))
+          a.style.background='';
+      });
+    });
+
+  } else if(isMobile && toc){
+    /* Mobile : ouvrir par défaut */
+    toc.classList.add('is-open');
+    var mb=toc.querySelector('.toc__toggle');
+    if(mb) mb.setAttribute('aria-expanded','true');
+  }
+
+  /* ── Temps de lecture dynamique ── */
+  var content=document.querySelector('.article-content');
+  var timeEl=document.querySelector('.article-meta__info span');
+  if(content && timeEl){
+    var words=(content.innerText||content.textContent||'').trim()
+      .split(/\s+/).filter(function(w){return w.length>0}).length;
+    var mins=Math.max(1,Math.ceil(words/200));
+    timeEl.textContent='⏱ '+mins+' min de lecture';
+    timeEl.className='reading-time-badge';
+  }
+
+  /* ── Scroll spy ── */
+  var navLinks=document.querySelectorAll('.toc__list a[href^="#"]');
+  if(!navLinks.length) return;
+  var sections=[];
+  navLinks.forEach(function(l){
+    var id=l.getAttribute('href').slice(1);
+    var el=document.getElementById(id);
+    if(el) sections.push({el:el,link:l});
+  });
+  function updateActive(){
+    var y=window.scrollY+140;
+    var active=null;
+    sections.forEach(function(s){if(s.el.offsetTop<=y)active=s;});
+    navLinks.forEach(function(l){
+      l.classList.remove('toc-active');
+      l.style.background='';
+      l.style.color=TEXT_MID;
+      l.style.fontWeight='400';
+    });
+    if(active){
+      active.link.classList.add('toc-active');
+      active.link.style.background=BG_ACTIVE;
+      active.link.style.color=GREEN_DARK;
+      active.link.style.fontWeight='600';
+    }
+  }
+  window.addEventListener('scroll',updateActive,{passive:true});
+  updateActive();
+})();
+</script>
+<!-- ═══ FIN TOC SIDEBAR v3 ═══ -->
 </body>
+
 </html>

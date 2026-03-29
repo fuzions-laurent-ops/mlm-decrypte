@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page non trouvée | MLM Décrypté</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-dark: #0d3b2e;
+            --green-mid: #1a5c44;
+            --amber: #e8a020;
+            --cream: #faf8f3;
+            --text-dark: #1a1a2e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 1.25rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background-color: var(--green-dark);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cream);
+            font-weight: 800;
+            font-size: 0.875rem;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: var(--green-mid);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 2rem;
+        }
+
+        .container-404 {
+            text-align: center;
+            max-width: 600px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .error-code {
+            font-family: 'Playfair Display', serif;
+            font-size: 8rem;
+            font-weight: 800;
+            color: var(--green-dark);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .error-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .error-description {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 0.875rem 1.75rem;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--green-mid);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--green-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(26, 92, 68, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--green-mid);
+            border: 2px solid var(--green-mid);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--green-mid);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(26, 92, 68, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: white;
+            border-top: 1px solid #e0e0e0;
+            padding: 2rem;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 1.5rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav {
+                gap: 1rem;
+            }
+
+            .error-code {
+                font-size: 5rem;
+            }
+
+            .error-subtitle {
+                font-size: 1.5rem;
+            }
+
+            .error-description {
+                font-size: 1rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            main {
+                padding: 2rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 3.5rem;
+            }
+
+            .error-subtitle {
+                font-size: 1.25rem;
+            }
+
+            .error-description {
+                font-size: 0.95rem;
+                margin-bottom: 2rem;
+            }
+
+            .btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">
+                <div class="logo-icon">MD</div>
+                MLM Décrypté
+            </a>
+            <nav class="nav">
+                <a href="/">Accueil</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-404">
+            <div class="error-code">404</div>
+            <h1 class="error-subtitle">Oups, cette page n'existe pas</h1>
+            <p class="error-description">La page que tu cherches a peut-être été déplacée ou n'existe plus. Pas de panique, il y a plein d'articles intéressants à découvrir !</p>
+            <div class="button-group">
+                <a href="/" class="btn btn-primary">Retour à l'accueil</a>
+                <a href="/articles" class="btn btn-secondary">Voir les articles</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>MLM Décrypté © 2026</p>
+    </footer>
+
+    <script src="/chatbot-widget.js" defer></script>
+</body>
+</html>

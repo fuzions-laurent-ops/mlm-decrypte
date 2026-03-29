@@ -589,6 +589,8 @@
             }
         }
     </style>
+  <meta property="og:image" content="https://mlm-decrypte.fr/assets/images/laurent-avatar-circle.png" />
+  <meta name="twitter:image" content="https://mlm-decrypte.fr/assets/images/laurent-avatar-circle.png" />
 </head>
 <body>
     <!-- HEADER -->
@@ -599,7 +601,7 @@
             <a href="categories/demystifier.html">Démystifier</a>
             <a href="categories/le-modele.html">Le modèle</a>
             <a href="categories/la-realite.html">La réalité</a>
-            <a href="categories/temoignages.html">Témoignages</a>
+            <a href="partager-temoignage.html">Témoigner</a>
             <a href="categories/mon-regard.html">Mon regard</a>
             <a href="a-propos.html">À propos</a>
         </nav>
@@ -613,7 +615,7 @@
             <a href="categories/demystifier.html">Démystifier</a>
             <a href="categories/le-modele.html">Le modèle</a>
             <a href="categories/la-realite.html">La réalité</a>
-            <a href="categories/temoignages.html">Témoignages</a>
+            <a href="partager-temoignage.html">Témoigner</a>
             <a href="categories/mon-regard.html">Mon regard</a>
             <a href="a-propos.html">À propos</a>
         </nav>
@@ -710,7 +712,7 @@
             </div>
             <div class="footer-col">
                 <h3>Ressources</h3>
-                <a href="categories/temoignages.html">Témoignages</a>
+                <a href="partager-temoignage.html">Témoigner</a>
                 <a href="categories/mon-regard.html">Mon regard</a>
                 <a href="a-propos.html">À propos</a>
                 <a href="contact.html">Contact</a>
@@ -871,7 +873,7 @@
 
 <script>
 (function(){
-  var GA_ID = 'GA_MEASUREMENT_ID';   // ← Remplacer par ex: G-ABC123XYZ
+  var GA_ID = 'G-BFEG1EH0N7';   // ← Remplacer par ex: G-ABC123XYZ
   var META_ID = 'META_PIXEL_ID';     // ← Remplacer par ex: 123456789012345
   var STORAGE_KEY = 'mlmd_cookie_consent';
 
@@ -879,7 +881,7 @@
   function setConsent(obj){ localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); }
 
   function loadGA(){
-    if(GA_ID === 'GA_MEASUREMENT_ID') return;
+    if(!GA_ID || GA_ID === 'GA_MEASUREMENT_ID') return;
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
@@ -945,5 +947,6 @@
 })();
 </script>
 <!-- ═══ FIN COOKIE CONSENT ═══ -->
+<script src="/chatbot-widget.js" defer></script>
 </body>
 </html>

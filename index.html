@@ -8,6 +8,13 @@
   <meta property="og:title" content="MLM Décrypté — Comprendre le marketing de réseau" />
   <meta property="og:description" content="Des articles honnêtes pour comprendre le MLM, démystifier les idées reçues et réfléchir autrement sur ce modèle économique." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mlm-decrypte.fr/" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MLM Décrypté — Comprendre le marketing de réseau" />
+  <meta name="twitter:description" content="Des articles honnêtes pour comprendre le MLM, démystifier les idées reçues et réfléchir autrement sur ce modèle économique." />
+  <link rel="canonical" href="https://mlm-decrypte.fr/" />
+  <link rel="alternate" type="application/rss+xml" title="MLM Décrypté — Flux RSS" href="https://mlm-decrypte.fr/feed.xml" />
   <title>MLM Décrypté — Comprendre le marketing de réseau sans préjugés</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -236,7 +243,7 @@
     /* ─── CATÉGORIES ─── */
     .categories { padding: 72px 0; }
     .section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 36px; flex-wrap: wrap; gap: 16px; }
-    .categories__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+    .categories__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .cat-card {
       padding: 22px 16px; border-radius: var(--radius-md); text-align: center;
       cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
@@ -465,6 +472,30 @@
       .hero__stats { flex-direction: column; gap: 12px; padding-top: 20px; margin-top: 24px; }
     }
   </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "MLM Décrypté",
+  "url": "https://mlm-decrypte.fr",
+  "description": "Comprendre le marketing de réseau sans préjugés. Articles, analyses et témoignages pour démystifier le MLM.",
+  "author": {
+    "@type": "Person",
+    "name": "Laurent Constantin"
+  },
+  "inLanguage": "fr"
+}
+</script>
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2228137');
+</script>
+<!-- End MailerLite Universal -->
+    <meta property="og:image" content="https://mlm-decrypte.fr/assets/images/laurent-avatar-circle.png" />
+  <meta name="twitter:image" content="https://mlm-decrypte.fr/assets/images/laurent-avatar-circle.png" />
 </head>
 <body>
 
@@ -484,7 +515,7 @@
         <li><a href="#demystifier">Démystifier</a></li>
         <li><a href="#comprendre">Le modèle</a></li>
         <li><a href="#realite">La réalité</a></li>
-        <li><a href="#temoignages">Témoignages</a></li>
+        <li><a href="partager-temoignage.html">Témoigner</a></li>
         <li><a href="#apropos">À propos</a></li>
       </ul>
       <div class="nav__cta">
@@ -505,7 +536,7 @@
         <li><a href="#demystifier" onclick="closeNav()">🔍 Démystifier</a></li>
         <li><a href="#comprendre"  onclick="closeNav()">📊 Le modèle</a></li>
         <li><a href="#realite"     onclick="closeNav()">🌱 La réalité</a></li>
-        <li><a href="#temoignages" onclick="closeNav()">🗣️ Témoignages</a></li>
+        <li><a href="partager-temoignage.html" onclick="closeNav()">🗣️ Témoigner</a></li>
         <li><a href="#apropos"     onclick="closeNav()">✍️ À propos</a></li>
       </ul>
       <div class="mobile-nav__cta">
@@ -559,7 +590,7 @@
       <div class="section-header">
         <div>
           <p class="section-eyebrow">Explorer par thème</p>
-          <h2 class="section-title">Les <em>5 grands sujets</em> du blog</h2>
+          <h2 class="section-title">Les <em>4 grands sujets</em> du blog</h2>
         </div>
       </div>
       <div class="categories__grid">
@@ -577,11 +608,6 @@
           <div class="cat-card__icon">🌱</div>
           <div class="cat-card__name">La réalité</div>
           <div class="cat-card__count">Ni tout rose ni tout noir</div>
-        </a>
-        <a href="categories/temoignages.html" class="cat-card cat-card--amber">
-          <div class="cat-card__icon">🗣️</div>
-          <div class="cat-card__name">Témoignages</div>
-          <div class="cat-card__count">Vraies histoires</div>
         </a>
         <a href="categories/mon-regard.html" class="cat-card cat-card--purple">
           <div class="cat-card__icon">✍️</div>
@@ -699,16 +725,6 @@
           </div>
         </article>
         <article class="article-card">
-          <div class="article-card__img-placeholder img-purple">🗣️</div>
-          <div class="article-card__body">
-            <span class="tag tag--purple">Témoignage</span>
-            <h3 class="article-card__title">Sarah, 3 ans en MLM : "J'ai appris plus sur moi-même que dans mon ancien boulot"</h3>
-            <div class="article-card__meta"><span>📅 22 fév. 2026</span><span>⏱ 6 min</span></div>
-            <p class="article-card__excerpt">Un témoignage sans filtre : les débuts difficiles, les doutes, les petites victoires.</p>
-            <a href="articles/temoignage-mlm-argent.html" class="read-more">Lire l'article</a>
-          </div>
-        </article>
-        <article class="article-card">
           <div class="article-card__img-placeholder img-amber">⚖️</div>
           <div class="article-card__body">
             <span class="tag tag--amber">La réalité</span>
@@ -812,7 +828,7 @@
             <li><a href="categories/demystifier.html">Démystifier</a></li>
             <li><a href="categories/le-modele.html">Le modèle économique</a></li>
             <li><a href="categories/la-realite.html">La réalité du terrain</a></li>
-            <li><a href="categories/temoignages.html">Témoignages</a></li>
+            <li><a href="partager-temoignage.html">Témoigner</a></li>
             <li><a href="categories/mon-regard.html">Mon regard</a></li>
           </ul>
         </div>
@@ -874,31 +890,62 @@
     /* Fermer avec Echap */
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
 
-    /* ─── NEWSLETTER ─── */
+    /* ─── NEWSLETTER (MailerLite) ─── */
     function handleNewsletter(e) {
       e.preventDefault();
-      const form  = e.target;
-      const input = form.querySelector('input[type="email"]');
-      const btn   = form.querySelector('button');
-      const email = input.value.trim();
+      var form  = e.target;
+      var input = form.querySelector('input[type="email"]');
+      var checkbox = form.closest('.newsletter__inner').querySelector('input[type="checkbox"]');
+      var btn   = form.querySelector('button');
+      var email = input.value.trim();
       if (!email) return false;
+      if (checkbox && !checkbox.checked) {
+        alert('Veuillez accepter de recevoir la newsletter pour continuer.');
+        return false;
+      }
 
       btn.textContent = 'Inscription…';
       btn.disabled = true;
 
-      /* Simuler l'envoi — remplacer par l'appel API Brevo en production */
-      setTimeout(() => {
+      /* Envoi via MailerLite API (formulaire embedded g502fg) */
+      var formData = new FormData();
+      formData.append('fields[email]', email);
+      formData.append('ml-submit', '1');
+      formData.append('anticsrf', 'true');
+
+      fetch('https://assets.mailerlite.com/jsonp/2228137/forms/183173787849590271/subscribe', {
+        method: 'POST',
+        body: formData
+      })
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
         btn.textContent = '✓ Abonné(e) !';
         btn.style.background = '#16a34a';
         input.value = '';
-        setTimeout(() => {
+        setTimeout(function() {
           btn.textContent = 'S\'abonner';
           btn.style.background = '';
           btn.disabled = false;
-        }, 3500);
-      }, 1000);
+        }, 4000);
+      })
+      .catch(function() {
+        /* Fallback JSONP si fetch échoue (CORS) */
+        var script = document.createElement('script');
+        script.src = 'https://assets.mailerlite.com/jsonp/2228137/forms/183173787849590271/subscribe?fields[email]=' + encodeURIComponent(email) + '&ml-submit=1&anticsrf=true&callback=mlSubscribeCallback';
+        document.body.appendChild(script);
+        btn.textContent = '✓ Abonné(e) !';
+        btn.style.background = '#16a34a';
+        input.value = '';
+        setTimeout(function() {
+          btn.textContent = 'S\'abonner';
+          btn.style.background = '';
+          btn.disabled = false;
+          script.remove();
+        }, 4000);
+      });
       return false;
     }
+    window.mlSubscribeCallback = function() {};
   </script>
 <!-- ═══ COOKIE CONSENT + TRACKERS ═══ -->
 <style>
@@ -983,7 +1030,7 @@
 
 <script>
 (function(){
-  var GA_ID = 'GA_MEASUREMENT_ID';   // ← Remplacer par ex: G-ABC123XYZ
+  var GA_ID = 'G-BFEG1EH0N7';   // ← Remplacer par ex: G-ABC123XYZ
   var META_ID = 'META_PIXEL_ID';     // ← Remplacer par ex: 123456789012345
   var STORAGE_KEY = 'mlmd_cookie_consent';
 
@@ -991,7 +1038,7 @@
   function setConsent(obj){ localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); }
 
   function loadGA(){
-    if(GA_ID === 'GA_MEASUREMENT_ID') return;
+    if(!GA_ID || GA_ID === 'GA_MEASUREMENT_ID') return;
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
@@ -1057,5 +1104,6 @@
 })();
 </script>
 <!-- ═══ FIN COOKIE CONSENT ═══ -->
+<script src="/chatbot-widget.js" defer></script>
 </body>
 </html>
