@@ -243,7 +243,7 @@
     /* ─── CATÉGORIES ─── */
     .categories { padding: 72px 0; }
     .section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 36px; flex-wrap: wrap; gap: 16px; }
-    .categories__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .categories__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
     .cat-card {
       padding: 22px 16px; border-radius: var(--radius-md); text-align: center;
       cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
@@ -255,6 +255,7 @@
     .cat-card--blue   { background: #dbeafe; border-color: #bfdbfe; }
     .cat-card--red    { background: #fee2e2; border-color: #fecaca; }
     .cat-card--purple { background: #ede9fe; border-color: #ddd6fe; }
+    .cat-card--amber  { background: #fdefd0; border-color: #f5d590; }
     .cat-card__icon { font-size: 1.7rem; margin-bottom: 10px; }
     .cat-card__name { font-weight: 700; font-size: 0.86rem; color: var(--text-dark); margin-bottom: 4px; }
     .cat-card__count { font-size: 0.74rem; color: var(--text-mid); }
@@ -386,7 +387,7 @@
     @media (max-width: 1024px) {
       .hero__inner { gap: 36px; }
       .categories__grid { grid-template-columns: repeat(3, 1fr); }
-      .cat-card:nth-child(4),
+      .cat-card:nth-child(4) { grid-column: span 1; }
       .cat-card:nth-child(5) { grid-column: span 1; }
       .featured__grid { grid-template-columns: 1fr; }
       .featured__grid .article-card--large .article-card__img-placeholder { aspect-ratio: 16/7; }
@@ -420,7 +421,7 @@
       /* Catégories */
       .categories { padding: 52px 0; }
       .categories__grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-      .cat-card:last-child { grid-column: 1 / -1; max-width: 50%; justify-self: center; }
+      .cat-card:last-child { grid-column: 1 / -1; max-width: 60%; justify-self: center; }
 
       /* Featured */
       .featured { padding: 52px 0; }
@@ -512,11 +513,12 @@ ml('account', '2228137');
 
       <!-- Desktop -->
       <ul class="nav__links">
-        <li><a href="#demystifier">Démystifier</a></li>
-        <li><a href="#comprendre">Le modèle</a></li>
-        <li><a href="#realite">La réalité</a></li>
+        <li><a href="categories/demystifier.html">Démystifier</a></li>
+        <li><a href="categories/le-modele.html">Le modèle</a></li>
+        <li><a href="categories/la-realite.html">La réalité</a></li>
+        <li><a href="categories/sur-le-terrain.html">Sur le terrain</a></li>
         <li><a href="partager-temoignage.html">Témoigner</a></li>
-        <li><a href="#apropos">À propos</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
       </ul>
       <div class="nav__cta">
         <a href="#newsletter" class="btn btn--primary">📩 S'abonner</a>
@@ -533,11 +535,13 @@ ml('account', '2228137');
     <!-- Mobile nav -->
     <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
       <ul class="mobile-nav__links">
-        <li><a href="#demystifier" onclick="closeNav()">🔍 Démystifier</a></li>
-        <li><a href="#comprendre"  onclick="closeNav()">📊 Le modèle</a></li>
-        <li><a href="#realite"     onclick="closeNav()">🌱 La réalité</a></li>
-        <li><a href="partager-temoignage.html" onclick="closeNav()">🗣️ Témoigner</a></li>
-        <li><a href="#apropos"     onclick="closeNav()">✍️ À propos</a></li>
+        <li><a href="categories/demystifier.html" onclick="closeNav()">🔍 Démystifier</a></li>
+        <li><a href="categories/le-modele.html"   onclick="closeNav()">📊 Le modèle</a></li>
+        <li><a href="categories/la-realite.html"   onclick="closeNav()">🌱 La réalité</a></li>
+        <li><a href="categories/sur-le-terrain.html" onclick="closeNav()">🏕️ Sur le terrain</a></li>
+        <li><a href="categories/mon-regard.html"   onclick="closeNav()">✍️ Mon regard</a></li>
+        <li><a href="partager-temoignage.html"     onclick="closeNav()">🗣️ Témoigner</a></li>
+        <li><a href="a-propos.html"                onclick="closeNav()">👤 À propos</a></li>
       </ul>
       <div class="mobile-nav__cta">
         <a href="#newsletter" class="btn btn--amber" onclick="closeNav()">📩 S'abonner à la newsletter</a>
@@ -560,11 +564,11 @@ ml('account', '2228137');
           </div>
           <div class="hero__stats">
             <div>
-              <div class="hero__stat-num">41</div>
+              <div class="hero__stat-num">36</div>
               <div class="hero__stat-label">Articles publiés</div>
             </div>
             <div>
-              <div class="hero__stat-num">6</div>
+              <div class="hero__stat-num">5</div>
               <div class="hero__stat-label">Grandes thématiques</div>
             </div>
             <div>
@@ -590,7 +594,7 @@ ml('account', '2228137');
       <div class="section-header">
         <div>
           <p class="section-eyebrow">Explorer par thème</p>
-          <h2 class="section-title">Les <em>4 grands sujets</em> du blog</h2>
+          <h2 class="section-title">Les <em>5 grands sujets</em> du blog</h2>
         </div>
       </div>
       <div class="categories__grid">
@@ -608,6 +612,11 @@ ml('account', '2228137');
           <div class="cat-card__icon">🌱</div>
           <div class="cat-card__name">La réalité</div>
           <div class="cat-card__count">Ni tout rose ni tout noir</div>
+        </a>
+        <a href="categories/sur-le-terrain.html" class="cat-card cat-card--amber">
+          <div class="cat-card__icon">🏕️</div>
+          <div class="cat-card__name">Sur le terrain</div>
+          <div class="cat-card__count">Mon parcours concret</div>
         </a>
         <a href="categories/mon-regard.html" class="cat-card cat-card--purple">
           <div class="cat-card__icon">✍️</div>
@@ -828,8 +837,9 @@ ml('account', '2228137');
             <li><a href="categories/demystifier.html">Démystifier</a></li>
             <li><a href="categories/le-modele.html">Le modèle économique</a></li>
             <li><a href="categories/la-realite.html">La réalité du terrain</a></li>
-            <li><a href="partager-temoignage.html">Témoigner</a></li>
+            <li><a href="categories/sur-le-terrain.html">Sur le terrain</a></li>
             <li><a href="categories/mon-regard.html">Mon regard</a></li>
+            <li><a href="partager-temoignage.html">Témoigner</a></li>
           </ul>
         </div>
         <div>
@@ -847,7 +857,7 @@ ml('account', '2228137');
             <li><a href="a-propos.html">À propos</a></li>
             <li><a href="#newsletter">Newsletter</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact.html">Proposer un témoignage</a></li>
+            <li><a href="partager-temoignage.html">Proposer un témoignage</a></li>
           </ul>
         </div>
       </div>
