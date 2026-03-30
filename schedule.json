@@ -50,38 +50,44 @@
   "pourquoi-blog-mlm-decrypte.html": {
     "title": "Pourquoi ce blog MLM Décrypté",
     "category": "mon-regard",
-    "publish_date": "2026-04-07",
-    "status": "scheduled"
+    "publish_date": "2026-04-01",
+    "status": "launch",
+    "newsletter": "2026-04-07"
   },
   "mlm-mauvaise-reputation.html": {
     "title": "Pourquoi le MLM a mauvaise réputation",
     "category": "demystifier",
-    "publish_date": "2026-04-10",
-    "status": "scheduled"
+    "publish_date": "2026-04-01",
+    "status": "launch",
+    "newsletter": "2026-04-10"
   },
   "plus-grandes-entreprises-mlm.html": {
     "title": "Les plus grandes entreprises MLM",
     "category": "le-modele",
     "publish_date": "2026-04-14",
-    "status": "scheduled"
+    "status": "scheduled",
+    "newsletter": "2026-04-14"
   },
   "plan-de-compensation-mlm.html": {
     "title": "Comprendre les plans de compensation",
     "category": "le-modele",
     "publish_date": "2026-04-17",
-    "status": "scheduled"
+    "status": "scheduled",
+    "newsletter": "2026-04-17"
   },
   "difference-vente-directe-mlm.html": {
     "title": "Vente directe vs MLM",
     "category": "le-modele",
     "publish_date": "2026-04-21",
-    "status": "scheduled"
+    "status": "scheduled",
+    "newsletter": "2026-04-21"
   },
   "mlm-recrutement-ou-vente.html": {
     "title": "Recrutement ou vente : le vrai débat",
     "category": "le-modele",
     "publish_date": "2026-04-24",
-    "status": "scheduled"
+    "status": "scheduled",
+    "newsletter": "2026-04-24"
   },
   "mlm-manipulation.html": {
     "title": "MLM et manipulation : les techniques",
@@ -122,8 +128,8 @@
   "erreurs-debutant-mlm.html": {
     "title": "Les erreurs classiques du débutant",
     "category": "la-realite",
-    "publish_date": "2026-05-19",
-    "status": "scheduled"
+    "publish_date": "2026-04-01",
+    "status": "launch"
   },
   "avenir-mlm.html": {
     "title": "Quel avenir pour le MLM ?",
