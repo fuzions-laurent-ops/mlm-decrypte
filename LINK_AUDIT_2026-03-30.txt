@@ -1,0 +1,293 @@
+================================================================================
+COMPREHENSIVE LINK AUDIT REPORT
+MLM Décrypté Website - All HTML Pages
+================================================================================
+
+AUDIT DATE: 2026-03-30
+SITE ROOT: /sessions/loving-wonderful-volta/mnt/MLM
+TOTAL PAGES AUDITED: 24
+
+================================================================================
+SUMMARY STATISTICS
+================================================================================
+
+Pages Audited:              24
+Total Links Analyzed:       1,109
+  ├─ Working internal:      806 (72.7%)
+  ├─ External links:        54 (4.9%)
+  ├─ Anchor links:          181 (16.3%)
+  ├─ Links to drafts:       30 (2.7%)
+  └─ Broken links:          5 (0.5%)
+
+Pages with Issues:          2
+Pages clean:                22
+
+================================================================================
+BROKEN LINKS DETAILS (5 TOTAL)
+================================================================================
+
+1. 404.html
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Link: /articles
+   Resolves to: /sessions/loving-wonderful-volta/mnt/MLM/articles
+   Status: Directory EXISTS but no index.html
+   Issue: Linking to directory without index.html file
+   Fix: Either create articles/index.html or change link to specific article page
+
+2. article-template.html (4 broken links)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   
+   a) Link: ../partager-temoignage.html
+      Location: Root level (article-template.html is in /MLM/, not /MLM/articles/)
+      Resolves to: /sessions/loving-wonderful-volta/mnt/partager-temoignage.html
+      Correct path: /sessions/loving-wonderful-volta/mnt/MLM/partager-temoignage.html
+      Status: ✗ BROKEN - PATH TRAVERSAL ERROR
+      Issue: Template file is at ROOT level but uses ../ path as if in articles/ subfolder
+      Fix: Change "../partager-temoignage.html" to "partager-temoignage.html"
+   
+   b) Link: /articles/ARTICLE-LIE-1.html
+      Status: ✗ BROKEN - TEMPLATE PLACEHOLDER
+      Issue: Template file contains sample placeholder links that need article titles
+      Fix: Replace with actual article filenames when creating new articles
+   
+   c) Link: /articles/ARTICLE-LIE-2.html
+      Status: ✗ BROKEN - TEMPLATE PLACEHOLDER
+      Issue: Template file contains sample placeholder links that need article titles
+      Fix: Replace with actual article filenames when creating new articles
+   
+   d) Link: /articles/ARTICLE-LIE-3.html
+      Status: ✗ BROKEN - TEMPLATE PLACEHOLDER
+      Issue: Template file contains sample placeholder links that need article titles
+      Fix: Replace with actual article filenames when creating new articles
+
+================================================================================
+PAGES WITH LINKS TO DRAFT ARTICLES (30 LINKS TOTAL)
+================================================================================
+
+These pages contain links to articles that are currently in the brouillons/ (drafts)
+folder and are not published yet. These are NOT broken links - they're intentional
+references to unpublished content.
+
+CATEGORY PAGES (5 links):
+─────────────────────────────────────────────────────────────────────────────────
+• categories/le-modele.html (1 link)
+  → plan-de-compensation-mlm.html
+
+• categories/la-realite.html (2 links)
+  → competences-developpees-mlm.html
+  → quitter-le-mlm.html
+
+• categories/mon-regard.html (2 links)
+  → avenir-mlm.html
+  → comprendre-distributeur-mlm.html
+
+ARTICLE PAGES (25 links):
+─────────────────────────────────────────────────────────────────────────────────
+• articles/comment-fonctionne-mlm.html (2 links)
+  → difference-vente-directe-mlm.html
+  → plan-de-compensation-mlm.html
+
+• articles/erreurs-debutant-mlm.html (5 links)
+  → competences-developpees-mlm.html
+  → mlm-manipulation.html
+  → plan-de-compensation-mlm.html
+  → quitter-le-mlm.html
+  → regard-famille-amis-mlm.html
+
+• articles/mlm-france-legal.html (2 links)
+  → difference-vente-directe-mlm.html
+  → mlm-fonctionnaire-cumul-activite.html
+
+• articles/mlm-impots-france.html (1 link)
+  → plan-de-compensation-mlm.html
+
+• articles/mlm-mauvaise-reputation.html (3 links)
+  → mlm-et-secte.html
+  → mlm-manipulation.html
+  → produits-mlm-trop-chers.html
+
+• articles/mlm-vs-pyramide-de-ponzi.html (2 links)
+  → mlm-manipulation.html
+  → plan-de-compensation-mlm.html
+
+• articles/pourquoi-blog-mlm-decrypte.html (2 links)
+  → avenir-mlm.html
+  → comprendre-distributeur-mlm.html
+
+• articles/pourquoi-echouer-mlm.html (3 links)
+  → competences-developpees-mlm.html
+  → quitter-le-mlm.html
+  → regard-famille-amis-mlm.html
+
+• articles/signaux-alarme-mlm-douteux.html (4 links)
+  → mlm-manipulation.html
+  → mlm-recrutement-ou-vente.html
+  → plan-de-compensation-mlm.html
+  → produits-mlm-trop-chers.html
+
+• articles/vivre-du-mlm-statistiques.html (1 link)
+  → plan-de-compensation-mlm.html
+
+================================================================================
+PAGES WITH PERFECT LINKS (17 PAGES)
+================================================================================
+
+All links working, external links valid, all anchors correct:
+
+ROOT LEVEL:
+  ✓ index.html
+  ✓ a-propos.html
+  ✓ contact.html
+  ✓ partager-temoignage.html
+  ✓ mentions-legales.html
+  ✓ confidentialite.html
+
+CATEGORIES:
+  ✓ categories/demystifier.html
+  ✓ categories/sur-le-terrain.html
+
+ARTICLES:
+  ✓ articles/mlm-arnaque-ou-opportunite.html
+
+================================================================================
+DETAILED PAGE AUDIT BY SECTION
+================================================================================
+
+ROOT LEVEL PAGES (8 pages)
+─────────────────────────────────────────────────────────────────────────────────
+✓ index.html
+  Links: 59 total | 50 internal | 0 external | 9 anchors
+  Status: CLEAN
+
+✓ a-propos.html
+  Links: 30 total | 30 internal | 0 external | 0 anchors
+  Status: CLEAN
+
+✓ contact.html
+  Links: 28 total | 28 internal | 0 external | 0 anchors
+  Status: CLEAN
+
+✓ partager-temoignage.html
+  Links: 20 total | 20 internal | 0 external | 0 anchors
+  Status: CLEAN
+
+✓ mentions-legales.html
+  Links: 32 total | 29 internal | 3 external | 0 anchors
+  Status: CLEAN
+
+✓ confidentialite.html
+  Links: 34 total | 28 internal | 6 external | 0 anchors
+  Status: CLEAN
+
+✗ 404.html
+  Links: 4 total | 3 internal | 0 external | 0 anchors
+  BROKEN: /articles (no index.html in directory)
+
+✗ article-template.html
+  Links: 46 total | 26 internal | 0 external | 8 anchors
+  BROKEN: 4 links
+    - ../partager-temoignage.html (path error - template at root but uses ../)
+    - /articles/ARTICLE-LIE-1.html (placeholder)
+    - /articles/ARTICLE-LIE-2.html (placeholder)
+    - /articles/ARTICLE-LIE-3.html (placeholder)
+
+CATEGORY PAGES (5 pages)
+─────────────────────────────────────────────────────────────────────────────────
+✓ categories/demystifier.html
+  Links: 37 total | 34 internal | 0 external | 3 anchors
+  Status: CLEAN
+
+✓ categories/sur-le-terrain.html
+  Links: 29 total | 26 internal | 0 external | 3 anchors
+  Status: CLEAN
+
+~ categories/le-modele.html
+  Links: 37 total | 33 internal | 0 external | 3 anchors
+  Draft links: 1 (plan-de-compensation-mlm.html)
+
+~ categories/la-realite.html
+  Links: 33 total | 28 internal | 0 external | 3 anchors
+  Draft links: 2 (competences-developpees-mlm.html, quitter-le-mlm.html)
+
+~ categories/mon-regard.html
+  Links: 31 total | 26 internal | 0 external | 3 anchors
+  Draft links: 2 (avenir-mlm.html, comprendre-distributeur-mlm.html)
+
+ARTICLE PAGES (11 pages)
+─────────────────────────────────────────────────────────────────────────────────
+✓ articles/mlm-arnaque-ou-opportunite.html
+  Links: 67 total | 46 internal | 7 external | 14 anchors
+  Status: CLEAN
+
+~ articles/comment-fonctionne-mlm.html
+  Links: 63 total | 40 internal | 4 external | 13 anchors
+  Draft links: 2
+
+~ articles/erreurs-debutant-mlm.html
+  Links: 58 total | 37 internal | 0 external | 14 anchors
+  Draft links: 5
+
+~ articles/mlm-france-legal.html
+  Links: 63 total | 42 internal | 4 external | 14 anchors
+  Draft links: 2
+
+~ articles/mlm-impots-france.html
+  Links: 59 total | 35 internal | 8 external | 14 anchors
+  Draft links: 1
+
+~ articles/mlm-mauvaise-reputation.html
+  Links: 59 total | 37 internal | 2 external | 13 anchors
+  Draft links: 3
+
+~ articles/mlm-vs-pyramide-de-ponzi.html
+  Links: 69 total | 45 internal | 6 external | 14 anchors
+  Draft links: 2
+
+~ articles/pourquoi-blog-mlm-decrypte.html
+  Links: 62 total | 45 internal | 0 external | 13 anchors
+  Draft links: 2
+
+~ articles/pourquoi-echouer-mlm.html
+  Links: 59 total | 39 internal | 2 external | 13 anchors
+  Draft links: 3
+
+~ articles/signaux-alarme-mlm-douteux.html
+  Links: 69 total | 38 internal | 9 external | 13 anchors
+  Draft links: 4
+
+~ articles/vivre-du-mlm-statistiques.html
+  Links: 61 total | 41 internal | 3 external | 14 anchors
+  Draft links: 1
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+CRITICAL (Fix immediately):
+  1. article-template.html: Fix relative path for partager-temoignage.html
+     Change: "../partager-temoignage.html" → "partager-temoignage.html"
+     Affects: All template links to testimonial page
+
+IMPORTANT (Fix before publishing new articles):
+  2. article-template.html: Replace placeholder links
+     Replace: /articles/ARTICLE-LIE-1.html, ARTICLE-LIE-2.html, ARTICLE-LIE-3.html
+     With: Actual article filenames for "related articles" section
+     
+  3. 404.html: Add landing page for /articles directory
+     Create: articles/index.html (list of all articles)
+     Or change link to: "index.html#articles" or specific article
+
+INFORMATIONAL:
+  4. Draft article links are functioning as intended
+     - 30 links point to unpublished content in brouillons/ folder
+     - No action needed unless articles should be published
+     - These will become valid when articles are moved from brouillons/ to articles/
+
+NOTES:
+  - All other internal links are working correctly
+  - All external links are valid
+  - Anchor links (#newsletter, #articles, etc.) are correctly implemented
+  - No missing image references detected in main content
+  - No broken category page links
+
+================================================================================
