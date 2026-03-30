@@ -7,141 +7,147 @@
     <title>La réalité du MLM — Ni tout rose ni tout noir | MLM Décrypté</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
+        /* ─── RESET ─── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body { font-family: 'Inter', sans-serif; color: #1a1a2e; background: #fff; line-height: 1.7; font-size: 16px; overflow-x: hidden; }
+        body.nav-open { overflow: hidden; }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+        button { font-family: inherit; }
+
+        /* ─── VARIABLES ─── */
         :root {
-            --green-dark: #0d3b2e;
-            --green-mid: #1a5c44;
-            --amber: #e8a020;
+            --green-dark:  #0d3b2e;
+            --green-mid:   #1a5c44;
+            --green-light: #2d8a64;
+            --amber:       #e8a020;
             --amber-light: #f5c052;
-            --cream: #faf8f3;
-            --grey-light: #f4f4f6;
-            --grey-mid: #9a9aaa;
-            --text-dark: #1a1a2e;
-            --text-mid: #4a4a6a;
-            --nav-h: 68px;
+            --cream:       #faf8f3;
+            --grey-light:  #f4f4f6;
+            --grey-mid:    #9a9aaa;
+            --text-dark:   #1a1a2e;
+            --text-mid:    #4a4a6a;
+            --shadow-sm:   0 2px 8px rgba(0,0,0,0.07);
+            --shadow-md:   0 4px 20px rgba(0,0,0,0.10);
+            --shadow-lg:   0 8px 40px rgba(0,0,0,0.14);
+            --radius-sm:   8px;
+            --radius-md:   14px;
+            --radius-lg:   24px;
+            --nav-h:       68px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* ─── UTILITIES ─── */
+        .container       { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+        .container--sm   { max-width: 680px;  margin: 0 auto; padding: 0 24px; }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--cream);
-            color: var(--text-dark);
-            line-height: 1.6;
+        .tag {
+            display: inline-block; font-size: 0.7rem; font-weight: 700;
+            letter-spacing: 0.08em; text-transform: uppercase;
+            padding: 4px 11px; border-radius: 20px; white-space: nowrap;
         }
+        .tag--green  { background: #d4f0e4; color: var(--green-mid); }
+        .tag--amber  { background: #fdefd0; color: #b07010; }
+        .tag--blue   { background: #dbeafe; color: #1e40af; }
+        .tag--red    { background: #fee2e2; color: #991b1b; }
+        .tag--purple { background: #ede9fe; color: #5b21b6; }
 
-        /* Header */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+            padding: 13px 26px; border-radius: var(--radius-sm);
+            font-weight: 600; font-size: 0.92rem; cursor: pointer;
+            transition: all 0.2s ease; border: none; min-height: 48px;
+        }
+        .btn--primary { background: var(--green-mid); color: white; }
+        .btn--primary:hover { background: var(--green-dark); transform: translateY(-1px); }
+        .btn--outline { background: transparent; color: var(--green-mid); border: 2px solid var(--green-mid); }
+        .btn--outline:hover { background: var(--green-mid); color: white; }
+        .btn--amber { background: var(--amber); color: white; }
+        .btn--amber:hover { background: #c88010; transform: translateY(-1px); }
+
+        /* ─── HEADER ─── */
         header {
-            position: sticky;
-            top: 0;
-            background: white;
-            height: var(--nav-h);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            z-index: 100;
+            position: sticky; top: 0; z-index: 200;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(0,0,0,0.08);
         }
+        nav { display: flex; align-items: center; justify-content: space-between; height: var(--nav-h); }
 
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
+        .nav__logo { display: flex; align-items: center; gap: 10px; z-index: 201; }
+        .nav__logo-icon {
+            width: 38px; height: 38px; background: var(--green-mid); border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; font-weight: 800; color: white; flex-shrink: 0;
         }
+        .nav__logo-text { font-weight: 800; font-size: 1.12rem; color: var(--text-dark); }
+        .nav__logo-text span { color: var(--green-mid); }
 
-        .logo-m {
-            color: var(--green-mid);
+        /* Desktop links */
+        .nav__links {
+            display: flex; align-items: center; gap: 28px; list-style: none;
         }
-
-        nav {
-            display: flex;
-            gap: 2rem;
+        .nav__links a {
+            font-size: 0.88rem; font-weight: 500; color: var(--text-mid);
+            transition: color 0.2s; padding: 6px 0;
         }
+        .nav__links a:hover { color: var(--green-mid); }
 
-        nav a {
-            text-decoration: none;
-            color: var(--text-mid);
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
+        .nav__cta { display: flex; gap: 10px; align-items: center; }
 
-        nav a:hover {
-            color: var(--green-mid);
-        }
-
+        /* ─── HAMBURGER ─── */
         .hamburger {
+            display: none; flex-direction: column; justify-content: center;
+            gap: 5px; cursor: pointer; padding: 10px; margin-right: -10px;
+            background: none; border: none; z-index: 201;
+            min-width: 44px; min-height: 44px;
+        }
+        .hamburger__line {
+            display: block; width: 24px; height: 2px;
+            background: var(--text-dark); border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform-origin: center;
+        }
+        .hamburger.is-active .hamburger__line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.is-active .hamburger__line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger.is-active .hamburger__line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        /* ─── MOBILE NAV DRAWER ─── */
+        .mobile-nav {
             display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 6px;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: var(--text-dark);
-            transition: all 0.3s;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(8px, 8px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-        }
-
-        /* Mobile Menu */
-        .nav-drawer {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 80%;
-            height: 100vh;
+            position: fixed; inset: 0; top: var(--nav-h); z-index: 190;
             background: white;
-            transition: right 0.3s ease;
-            z-index: 99;
-            padding: 100px 2rem 2rem;
+            padding: 32px 24px 40px;
+            flex-direction: column;
             overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
         }
+        .mobile-nav.is-open {
+            transform: translateX(0);
+        }
+        .mobile-nav__links {
+            list-style: none;
+            margin-bottom: 28px;
+        }
+        .mobile-nav__links li { border-bottom: 1px solid var(--grey-light); }
+        .mobile-nav__links a {
+            display: block; padding: 16px 4px;
+            font-size: 1.1rem; font-weight: 600; color: var(--text-dark);
+            transition: color 0.2s;
+        }
+        .mobile-nav__links a:hover { color: var(--green-mid); }
+        .mobile-nav__cta { display: flex; flex-direction: column; gap: 12px; }
+        .mobile-nav__cta .btn { width: 100%; font-size: 1rem; }
 
-        .nav-drawer.open {
-            right: 0;
+        /* Overlay derrière le drawer */
+        .nav-overlay {
+            display: none; position: fixed; inset: 0; top: var(--nav-h);
+            background: rgba(0,0,0,0.4); z-index: 189;
+            opacity: 0; transition: opacity 0.3s ease;
         }
-
-        .nav-drawer a {
-            display: block;
-            padding: 1rem 0;
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            border-bottom: 1px solid var(--grey-light);
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            display: none;
-            z-index: 98;
-        }
-
-        .overlay.open {
-            display: block;
-        }
+        .nav-overlay.is-open { opacity: 1; }
 
         /* Hero */
         .hero {
@@ -298,59 +304,26 @@
             color: var(--amber);
         }
 
-        /* Newsletter */
-        .newsletter {
-            background: var(--amber-light);
-            padding: 3rem 2rem;
-            text-align: center;
-            margin: 4rem 2rem;
-            border-radius: 8px;
+        /* ─── NEWSLETTER ─── */
+        .newsletter { padding: 72px 0; background: linear-gradient(135deg, #fff8ec, #fdf4e3); }
+        .newsletter__inner { max-width: 540px; margin: 0 auto; text-align: center; }
+        .newsletter__icon {
+            width: 58px; height: 58px; background: var(--amber); border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.55rem; margin: 0 auto 18px;
         }
-
-        .newsletter h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
+        .newsletter h2 { font-family: 'Playfair Display', serif; font-size: 1.75rem; margin-bottom: 10px; }
+        .newsletter p { color: var(--text-mid); font-size: 0.9rem; margin-bottom: 24px; }
+        .newsletter__form { display: flex; gap: 10px; }
+        .newsletter__input {
+            flex: 1; padding: 13px 18px;
+            border: 1.5px solid #e0d8c8; border-radius: var(--radius-sm);
+            font-size: 0.9rem; font-family: 'Inter', sans-serif;
+            background: white; outline: none; transition: border-color 0.2s;
+            min-height: 48px;
         }
-
-        .newsletter p {
-            margin-bottom: 2rem;
-            color: var(--text-mid);
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .newsletter-form {
-            display: flex;
-            gap: 0.5rem;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .newsletter-form input {
-            flex: 1;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 4px;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .newsletter-form button {
-            padding: 0.8rem 1.5rem;
-            background: var(--green-mid);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-
-        .newsletter-form button:hover {
-            background: var(--green-dark);
-        }
+        .newsletter__input:focus { border-color: var(--amber); }
+        .newsletter__note { font-size: 0.74rem; color: var(--grey-mid); margin-top: 12px; }
 
         /* Footer */
         footer {
@@ -421,32 +394,15 @@
             .footer-content {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            header {
-                padding: 0 1rem;
-            }
-
-            nav {
-                gap: 1.5rem;
-            }
-
-            nav a {
-                font-size: 0.85rem;
-            }
         }
 
         @media (max-width: 768px) {
-            header {
-                padding: 0 1rem;
-            }
+            :root { --nav-h: 60px; }
 
-            nav {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
+            /* Nav */
+            .nav__links, .nav__cta { display: none; }
+            .hamburger { display: flex; }
+            .mobile-nav { display: flex; }
 
             .articles-grid {
                 grid-template-columns: 1fr;
@@ -464,9 +420,11 @@
                 font-size: 1rem;
             }
 
-            .newsletter-form {
-                flex-direction: column;
-            }
+            /* Newsletter */
+            .newsletter { padding: 52px 0; }
+            .newsletter__form { flex-direction: column; }
+            .newsletter__form .btn { width: 100%; }
+            .newsletter h2 { font-size: 1.45rem; }
 
             .nav-drawer {
                 width: 100%;
@@ -474,9 +432,7 @@
         }
 
         @media (max-width: 400px) {
-            .logo {
-                font-size: 1.2rem;
-            }
+            .nav__logo-text { font-size: 1rem; }
 
             .hero {
                 padding: 2rem 1rem;
@@ -501,34 +457,55 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo"><span class="logo-m">M</span>LM Décrypté</div>
-        <nav id="nav">
-            <a href="../index.html">Accueil</a>
-            <a href="./demystifier.html">Démystifier</a>
-            <a href="./le-modele.html">Le modèle</a>
-            <a href="./la-realite.html">La réalité</a>
-            <a href="../partager-temoignage.html">Témoigner</a>
-            <a href="./mon-regard.html">Mon regard</a>
-        </nav>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
+    <!-- ═══ MOBILE NAV OVERLAY ═══ -->
+    <div class="nav-overlay" id="navOverlay" onclick="closeNav()" aria-hidden="true"></div>
 
-    <!-- Mobile Menu -->
-    <div class="overlay" id="overlay"></div>
-    <div class="nav-drawer" id="navDrawer">
-        <a href="../index.html">Accueil</a>
-        <a href="./demystifier.html">Démystifier</a>
-        <a href="./le-modele.html">Le modèle</a>
-        <a href="./la-realite.html">La réalité</a>
-        <a href="../partager-temoignage.html">Témoigner</a>
-        <a href="./mon-regard.html">Mon regard</a>
-    </div>
+    <!-- ═══ HEADER ═══ -->
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="nav__logo" aria-label="MLM Décrypté — Accueil">
+                <div class="nav__logo-icon">M</div>
+                <span class="nav__logo-text">MLM <span>Décrypté</span></span>
+            </a>
+
+            <!-- Desktop -->
+            <ul class="nav__links">
+                <li><a href="./demystifier.html">Démystifier</a></li>
+                <li><a href="./le-modele.html">Le modèle</a></li>
+                <li><a href="./la-realite.html">La réalité</a></li>
+                <li><a href="./sur-le-terrain.html">Sur le terrain</a></li>
+                <li><a href="../partager-temoignage.html">Témoigner</a></li>
+                <li><a href="../a-propos.html">À propos</a></li>
+            </ul>
+            <div class="nav__cta">
+                <a href="#newsletter" class="btn btn--primary">📩 S'abonner</a>
+            </div>
+
+            <!-- Hamburger -->
+            <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNav">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+        </nav>
+
+        <!-- Mobile nav -->
+        <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+            <ul class="mobile-nav__links">
+                <li><a href="./demystifier.html" onclick="closeNav()">🔍 Démystifier</a></li>
+                <li><a href="./le-modele.html" onclick="closeNav()">📊 Le modèle</a></li>
+                <li><a href="./la-realite.html" onclick="closeNav()">🌱 La réalité</a></li>
+                <li><a href="./sur-le-terrain.html" onclick="closeNav()">🏕️ Sur le terrain</a></li>
+                <li><a href="./mon-regard.html" onclick="closeNav()">✍️ Mon regard</a></li>
+                <li><a href="../partager-temoignage.html" onclick="closeNav()">🗣️ Témoigner</a></li>
+                <li><a href="../a-propos.html" onclick="closeNav()">👤 À propos</a></li>
+            </ul>
+            <div class="mobile-nav__cta">
+                <a href="#newsletter" class="btn btn--amber" onclick="closeNav()">📩 S'abonner à la newsletter</a>
+                <a href="#articles" class="btn btn--outline" onclick="closeNav()">Lire les articles</a>
+            </div>
+        </nav>
+    </header>
 
     <!-- Hero -->
     <section class="hero">
@@ -644,18 +621,25 @@
         </div>
     </main>
 
-    <!-- Newsletter -->
-    <section class="newsletter">
-        <h2>Rester informé</h2>
-        <p>Recevez nos derniers articles directement dans votre boîte mail, pour rester au cœur du sujet.</p>
-        <form class="newsletter-form" onsubmit="event.preventDefault();">
-            <input type="email" placeholder="Votre email" required>
-            <button type="submit">S'inscrire</button>
-            <label class="rgpd-consent" style="display:flex;align-items:flex-start;gap:8px;font-size:0.8rem;color:#888;margin-top:10px;cursor:pointer">
-                <input type="checkbox" required style="margin-top:2px;flex-shrink:0">
-                <span>J'accepte de recevoir la newsletter. <a href="../confidentialite.html" style="color:var(--amber,#f5a623)">Désabonnement à tout moment.</a></span>
-            </label>
-        </form>
+    <!-- ═══ NEWSLETTER ═══ -->
+    <section class="newsletter" id="newsletter" aria-label="Newsletter">
+        <div class="container">
+            <div class="newsletter__inner">
+                <div class="newsletter__icon" aria-hidden="true">📩</div>
+                <h2>Restez informé, pensez par vous-même</h2>
+                <p>Un nouvel article par semaine, directement dans votre boîte mail. Pas de spam, pas de recrutement — juste de la réflexion.</p>
+                <form class="newsletter__form" onsubmit="return handleNewsletter(event)" novalidate>
+                    <input type="email" class="newsletter__input" placeholder="votre@email.com" aria-label="Votre adresse email" required />
+                    <button type="submit" class="btn btn--amber">S'abonner</button>
+                </form>
+                <div class="newsletter__note" style="text-align:left;margin-top:12px">
+                    <label style="display:flex;align-items:flex-start;gap:7px;cursor:pointer;font-size:0.75rem;color:#9a9aaa;line-height:1.5">
+                        <input type="checkbox" required style="margin-top:3px;flex-shrink:0;accent-color:#1a5c44;width:14px;height:14px">
+                        <span>J'accepte de recevoir la newsletter hebdomadaire de MLM Décrypté. Désabonnement à tout moment en un clic. <a href="../confidentialite.html" style="color:#1a5c44;text-decoration:underline">Politique de confidentialité</a></span>
+                    </label>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -697,38 +681,90 @@
     </footer>
 
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const navDrawer = document.getElementById('navDrawer');
-        const overlay = document.getElementById('overlay');
+        /* ─── MENU MOBILE ─── */
+        const hamburger  = document.getElementById('hamburger');
+        const mobileNav  = document.getElementById('mobileNav');
+        const navOverlay = document.getElementById('navOverlay');
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navDrawer.classList.toggle('open');
-            overlay.classList.toggle('open');
-        });
+        function toggleNav() {
+            const isOpen = mobileNav.classList.contains('is-open');
+            isOpen ? closeNav() : openNav();
+        }
+        function openNav() {
+            hamburger.classList.add('is-active');
+            hamburger.setAttribute('aria-expanded', 'true');
+            mobileNav.classList.add('is-open');
+            navOverlay.classList.add('is-open');
+            navOverlay.style.display = 'block';
+            document.body.classList.add('nav-open');
+        }
+        function closeNav() {
+            hamburger.classList.remove('is-active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileNav.classList.remove('is-open');
+            navOverlay.classList.remove('is-open');
+            setTimeout(() => { navOverlay.style.display = 'none'; }, 300);
+            document.body.classList.remove('nav-open');
+        }
+        /* Fermer avec Echap */
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
 
-        overlay.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navDrawer.classList.remove('open');
-            overlay.classList.remove('open');
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                hamburger.classList.remove('active');
-                navDrawer.classList.remove('open');
-                overlay.classList.remove('open');
+        /* ─── NEWSLETTER (MailerLite) ─── */
+        function handleNewsletter(e) {
+            e.preventDefault();
+            var form  = e.target;
+            var input = form.querySelector('input[type="email"]');
+            var checkbox = form.closest('.newsletter__inner').querySelector('input[type="checkbox"]');
+            var btn   = form.querySelector('button');
+            var email = input.value.trim();
+            if (!email) return false;
+            if (checkbox && !checkbox.checked) {
+                alert('Veuillez accepter de recevoir la newsletter pour continuer.');
+                return false;
             }
-        });
 
-        navDrawer.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A') {
-                hamburger.classList.remove('active');
-                navDrawer.classList.remove('open');
-                overlay.classList.remove('open');
-            }
-        });
+            btn.textContent = 'Inscription…';
+            btn.disabled = true;
+
+            /* Envoi via MailerLite API (formulaire embedded g502fg) */
+            var formData = new FormData();
+            formData.append('fields[email]', email);
+            formData.append('ml-submit', '1');
+            formData.append('anticsrf', 'true');
+
+            fetch('https://assets.mailerlite.com/jsonp/2228137/forms/183173787849590271/subscribe', {
+                method: 'POST',
+                body: formData
+            })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                btn.textContent = '✓ Abonné(e) !';
+                btn.style.background = '#16a34a';
+                input.value = '';
+                setTimeout(function() {
+                    btn.textContent = 'S\'abonner';
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 4000);
+            })
+            .catch(function() {
+                /* Fallback JSONP si fetch échoue (CORS) */
+                var script = document.createElement('script');
+                script.src = 'https://assets.mailerlite.com/jsonp/2228137/forms/183173787849590271/subscribe?fields[email]=' + encodeURIComponent(email) + '&ml-submit=1&anticsrf=true&callback=mlSubscribeCallback';
+                document.body.appendChild(script);
+                btn.textContent = '✓ Abonné(e) !';
+                btn.style.background = '#16a34a';
+                input.value = '';
+                setTimeout(function() {
+                    btn.textContent = 'S\'abonner';
+                    btn.style.background = '';
+                    btn.disabled = false;
+                    script.remove();
+                }, 4000);
+            });
+            return false;
+        }
+        window.mlSubscribeCallback = function() {};
     </script>
-<script src="/chatbot-widget.js" defer></script>
 </body>
 </html>

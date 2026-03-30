@@ -56,7 +56,7 @@ Pour commencer, voici les 3 articles qui résument le mieux la philosophie de ce
 → [Pourquoi j'ai créé ce blog — et ce qu'il ne sera jamais] (lien)
 
 À très vite,
-Laurent
+Laurent — MLM Décrypté
 
 P.S. Si vous avez une question ou un sujet que vous aimeriez voir traité, répondez
 simplement à cet email. Je lis tous les messages.
@@ -82,7 +82,7 @@ qu'on voit dans les présentations de recrutement) :
 
 La réponse est plus nuancée que "oui" ou "non". Et c'est justement ça qui est intéressant.
 
-Laurent
+Laurent — MLM Décrypté
 
 ---
 
@@ -103,7 +103,7 @@ Si ce type de contenu vous intéresse, vous le retrouvez chaque semaine dans vot
 Et si un sujet vous tient à cœur, dites-le moi — vos questions orientent souvent
 les prochains articles.
 
-Laurent
+Laurent — MLM Décrypté
 
 ---
 
@@ -179,7 +179,7 @@ OBJET : [Article de la semaine] + accroche courte
 
 ─────────────────────────────────────
 À la semaine prochaine,
-Laurent
+Laurent — MLM Décrypté
 ─────────────────────────────────────
 ```
 
@@ -214,7 +214,7 @@ Je voulais juste vous dire deux choses :
 Et si vous revenez, voici l'article le plus lu du blog en ce moment :
 → [Article le plus populaire du moment] (lien)
 
-Laurent
+Laurent — MLM Décrypté
 
 ---
 *Si pas d'ouverture 7 jours après → désabonnement automatique (maintient une liste saine)*
