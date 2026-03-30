@@ -1,0 +1,34 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="dots3" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1.5" fill="#ffffff" opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" rx="12" fill="url(#grad3)"/>
+  <rect width="800" height="450" rx="12" fill="url(#dots3)"/>
+
+  <!-- Mountain -->
+  <g opacity="0.9">
+    <!-- Mountain base -->
+    <path d="M 250 330 L 400 120 L 550 330" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Climbing path (dashed) -->
+    <path d="M 250 330 L 300 280 L 350 250 L 400 150" fill="none" stroke="#ffffff" stroke-width="3" stroke-dasharray="8,4" opacity="0.7"/>
+
+    <!-- Flag at peak -->
+    <rect x="390" y="100" width="20" height="30" fill="#ffffff"/>
+    <path d="M 410 110 L 450 95 L 410 120 Z" fill="#ffffff"/>
+
+    <!-- Person on mountain (climbing) -->
+    <circle cx="350" cy="250" r="12" fill="#ffffff"/>
+    <line x1="350" y1="262" x2="350" y2="290" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="330" y1="275" x2="370" y2="275" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="350" y1="290" x2="335" y2="315" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="350" y1="290" x2="365" y2="315" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

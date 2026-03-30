@@ -32,154 +32,232 @@
             line-height: 1.6;
         }
 
-        /* ===== HEADER & NAVIGATION ===== */
+        /* ─── HEADER ─── */
         header {
             position: sticky;
             top: 0;
-            z-index: 100;
-            background: white;
-            border-bottom: 1px solid #e8e8e8;
-            height: var(--nav-h);
+            z-index: 200;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        nav.container {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            height: 64px;
+            max-width: 1100px;
+            margin: 0 auto;
             padding: 0 24px;
         }
 
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--green-dark);
-            text-decoration: none;
-        }
-
-        nav.desktop {
+        .nav__logo {
             display: flex;
-            gap: 32px;
-        }
-
-        nav.desktop a {
+            align-items: center;
+            gap: 10px;
+            z-index: 201;
             text-decoration: none;
-            color: var(--text-mid);
-            font-size: 14px;
+        }
+
+        .nav__logo-icon {
+            width: 38px;
+            height: 38px;
+            background: var(--green-mid);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .nav__logo-text {
+            font-weight: 800;
+            font-size: 1.12rem;
+            color: var(--text-dark);
+        }
+
+        .nav__logo-text span {
+            color: var(--green-mid);
+        }
+
+        .nav__links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav__links a {
+            font-size: 0.88rem;
             font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
+            color: var(--text-mid);
+            transition: color 0.2s;
+            padding: 6px 0;
+            text-decoration: none;
         }
 
-        nav.desktop a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--amber);
-            transition: width 0.3s ease;
+        .nav__links a:hover {
+            color: var(--green-mid);
         }
 
-        nav.desktop a:hover::after {
-            width: 100%;
-        }
-
-        nav.desktop a.active {
-            color: var(--green-dark);
-            font-weight: 600;
+        .nav__cta {
+            display: flex;
+            gap: 10px;
+            align-items: center;
         }
 
         .hamburger {
             display: none;
             flex-direction: column;
-            gap: 6px;
+            justify-content: center;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+            margin-right: -10px;
             background: none;
             border: none;
-            cursor: pointer;
-            padding: 8px;
+            z-index: 201;
+            min-width: 44px;
+            min-height: 44px;
         }
 
-        .hamburger span {
+        .hamburger__line {
+            display: block;
             width: 24px;
-            height: 2.5px;
+            height: 2px;
             background: var(--text-dark);
             border-radius: 2px;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform-origin: center;
         }
 
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(10px, 10px);
+        .hamburger.is-active .hamburger__line:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
         }
 
-        .hamburger.active span:nth-child(2) {
+        .hamburger.is-active .hamburger__line:nth-child(2) {
             opacity: 0;
+            transform: scaleX(0);
         }
 
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
+        .hamburger.is-active .hamburger__line:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            inset: 0;
+            top: 64px;
+            z-index: 190;
+            background: white;
+            padding: 32px 24px 40px;
+            flex-direction: column;
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-nav.is-open {
+            transform: translateX(0);
+        }
+
+        .mobile-nav__links {
+            list-style: none;
+            margin-bottom: 28px;
+        }
+
+        .mobile-nav__links li {
+            border-bottom: 1px solid #eee;
+        }
+
+        .mobile-nav__links a {
+            display: block;
+            padding: 16px 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: color 0.2s;
+            text-decoration: none;
+        }
+
+        .mobile-nav__links a:hover {
+            color: var(--green-mid);
+        }
+
+        .mobile-nav__cta {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mobile-nav__cta .btn {
+            width: 100%;
+            font-size: 1rem;
         }
 
         .nav-overlay {
             display: none;
             position: fixed;
-            top: var(--nav-h);
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
+            top: 64px;
             background: rgba(0, 0, 0, 0.4);
-            z-index: 99;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            z-index: 189;
         }
 
-        .nav-overlay.active {
+        .nav-overlay.is-open {
             display: block;
-            opacity: 1;
         }
 
-        nav.mobile {
-            display: none;
-            position: fixed;
-            top: var(--nav-h);
-            left: 0;
-            width: 280px;
-            height: calc(100vh - var(--nav-h));
-            background: white;
-            flex-direction: column;
-            padding: 24px 0;
-            z-index: 101;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+        body.nav-open {
+            overflow: hidden;
         }
 
-        nav.mobile.active {
-            transform: translateX(0);
-        }
-
-        nav.mobile a {
-            text-decoration: none;
-            color: var(--text-mid);
-            font-size: 16px;
-            padding: 16px 24px;
-            transition: background 0.2s ease, color 0.2s ease;
-            border-left: 3px solid transparent;
-        }
-
-        nav.mobile a:hover {
-            background: var(--grey-light);
-            color: var(--green-dark);
-        }
-
-        nav.mobile a.active {
-            background: var(--cream);
-            color: var(--green-dark);
-            border-left-color: var(--amber);
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 10px;
             font-weight: 600;
+            font-size: 0.92rem;
+            cursor: pointer;
+            text-decoration: none;
+            border: none;
+            transition: transform 0.15s, box-shadow 0.15s;
         }
 
-        /* ===== RESPONSIVE HEADER ===== */
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn--primary {
+            background: var(--green-mid);
+            color: white;
+        }
+
+        .btn--amber {
+            background: var(--amber);
+            color: white;
+        }
+
+        .btn--outline {
+            background: transparent;
+            border: 1.5px solid #ccc;
+            color: var(--text-dark);
+        }
+
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
-            nav.desktop {
+            .nav__links,
+            .nav__cta {
                 display: none;
             }
 
@@ -187,7 +265,7 @@
                 display: flex;
             }
 
-            nav.mobile {
+            .mobile-nav {
                 display: flex;
             }
         }
@@ -843,32 +921,45 @@
 <body>
     <!-- HEADER -->
     <header>
-        <a href="index.html" class="logo">M</a>
-        <nav class="desktop">
-            <a href="index.html">Accueil</a>
-            <a href="categories/demystifier.html">Démystifier</a>
-            <a href="categories/le-modele.html">Le modèle</a>
-            <a href="categories/la-realite.html">La réalité</a>
-            <a href="partager-temoignage.html">Témoigner</a>
-            <a href="categories/mon-regard.html">Mon regard</a>
-            <a href="a-propos.html" class="active">À propos</a>
-        </nav>
-        <button class="hamburger" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <nav class="mobile">
-            <a href="index.html">Accueil</a>
-            <a href="categories/demystifier.html">Démystifier</a>
-            <a href="categories/le-modele.html">Le modèle</a>
-            <a href="categories/la-realite.html">La réalité</a>
-            <a href="partager-temoignage.html">Témoigner</a>
-            <a href="categories/mon-regard.html">Mon regard</a>
-            <a href="a-propos.html" class="active">À propos</a>
-        </nav>
-        <div class="nav-overlay"></div>
+    <nav class="container">
+      <a href="index.html" class="nav__logo" aria-label="MLM Décrypté — Accueil">
+        <div class="nav__logo-icon">M</div>
+        <span class="nav__logo-text">MLM <span>Décrypté</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="categories/demystifier.html">Démystifier</a></li>
+        <li><a href="categories/le-modele.html">Le modèle</a></li>
+        <li><a href="categories/la-realite.html">La réalité</a></li>
+        <li><a href="categories/sur-le-terrain.html">Sur le terrain</a></li>
+        <li><a href="partager-temoignage.html">Témoigner</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="index.html#newsletter" class="btn btn--primary">📩 S'abonner</a>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNav">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </nav>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+      <ul class="mobile-nav__links">
+        <li><a href="categories/demystifier.html" onclick="closeNav()">🔍 Démystifier</a></li>
+        <li><a href="categories/le-modele.html" onclick="closeNav()">📊 Le modèle</a></li>
+        <li><a href="categories/la-realite.html" onclick="closeNav()">🌱 La réalité</a></li>
+        <li><a href="categories/sur-le-terrain.html" onclick="closeNav()">🏕️ Sur le terrain</a></li>
+        <li><a href="categories/mon-regard.html" onclick="closeNav()">✍️ Mon regard</a></li>
+        <li><a href="partager-temoignage.html" onclick="closeNav()">🗣️ Témoigner</a></li>
+        <li><a href="a-propos.html" onclick="closeNav()">👤 À propos</a></li>
+      </ul>
+      <div class="mobile-nav__cta">
+        <a href="index.html#newsletter" class="btn btn--amber" onclick="closeNav()">📩 S'abonner à la newsletter</a>
+        <a href="index.html#articles" class="btn btn--outline" onclick="closeNav()">Lire les articles</a>
+      </div>
+    </nav>
     </header>
+    <div class="nav-overlay" id="navOverlay" onclick="closeNav()" aria-hidden="true"></div>
 
     <!-- MAIN -->
     <main>
@@ -1068,32 +1159,34 @@
     </footer>
 
     <script>
-        // Hamburger menu
-        const hamburger = document.querySelector('.hamburger');
-        const mobileNav = document.querySelector('nav.mobile');
-        const navOverlay = document.querySelector('.nav-overlay');
-        const mobileLinks = document.querySelectorAll('nav.mobile a');
+        const hamburger  = document.getElementById('hamburger');
+        const mobileNav  = document.getElementById('mobileNav');
+        const navOverlay = document.getElementById('navOverlay');
 
-        function toggleMenu() {
-            hamburger.classList.toggle('active');
-            mobileNav.classList.toggle('active');
-            navOverlay.classList.toggle('active');
-            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        function toggleNav() {
+            const isOpen = mobileNav.classList.contains('is-open');
+            isOpen ? closeNav() : openNav();
         }
 
-        hamburger.addEventListener('click', toggleMenu);
-        navOverlay.addEventListener('click', toggleMenu);
+        function openNav() {
+            hamburger.classList.add('is-active');
+            hamburger.setAttribute('aria-expanded', 'true');
+            mobileNav.classList.add('is-open');
+            navOverlay.classList.add('is-open');
+            navOverlay.style.display = 'block';
+            document.body.classList.add('nav-open');
+        }
 
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', toggleMenu);
-        });
+        function closeNav() {
+            hamburger.classList.remove('is-active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileNav.classList.remove('is-open');
+            navOverlay.classList.remove('is-open');
+            setTimeout(() => { navOverlay.style.display = 'none'; }, 300);
+            document.body.classList.remove('nav-open');
+        }
 
-        // Close menu on Escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
-                toggleMenu();
-            }
-        });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
 
         // Newsletter form
         function handleNewsletterSubmit(e) {
@@ -1111,17 +1204,6 @@
                 button.style.background = '';
             }, 3000);
         }
-
-        // Set active nav link
-        const currentPath = window.location.pathname;
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
     </script>
 <!-- ═══ COOKIE CONSENT + TRACKERS ═══ -->
 <style>
