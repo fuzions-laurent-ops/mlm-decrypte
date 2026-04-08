@@ -1,0 +1,78 @@
+name: Publication automatique MLM Décrypté
+
+on:
+  schedule:
+    - cron: '0 7 * * 2'
+    - cron: '0 7 * * 5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Configurer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Publier les articles du jour
+        run: python3 publish.py
+
+      - name: Mettre à jour la page d'accueil
+        run: python3 update-homepage.py
+
+      - name: Régénérer le sitemap.xml
+        run: python3 generate-sitemap.py
+
+      - name: Régénérer le flux RSS
+        run: python3 generate-rss.py
+
+      - name: Afficher le statut
+        run: python3 publish.py --status
+
+      - name: Committer les changements
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "MLM Décrypté Bot"
+          git diff --quiet && echo "Aucun changement" || (git add -A && git commit -m "Publication automatique — \$(date +'%Y-%m-%d')")
+
+      - name: Pousser vers GitHub
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy:
+    needs: publish
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Récupérer le code mis à jour
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Configurer GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Uploader l'artefact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Déployer sur GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
