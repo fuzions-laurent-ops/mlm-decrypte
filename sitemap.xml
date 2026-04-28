@@ -130,6 +130,12 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://mlm-decrypte.fr/articles/mlm-manipulation.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://mlm-decrypte.fr/articles/erreurs-debutant-mlm.html</loc>
     <lastmod>2026-04-01</lastmod>
     <priority>0.8</priority>
