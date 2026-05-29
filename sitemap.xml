@@ -177,4 +177,16 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://mlm-decrypte.fr/articles/regard-famille-amis-mlm.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://mlm-decrypte.fr/articles/mlm-fonctionnaire-cumul-activite.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
