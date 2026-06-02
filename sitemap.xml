@@ -189,4 +189,10 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://mlm-decrypte.fr/articles/terrain-manifeste.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
