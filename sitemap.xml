@@ -207,4 +207,10 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://mlm-decrypte.fr/articles/terrain-premier-echec.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
