@@ -255,4 +255,10 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://mlm-decrypte.fr/articles/quitter-le-mlm.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
